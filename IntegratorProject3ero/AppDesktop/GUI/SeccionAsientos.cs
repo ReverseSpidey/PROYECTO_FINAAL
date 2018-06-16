@@ -19,13 +19,13 @@ namespace AppDesktop.GUI
         srvAsiento asi = new srvAsiento();
         vTipo_Boleto vista = new vTipo_Boleto();
         vFuncion fun;
-        double[] tipo = new double[3];
         double acumulador_tot;
 
         public SeccionAsientos(vFuncion func)
         {
             InitializeComponent();
             this.fun = func;
+            lblSALA.Text = func.tipo_sala;
             
         }
 
@@ -50,16 +50,28 @@ namespace AppDesktop.GUI
 
         private void nupAbuelo_ValueChanged(object sender, EventArgs e)
         {
+            if(nupAbuelo.Value > 0)
+            txtTotal.Text = acumulador_tot.ToString();
+        }
+        private void nupAbuelo_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void nupAbuelo_MouseUp(object sender, MouseEventArgs e)
+        {
             foreach (var x in srvTipo.ObtenerPrecio().Where(x => x.id_tipo == 8))
             {
                 acumulador_tot += Convert.ToDouble(x.Precio_tipo);
             }
-            txtTotal.Text = acumulador_tot.ToString();
         }
 
         private void btnValidar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("" + fun.Sala.Tipo_sala.Nombre_sala);
+            if ((nupAbuelo.Value + nupAdulto.Value + nupNinio.Value) > 8)
+            {
+                MessageBox.Show("La cantidad de boletos máximos son 8", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

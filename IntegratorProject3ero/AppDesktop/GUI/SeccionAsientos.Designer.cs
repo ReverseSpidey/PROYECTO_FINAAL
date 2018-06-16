@@ -30,6 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pnlTipo_Funcion = new System.Windows.Forms.Panel();
+            this.lblSALA = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnValidar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -41,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.pnlTipo_Funcion.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupNinio)).BeginInit();
@@ -64,6 +68,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pnlTipo_Funcion);
             this.groupBox1.Controls.Add(this.btnValidar);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -72,10 +77,42 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(288, 345);
+            this.groupBox1.Size = new System.Drawing.Size(309, 423);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Elegir tipo de boleto";
+            // 
+            // pnlTipo_Funcion
+            // 
+            this.pnlTipo_Funcion.Controls.Add(this.lblSALA);
+            this.pnlTipo_Funcion.Controls.Add(this.label5);
+            this.pnlTipo_Funcion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTipo_Funcion.Location = new System.Drawing.Point(3, 17);
+            this.pnlTipo_Funcion.Name = "pnlTipo_Funcion";
+            this.pnlTipo_Funcion.Size = new System.Drawing.Size(303, 56);
+            this.pnlTipo_Funcion.TabIndex = 59;
+            // 
+            // lblSALA
+            // 
+            this.lblSALA.AutoSize = true;
+            this.lblSALA.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSALA.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblSALA.Location = new System.Drawing.Point(181, 19);
+            this.lblSALA.Name = "lblSALA";
+            this.lblSALA.Size = new System.Drawing.Size(44, 27);
+            this.lblSALA.TabIndex = 62;
+            this.lblSALA.Text = "\"   \"";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(-5, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(180, 27);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "Costo para la Sala";
             // 
             // btnValidar
             // 
@@ -85,9 +122,9 @@
             this.btnValidar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValidar.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnValidar.ForeColor = System.Drawing.Color.White;
-            this.btnValidar.Location = new System.Drawing.Point(3, 279);
+            this.btnValidar.Location = new System.Drawing.Point(3, 357);
             this.btnValidar.Name = "btnValidar";
-            this.btnValidar.Size = new System.Drawing.Size(282, 63);
+            this.btnValidar.Size = new System.Drawing.Size(303, 63);
             this.btnValidar.TabIndex = 58;
             this.btnValidar.Text = "Validar";
             this.btnValidar.UseVisualStyleBackColor = false;
@@ -102,10 +139,9 @@
             this.panel1.Controls.Add(this.nupAdulto);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 17);
+            this.panel1.Location = new System.Drawing.Point(3, 79);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(282, 256);
+            this.panel1.Size = new System.Drawing.Size(300, 284);
             this.panel1.TabIndex = 8;
             // 
             // panel2
@@ -114,15 +150,15 @@
             this.panel2.Controls.Add(this.txtTotal);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 207);
+            this.panel2.Location = new System.Drawing.Point(0, 235);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(282, 49);
+            this.panel2.Size = new System.Drawing.Size(300, 49);
             this.panel2.TabIndex = 8;
             // 
             // txtTotal
             // 
             this.txtTotal.Dock = System.Windows.Forms.DockStyle.Right;
-            this.txtTotal.Location = new System.Drawing.Point(203, 0);
+            this.txtTotal.Location = new System.Drawing.Point(221, 0);
             this.txtTotal.Multiline = true;
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(79, 49);
@@ -177,6 +213,8 @@
             this.nupAbuelo.Size = new System.Drawing.Size(88, 25);
             this.nupAbuelo.TabIndex = 7;
             this.nupAbuelo.ValueChanged += new System.EventHandler(this.nupAbuelo_ValueChanged);
+            this.nupAbuelo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.nupAbuelo_MouseDown);
+            this.nupAbuelo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.nupAbuelo_MouseUp);
             // 
             // nupAdulto
             // 
@@ -229,13 +267,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(10)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(288, 345);
+            this.ClientSize = new System.Drawing.Size(309, 423);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SeccionAsientos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeccionAsientos";
             this.groupBox1.ResumeLayout(false);
+            this.pnlTipo_Funcion.ResumeLayout(false);
+            this.pnlTipo_Funcion.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -260,5 +300,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel pnlTipo_Funcion;
+        private System.Windows.Forms.Label lblSALA;
+        private System.Windows.Forms.Label label5;
     }
 }
