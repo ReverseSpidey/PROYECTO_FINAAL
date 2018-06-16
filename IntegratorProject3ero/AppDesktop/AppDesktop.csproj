@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4AE3953-1DE9-4E2A-AAB6-014CC6A37E29}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AppDesktop</RootNamespace>
+    <AssemblyName>AppDesktop</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ProyectoFinal\IntegratorProject3ero\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\Datos_Org\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\Datos_Org\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks">
+      <HintPath>..\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Design">
+      <HintPath>..\Microsoft.VisualBasic.PowerPacks.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\Asiento_Columna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Asiento_Columna.Designer.cs">
+      <DependentUpon>Asiento_Columna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmAsiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAsiento.Designer.cs">
+      <DependentUpon>frmAsiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MenuEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MenuEmpleado.Designer.cs">
+      <DependentUpon>MenuEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MenuPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MenuPeliculas.Designer.cs">
+      <DependentUpon>MenuPeliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NuevaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NuevaCompra.Designer.cs">
+      <DependentUpon>NuevaCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LOGIN.Designer.cs">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MenuAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MenuAdministrador.Designer.cs">
+      <DependentUpon>MenuAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NuevaSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NuevaSala.Designer.cs">
+      <DependentUpon>NuevaSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\newAsiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\newAsiento.Designer.cs">
+      <DependentUpon>newAsiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Peliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Peliculas.Designer.cs">
+      <DependentUpon>Peliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PERSONA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PERSONA.Designer.cs">
+      <DependentUpon>PERSONA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SALA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SALA.Designer.cs">
+      <DependentUpon>SALA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SeccionAsientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SeccionAsientos.Designer.cs">
+      <DependentUpon>SeccionAsientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Asiento_Columna.resx">
+      <DependentUpon>Asiento_Columna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmAsiento.resx">
+      <DependentUpon>frmAsiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MenuEmpleado.resx">
+      <DependentUpon>MenuEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MenuPeliculas.resx">
+      <DependentUpon>MenuPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NuevaCompra.resx">
+      <DependentUpon>NuevaCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LOGIN.resx">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MenuAdministrador.resx">
+      <DependentUpon>MenuAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NuevaSala.resx">
+      <DependentUpon>NuevaSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\newAsiento.resx">
+      <DependentUpon>newAsiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Peliculas.resx">
+      <DependentUpon>Peliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PERSONA.resx">
+      <DependentUpon>PERSONA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SALA.resx">
+      <DependentUpon>SALA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SeccionAsientos.resx">
+      <DependentUpon>SeccionAsientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="bin\Debug\AppDesktop.exe.config" />
+    <None Include="bin\Debug\appdesktop.InstallLog" />
+    <None Include="bin\Debug\InstallUtil.InstallLog" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SettingHover.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SettingsNormal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseHover.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseNormal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizaeHover.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizarNormal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserHover.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserNormal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linita shida1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon cerrar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AppDesktop.exe" />
+    <Content Include="bin\Debug\AppDesktop.pdb" />
+    <Content Include="bin\Debug\Bunifu_UI_v1.5.3.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualBasic.PowerPacks.Design.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualBasic.PowerPacks.dll" />
+    <Content Include="bin\Debug\MySql.Data.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <None Include="Resources\Banner\filme.png" />
+    <None Include="Resources\Banner\logo.png" />
+    <None Include="Resources\Banner\tsubasa.png" />
+    <None Include="Resources\Banner\waar.jpg" />
+    <None Include="Resources\Banner\overboard.jpg" />
+    <None Include="Resources\Banner\deadpool.png" />
+    <None Include="Resources\listaa.png" />
+    <None Include="Resources\manage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detective_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detective2_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ticket1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ticket2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sala.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AGUA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DIDPUL.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\INFINITY.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUPER.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos_Org\Datos_Org.csproj">
+      <Project>{b5131367-bdd8-4d3b-989d-c0bcb3948b1f}</Project>
+      <Name>Datos_Org</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
