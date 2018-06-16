@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\vTipo_Boleto.cs" />
     <Compile Include="Modelo\Asiento.cs">
       <DependentUpon>EntidadesCinema.tt</DependentUpon>
     </Compile>
@@ -136,6 +137,7 @@
     <Compile Include="Servicios\srvAsiento.cs" />
     <Compile Include="Servicios\srvFuncion.cs" />
     <Compile Include="Servicios\srvSala.cs" />
+    <Compile Include="Servicios\srvTipoBoleto.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Modelo\EntidadesCinema.Context.tt">

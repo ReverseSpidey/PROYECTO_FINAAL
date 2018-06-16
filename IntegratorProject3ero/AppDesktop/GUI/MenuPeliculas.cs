@@ -54,10 +54,17 @@ namespace AppDesktop.GUI
 
         private void dgvHorarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            SeccionAsientos selec = new SeccionAsientos();
+            vFuncion func = new vFuncion();
             if (e.ColumnIndex == 5)
             {
-                Funcion func = new Funcion();
+                func.ID_funcion = int.Parse
+                    (dgvHorarios.Rows[e.RowIndex].Cells[0].Value.ToString());
+                
+                func.tipo_sala = dgvHorarios.Rows[e.RowIndex].Cells[2].Value.ToString();
+                func.nombre_peli = dgvHorarios.Rows[e.RowIndex].Cells[3].Value.ToString();
+                func.Hora_ini = dgvHorarios.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+                SeccionAsientos selec = new SeccionAsientos(func);
                 selec.ShowDialog();
             }
         }
