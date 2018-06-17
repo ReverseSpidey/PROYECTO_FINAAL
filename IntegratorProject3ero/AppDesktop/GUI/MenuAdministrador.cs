@@ -20,7 +20,7 @@ namespace AppDesktop.GUI
         public MenuAdministrador()
         {
             InitializeComponent();
-
+            timer1.Enabled = true;
             pnlCatalogos.Visible = false;
         }
 
@@ -109,7 +109,7 @@ namespace AppDesktop.GUI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //AbrirFormHija(new GUI.Peliculas());
+           // AbrirFormHija(new Peliculas());
         }
 
 
@@ -128,6 +128,32 @@ namespace AppDesktop.GUI
         {
             AbrirFormHija(new frmAsiento());
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.WindowState= FormWindowState.Minimized;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Estás seguro de cerrar sesión?", "Se requiere confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Hide();
+                LOGIN abrir = new LOGIN();
+                abrir.Show();
+            }
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblFecha.Text = DateTime.Now.ToString();
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -16,6 +16,7 @@ namespace AppDesktop.GUI
         public MenuEmpleado()
         {
             InitializeComponent();
+            timer1.Enabled = true;
             pnlCatalogos.Visible = false;
 
         }
@@ -60,6 +61,21 @@ namespace AppDesktop.GUI
         private void panelcine_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblFecha.Text = DateTime.Now.ToString();
         }
     }
 }

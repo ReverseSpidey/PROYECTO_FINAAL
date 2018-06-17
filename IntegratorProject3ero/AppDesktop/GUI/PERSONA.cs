@@ -74,5 +74,25 @@ namespace AppDesktop.GUI
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void picCerrar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

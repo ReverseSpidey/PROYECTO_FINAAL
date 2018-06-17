@@ -136,6 +136,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicios\srvAsiento.cs" />
     <Compile Include="Servicios\srvFuncion.cs" />
+    <Compile Include="Servicios\srvPersona.cs" />
     <Compile Include="Servicios\srvSala.cs" />
     <Compile Include="Servicios\srvTipoBoleto.cs" />
   </ItemGroup>

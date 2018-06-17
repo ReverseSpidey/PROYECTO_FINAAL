@@ -105,5 +105,15 @@ namespace AppDesktop.GUI
             MenuAdministrador obj = new MenuAdministrador();
             obj.Show();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

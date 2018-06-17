@@ -119,6 +119,12 @@
     <Compile Include="GUI\newAsiento.Designer.cs">
       <DependentUpon>newAsiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\PELICULA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PELICULA.Designer.cs">
+      <DependentUpon>PELICULA.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Peliculas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,12 @@
     </Compile>
     <Compile Include="GUI\PERSONA.Designer.cs">
       <DependentUpon>PERSONA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Reserva.Designer.cs">
+      <DependentUpon>Reserva.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\SALA.cs">
       <SubType>Form</SubType>
@@ -172,11 +184,17 @@
     <EmbeddedResource Include="GUI\newAsiento.resx">
       <DependentUpon>newAsiento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PELICULA.resx">
+      <DependentUpon>PELICULA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Peliculas.resx">
       <DependentUpon>Peliculas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PERSONA.resx">
       <DependentUpon>PERSONA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reserva.resx">
+      <DependentUpon>Reserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SALA.resx">
       <DependentUpon>SALA.cs</DependentUpon>
@@ -258,6 +276,13 @@
     <Content Include="bin\Debug\MySql.Data.dll" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <None Include="Resources\ImagenCine.png" />
+    <None Include="Resources\Silla.ico" />
+    <None Include="Resources\Configuracion.png" />
+    <None Include="Resources\Exit.ico" />
+    <None Include="Resources\Exit.png" />
+    <None Include="Resources\Minimizar_32.png" />
+    <None Include="Resources\cerrar_32.png" />
     <None Include="Resources\Banner\filme.png" />
     <None Include="Resources\Banner\logo.png" />
     <None Include="Resources\Banner\tsubasa.png" />
