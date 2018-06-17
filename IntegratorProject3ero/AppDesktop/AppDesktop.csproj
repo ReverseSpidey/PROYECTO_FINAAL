@@ -258,6 +258,13 @@
     <Content Include="bin\Debug\MySql.Data.dll" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <None Include="Resources\ImagenCine.png" />
+    <None Include="Resources\Silla.ico" />
+    <None Include="Resources\Configuracion.png" />
+    <None Include="Resources\Exit.ico" />
+    <None Include="Resources\Exit.png" />
+    <None Include="Resources\Minimizar_32.png" />
+    <None Include="Resources\cerrar_32.png" />
     <None Include="Resources\Banner\filme.png" />
     <None Include="Resources\Banner\logo.png" />
     <None Include="Resources\Banner\tsubasa.png" />
