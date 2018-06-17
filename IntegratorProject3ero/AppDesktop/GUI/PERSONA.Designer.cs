@@ -40,12 +40,12 @@
             this.mxtNombre = new System.Windows.Forms.MaskedTextBox();
             this.mxtPaterno = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboTipoUsuario = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtContrasenia = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cboTipoUsuario = new System.Windows.Forms.ComboBox();
             this.bntGuardarYSeguir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -200,6 +200,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acceso a cuenta";
             // 
+            // cboTipoUsuario
+            // 
+            this.cboTipoUsuario.FormattingEnabled = true;
+            this.cboTipoUsuario.Location = new System.Drawing.Point(249, 82);
+            this.cboTipoUsuario.Name = "cboTipoUsuario";
+            this.cboTipoUsuario.Size = new System.Drawing.Size(121, 27);
+            this.cboTipoUsuario.TabIndex = 46;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(126, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 20);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Tipo de usuario";
+            // 
             // txtContrasenia
             // 
             this.txtContrasenia.Location = new System.Drawing.Point(365, 38);
@@ -243,25 +262,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(126, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 20);
-            this.label3.TabIndex = 45;
-            this.label3.Text = "Tipo de usuario";
-            // 
-            // cboTipoUsuario
-            // 
-            this.cboTipoUsuario.FormattingEnabled = true;
-            this.cboTipoUsuario.Location = new System.Drawing.Point(249, 82);
-            this.cboTipoUsuario.Name = "cboTipoUsuario";
-            this.cboTipoUsuario.Size = new System.Drawing.Size(121, 27);
-            this.cboTipoUsuario.TabIndex = 46;
             // 
             // bntGuardarYSeguir
             // 
@@ -314,6 +314,7 @@
             this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMinimizar.TabIndex = 44;
             this.picMinimizar.TabStop = false;
+            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
             // 
             // picCerrar
             // 
@@ -324,6 +325,7 @@
             this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCerrar.TabIndex = 43;
             this.picCerrar.TabStop = false;
+            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click_1);
             // 
             // frm_PERSONA
             // 

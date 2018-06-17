@@ -58,9 +58,10 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(69, 94);
+            this.pictureBox5.Image = global::AppDesktop.Properties.Resources.ImagenCine;
+            this.pictureBox5.Location = new System.Drawing.Point(46, 94);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(127, 109);
+            this.pictureBox5.Size = new System.Drawing.Size(159, 135);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
@@ -177,6 +178,7 @@
             this.label2.Size = new System.Drawing.Size(16, 17);
             this.label2.TabIndex = 12;
             this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -188,6 +190,7 @@
             this.label3.Size = new System.Drawing.Size(15, 17);
             this.label3.TabIndex = 13;
             this.label3.Text = "_";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // LOGIN
             // 

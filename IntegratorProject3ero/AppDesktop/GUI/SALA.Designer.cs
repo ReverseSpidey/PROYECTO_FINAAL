@@ -55,13 +55,12 @@
             // 
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.nupCodigo);
-            this.panel1.Controls.Add(this.btnValidar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dgvSala);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 41);
+            this.panel1.Location = new System.Drawing.Point(0, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(539, 322);
+            this.panel1.Size = new System.Drawing.Size(539, 314);
             this.panel1.TabIndex = 0;
             // 
             // btnBuscar
@@ -71,7 +70,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(181, 20);
+            this.btnBuscar.Location = new System.Drawing.Point(314, 16);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(84, 29);
             this.btnBuscar.TabIndex = 56;
@@ -84,7 +83,7 @@
             this.nupCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.nupCodigo.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nupCodigo.Location = new System.Drawing.Point(112, 22);
+            this.nupCodigo.Location = new System.Drawing.Point(245, 18);
             this.nupCodigo.Name = "nupCodigo";
             this.nupCodigo.Size = new System.Drawing.Size(50, 25);
             this.nupCodigo.TabIndex = 5;
@@ -96,7 +95,7 @@
             this.btnValidar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValidar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnValidar.ForeColor = System.Drawing.Color.White;
-            this.btnValidar.Location = new System.Drawing.Point(434, 12);
+            this.btnValidar.Location = new System.Drawing.Point(352, 11);
             this.btnValidar.Name = "btnValidar";
             this.btnValidar.Size = new System.Drawing.Size(90, 32);
             this.btnValidar.TabIndex = 55;
@@ -111,7 +110,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(12, 23);
+            this.label1.Location = new System.Drawing.Point(145, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 21);
             this.label1.TabIndex = 1;
@@ -141,7 +140,7 @@
             this.dgvSala.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvSala.EnableHeadersVisualStyles = false;
             this.dgvSala.GridColor = System.Drawing.Color.White;
-            this.dgvSala.Location = new System.Drawing.Point(0, 64);
+            this.dgvSala.Location = new System.Drawing.Point(0, 56);
             this.dgvSala.Name = "dgvSala";
             this.dgvSala.ReadOnly = true;
             this.dgvSala.Size = new System.Drawing.Size(539, 258);
@@ -213,6 +212,7 @@
             this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMinimizar.TabIndex = 58;
             this.picMinimizar.TabStop = false;
+            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
             // 
             // picCerrar
             // 
@@ -223,6 +223,7 @@
             this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCerrar.TabIndex = 57;
             this.picCerrar.TabStop = false;
+            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
             // 
             // SALA
             // 
@@ -232,6 +233,7 @@
             this.ClientSize = new System.Drawing.Size(539, 363);
             this.Controls.Add(this.picMinimizar);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnValidar);
             this.Controls.Add(this.picCerrar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

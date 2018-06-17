@@ -66,5 +66,15 @@ namespace AppDesktop.GUI
             dgvSala.AutoGenerateColumns = false;
             dgvSala.DataSource = srv.getListSala(map);
         }
+
+        private void picMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void picCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
