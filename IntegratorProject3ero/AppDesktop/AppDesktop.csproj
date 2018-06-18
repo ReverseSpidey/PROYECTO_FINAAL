@@ -32,10 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\ProyectoFinal\IntegratorProject3ero\Bunifu_UI_v1.5.3.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\Datos_Org\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
@@ -65,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Asientos_Elegir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Asientos_Elegir.Designer.cs">
+      <DependentUpon>Asientos_Elegir.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Asiento_Columna.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +159,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Asientos_Elegir.resx">
+      <DependentUpon>Asientos_Elegir.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Asiento_Columna.resx">
       <DependentUpon>Asiento_Columna.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +281,7 @@
     <Content Include="bin\Debug\MySql.Data.dll" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <None Include="Resources\SeatScreen.png" />
     <None Include="Resources\ImagenCine.png" />
     <None Include="Resources\Silla.ico" />
     <None Include="Resources\Configuracion.png" />

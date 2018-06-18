@@ -77,5 +77,15 @@ namespace AppDesktop.GUI
         {
             lblFecha.Text = DateTime.Now.ToString();
         }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace Datos_Org.Servicios
         public List<vFuncion> Horario(int id)
         {
             List<vFuncion> obj = new List<vFuncion>();
-            using (var db = new Entidades_Cinema())
+            using (var db = new EntidadesCinema())
             {
                 obj = (from x in db.Funcion
                        select new vFuncion

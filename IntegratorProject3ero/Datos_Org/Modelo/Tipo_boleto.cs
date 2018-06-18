@@ -14,8 +14,17 @@ namespace Datos_Org.Modelo
     
     public partial class Tipo_boleto
     {
-        public int id_tipo { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Tipo_boleto()
+        {
+            this.Detalle_compra = new HashSet<Detalle_compra>();
+        }
+    
+        public int id_tipoBoleto { get; set; }
         public string nombre_tipo { get; set; }
         public Nullable<decimal> Precio_tipo { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Detalle_compra> Detalle_compra { get; set; }
     }
 }

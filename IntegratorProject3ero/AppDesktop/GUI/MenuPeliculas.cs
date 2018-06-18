@@ -25,7 +25,7 @@ namespace AppDesktop.GUI
         }
         private void MenuPeliculas_Load(object sender, EventArgs e)
         {
-            cboPeliculas.Items.Add("Seleccionar");
+            cboPeliculas.Items.Add("Cargando...");
         }
        
         private void CargarCombo()
@@ -59,7 +59,7 @@ namespace AppDesktop.GUI
             {
                 func.ID_funcion = int.Parse
                     (dgvHorarios.Rows[e.RowIndex].Cells[0].Value.ToString());
-                
+                func.Cod_sala = Convert.ToInt32(dgvHorarios.Rows[e.RowIndex].Cells[1].Value.ToString());
                 func.tipo_sala = dgvHorarios.Rows[e.RowIndex].Cells[2].Value.ToString();
                 func.nombre_peli = dgvHorarios.Rows[e.RowIndex].Cells[3].Value.ToString();
                 func.Hora_ini = dgvHorarios.Rows[e.RowIndex].Cells[4].Value.ToString();

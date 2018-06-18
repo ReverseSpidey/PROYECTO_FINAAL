@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="20ca8b09712a45fbb64c515ec2853336" Name="Diagram1">
+        <EntityTypeShape EntityType="CinemaModel.Asiento" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Ciudad" Width="1.5" PointX="10" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Clasificacion" Width="1.5" PointX="1.5" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Compra" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Cuenta" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Detalle_compra" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Estado" Width="1.5" PointX="6" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Funcion" Width="1.5" PointX="3" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Genero" Width="1.5" PointX="1.5" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Idioma" Width="1.5" PointX="1.5" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Pelicula" Width="1.5" PointX="0.75" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Perfil" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Persona" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Sala" Width="1.5" PointX="1.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Sucursal" Width="1.5" PointX="12.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Tarjeta_credito" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Tipo_boleto" Width="1.5" PointX="0.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Tipo_pago" Width="1.5" PointX="7.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Tipo_sala" Width="1.5" PointX="1.5" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Usuario" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="CinemaModel.FK__Asiento__Cod_sal__607251E5" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.FK__Detalle_c__id_as__3C34F16F" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.RefCiudad3" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.RefEstado1" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.RefClasificacion24" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.FK__Compra__ID_DETAL__4D5F7D71" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.FK__Compra__ID_funci__3D2915A8" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.RefTipo_pago16" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.RefUsuario17" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.RefCuenta23" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.RefUsuario22" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.FK__Detalle_c__ID_TI__73852659" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.FK__Funcion__Cod_sal__4E53A1AA" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.RefPelicula13" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.RefGenero14" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.RefIdioma18" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.RefPerfil19" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.RefPersona20" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.FK__Sucursal__Cod_sa__59C55456" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.fk_cod_tipo" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.RefTarjeta_credito21" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

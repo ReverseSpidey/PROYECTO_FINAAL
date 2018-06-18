@@ -22,9 +22,11 @@ namespace Datos_Org.Modelo
     
         public int id_detalle { get; set; }
         public Nullable<int> id_asiento { get; set; }
+        public Nullable<int> ID_TIPOBOLETO { get; set; }
     
         public virtual Asiento Asiento { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Compra> Compra { get; set; }
+        public virtual Tipo_boleto Tipo_boleto { get; set; }
     }
 }

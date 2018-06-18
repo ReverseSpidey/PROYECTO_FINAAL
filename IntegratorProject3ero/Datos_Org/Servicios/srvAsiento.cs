@@ -14,7 +14,7 @@ namespace Datos_Org.Servicios
 
         public List<Asiento> GetAsiento()//método para obtener todos los datos del asiento
         {
-            using (var db = new Entidades_Cinema())
+            using (var db = new EntidadesCinema())
             {
                 return db.Asiento.ToList();
             }
@@ -23,7 +23,7 @@ namespace Datos_Org.Servicios
         /*Método para obtener los id de sala*/
         public List<Sala> getSala()//método para obtener todos los datos del asiento
         {
-            using (var db = new Entidades_Cinema())
+            using (var db = new EntidadesCinema())
             {
                 return db.Sala.ToList();
             }
@@ -33,7 +33,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new Entidades_Cinema())
+                using (var db = new EntidadesCinema())
                 {
                     db.Asiento.Add(item);
                     db.SaveChanges();
@@ -49,7 +49,7 @@ namespace Datos_Org.Servicios
         public List<vAsiento> AsientoComplete()
         {
             List<vAsiento> obj = new List<vAsiento>();
-            using (var db = new Entidades_Cinema())
+            using (var db = new EntidadesCinema())
             {
                 obj = (from x in db.Asiento
                        select new vAsiento
@@ -68,7 +68,7 @@ namespace Datos_Org.Servicios
         public List<vAsiento> CantAsientos(int num_sala)
         {
             List<vAsiento> obj = new List<vAsiento>();
-            using (var db = new Entidades_Cinema())
+            using (var db = new EntidadesCinema())
             {
               obj= (from x in db.Asiento
                  where

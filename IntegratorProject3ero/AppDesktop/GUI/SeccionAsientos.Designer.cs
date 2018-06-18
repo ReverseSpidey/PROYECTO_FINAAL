@@ -97,7 +97,7 @@
             this.lblSALA.AutoSize = true;
             this.lblSALA.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSALA.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblSALA.Location = new System.Drawing.Point(181, 19);
+            this.lblSALA.Location = new System.Drawing.Point(170, 19);
             this.lblSALA.Name = "lblSALA";
             this.lblSALA.Size = new System.Drawing.Size(44, 27);
             this.lblSALA.TabIndex = 62;
@@ -120,7 +120,7 @@
             this.btnValidar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnValidar.FlatAppearance.BorderSize = 0;
             this.btnValidar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnValidar.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnValidar.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnValidar.ForeColor = System.Drawing.Color.White;
             this.btnValidar.Location = new System.Drawing.Point(3, 357);
             this.btnValidar.Name = "btnValidar";
@@ -141,7 +141,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(3, 79);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 284);
+            this.panel1.Size = new System.Drawing.Size(300, 272);
             this.panel1.TabIndex = 8;
             // 
             // panel2
@@ -150,7 +150,7 @@
             this.panel2.Controls.Add(this.txtTotal);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 235);
+            this.panel2.Location = new System.Drawing.Point(0, 223);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(300, 49);
             this.panel2.TabIndex = 8;
@@ -213,8 +213,6 @@
             this.nupAbuelo.Size = new System.Drawing.Size(88, 25);
             this.nupAbuelo.TabIndex = 7;
             this.nupAbuelo.ValueChanged += new System.EventHandler(this.nupAbuelo_ValueChanged);
-            this.nupAbuelo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.nupAbuelo_MouseDown);
-            this.nupAbuelo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.nupAbuelo_MouseUp);
             // 
             // nupAdulto
             // 

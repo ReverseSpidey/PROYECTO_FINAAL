@@ -145,9 +145,6 @@
   <data name="SUPER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SUPER.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="linita shida1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\linita shida1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Configuracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Configuracion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,6 +220,9 @@
   <data name="SettingsNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SettingsNormal.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DIDPUL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DIDPUL.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Detective2_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Detective2_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -235,6 +235,9 @@
   <data name="usuario2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuario2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ImagenCine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImagenCine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Ticket2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ticket2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -244,13 +247,13 @@
   <data name="CloseNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CloseNormal.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DIDPUL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DIDPUL.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="linita shida1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linita shida1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Flash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Flash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ImagenCine" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImagenCine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SeatScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SeatScreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
