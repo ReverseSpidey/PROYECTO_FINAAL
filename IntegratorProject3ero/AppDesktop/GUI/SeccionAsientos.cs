@@ -91,6 +91,9 @@ namespace AppDesktop.GUI
         private void btnValidar_Click(object sender, EventArgs e)
         {
             int total = Convert.ToInt32(nupAbuelo.Value + nupAdulto.Value + nupNinio.Value);
+            int cant_ninio = Convert.ToInt32(nupNinio.Value);
+            int cant_adulto = Convert.ToInt32(nupAdulto.Value);
+            int cant_abuelo = Convert.ToInt32(nupAbuelo.Value);
             if (total > 8)
             {
                 MessageBox.Show("La cantidad de boletos máximos son 8", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -98,7 +101,7 @@ namespace AppDesktop.GUI
             else if(total > 0 && total <= 8)
             {
                 MessageBox.Show("Aquí van instrucciones", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Asientos_Elegir asiento = new Asientos_Elegir(fun);
+                Asientos_Elegir asiento = new Asientos_Elegir(fun, total,cant_abuelo,cant_adulto,cant_ninio);
                 asiento.ShowDialog();
                 
             }

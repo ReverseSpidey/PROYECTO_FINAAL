@@ -12,11 +12,18 @@ namespace Datos_Org.Servicios
     public class srvAsiento
     {
 
-        public List<Asiento> GetAsiento()//método para obtener todos los datos del asiento
+        public List<vAsiento> GetAsiento(string nombre, string valor, int sala)//método para obtener todos los datos del asiento
         {
+            List<vAsiento> liss = new List<vAsiento>();
             using (var db = new EntidadesCinema())
             {
-                return db.Asiento.ToList();
+                liss = (from x in db.Asiento
+                        where x.fila == nombre && x.columna == valor && x.Cod_sala == sala
+                        select new vAsiento
+                        {
+                            id_siento = x.id_siento
+                        }).ToList();
+                return liss;
             }
         }
 
@@ -35,6 +42,9 @@ namespace Datos_Org.Servicios
             {
                 using (var db = new EntidadesCinema())
                 {
+
+                  
+
                     db.Asiento.Add(item);
                     db.SaveChanges();
                 }
@@ -42,6 +52,28 @@ namespace Datos_Org.Servicios
             catch (Exception e)
             {
                 throw new Exception("Verifica los datos a Insertar");//es un error que yo creo
+            }
+        }
+
+
+        public void ModificarAsiento(Asiento item)
+        {
+            try
+            {
+                using (var db = new EntidadesCinema())
+                {
+                    Asiento obj = db.Asiento.Where(x => x.id_siento == item.id_siento).FirstOrDefault();
+                    if(obj != null)
+                    {
+                        obj.fila = item.fila;
+                        obj.columna = item.columna;
+                        db.SaveChanges();
+                    }
+                }
+
+            }catch(Exception e)
+            {
+                throw new Exception("Verifica los datos a modificar");
             }
         }
 

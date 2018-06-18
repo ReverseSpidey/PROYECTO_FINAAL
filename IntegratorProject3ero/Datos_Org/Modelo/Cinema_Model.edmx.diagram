@@ -20,7 +20,7 @@
         <EntityTypeShape EntityType="CinemaModel.Persona" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CinemaModel.Sala" Width="1.5" PointX="1.5" PointY="13" IsExpanded="true" />
         <EntityTypeShape EntityType="CinemaModel.Sucursal" Width="1.5" PointX="12.25" PointY="7.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CinemaModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CinemaModel.Tarjeta_credito" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
         <EntityTypeShape EntityType="CinemaModel.Tipo_boleto" Width="1.5" PointX="0.75" PointY="20.5" IsExpanded="true" />
         <EntityTypeShape EntityType="CinemaModel.Tipo_pago" Width="1.5" PointX="7.5" PointY="7.5" IsExpanded="true" />
@@ -47,6 +47,7 @@
         <AssociationConnector Association="CinemaModel.FK__Sucursal__Cod_sa__59C55456" ManuallyRouted="false" />
         <AssociationConnector Association="CinemaModel.fk_cod_tipo" ManuallyRouted="false" />
         <AssociationConnector Association="CinemaModel.RefTarjeta_credito21" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.FK__Detalle_c__Id_fu__0697FACD" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

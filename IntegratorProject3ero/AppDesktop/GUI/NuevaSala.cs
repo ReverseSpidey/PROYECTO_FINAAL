@@ -99,5 +99,10 @@ namespace AppDesktop.GUI
             frm_sala.Listar();
             this.Close();
         }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

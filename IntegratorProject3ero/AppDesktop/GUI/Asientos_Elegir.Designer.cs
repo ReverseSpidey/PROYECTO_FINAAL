@@ -32,6 +32,7 @@
             this.Cuerpo = new System.Windows.Forms.Panel();
             this.picPantalla = new System.Windows.Forms.PictureBox();
             this.pnlNombre = new System.Windows.Forms.Panel();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picPantalla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,12 +73,29 @@
             this.pnlNombre.Size = new System.Drawing.Size(0, 0);
             this.pnlNombre.TabIndex = 7;
             // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(72)))), ((int)(((byte)(21)))));
+            this.btnSiguiente.FlatAppearance.BorderSize = 0;
+            this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSiguiente.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnSiguiente.ForeColor = System.Drawing.Color.White;
+            this.btnSiguiente.Location = new System.Drawing.Point(631, 527);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(92, 29);
+            this.btnSiguiente.TabIndex = 42;
+            this.btnSiguiente.Text = "Siguiente";
+            this.btnSiguiente.UseVisualStyleBackColor = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            // 
             // Asientos_Elegir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(10)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(760, 577);
+            this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.pnlNombre);
             this.Controls.Add(this.Cuerpo);
             this.Controls.Add(this.picPantalla);
@@ -98,5 +116,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel Cuerpo;
         private System.Windows.Forms.Panel pnlNombre;
+        private System.Windows.Forms.Button btnSiguiente;
     }
 }

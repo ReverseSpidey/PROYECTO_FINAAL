@@ -131,6 +131,7 @@
     <Compile Include="Modelo\Usuario.cs">
       <DependentUpon>Cinema_Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Servicios\srvDetalle_Compra.cs" />
     <Compile Include="Servicios\srvPelicula.cs" />
     <Compile Include="Entidades\vAsiento.cs" />
     <Compile Include="Entidades\vFuncion.cs" />

@@ -18,6 +18,7 @@ namespace Datos_Org.Modelo
         public Funcion()
         {
             this.Compra = new HashSet<Compra>();
+            this.Detalle_compra = new HashSet<Detalle_compra>();
         }
     
         public int Cod_sala { get; set; }
@@ -29,5 +30,7 @@ namespace Datos_Org.Modelo
         public virtual ICollection<Compra> Compra { get; set; }
         public virtual Sala Sala { get; set; }
         public virtual Pelicula Pelicula { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Detalle_compra> Detalle_compra { get; set; }
     }
 }
