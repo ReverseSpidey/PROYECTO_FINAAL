@@ -43,16 +43,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvHorarios = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.cboPeliculas = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.ID_funcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NUM_SALA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cod_sala = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipo_sala = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre_peli = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hora_ini = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnElegir = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.cboPeliculas = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
@@ -145,6 +146,7 @@
             this.dgvHorarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHorarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_funcion,
+            this.NUM_SALA,
             this.cod_sala,
             this.tipo_sala,
             this.nombre_peli,
@@ -167,71 +169,6 @@
             this.dgvHorarios.Size = new System.Drawing.Size(539, 238);
             this.dgvHorarios.TabIndex = 4;
             this.dgvHorarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHorarios_CellContentClick);
-            // 
-            // ID_funcion
-            // 
-            this.ID_funcion.DataPropertyName = "ID_funcion";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ID_funcion.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ID_funcion.HeaderText = "ID Funcion";
-            this.ID_funcion.Name = "ID_funcion";
-            this.ID_funcion.ReadOnly = true;
-            // 
-            // cod_sala
-            // 
-            this.cod_sala.DataPropertyName = "cod_sala";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cod_sala.DefaultCellStyle = dataGridViewCellStyle4;
-            this.cod_sala.HeaderText = "Sala";
-            this.cod_sala.Name = "cod_sala";
-            this.cod_sala.ReadOnly = true;
-            // 
-            // tipo_sala
-            // 
-            this.tipo_sala.DataPropertyName = "tipo_sala";
-            this.tipo_sala.HeaderText = "Tipo de Sala";
-            this.tipo_sala.Name = "tipo_sala";
-            this.tipo_sala.ReadOnly = true;
-            // 
-            // nombre_peli
-            // 
-            this.nombre_peli.DataPropertyName = "nombre_peli";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre_peli.DefaultCellStyle = dataGridViewCellStyle5;
-            this.nombre_peli.HeaderText = "Película";
-            this.nombre_peli.Name = "nombre_peli";
-            this.nombre_peli.ReadOnly = true;
-            // 
-            // Hora_ini
-            // 
-            this.Hora_ini.DataPropertyName = "Hora_ini";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hora_ini.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Hora_ini.HeaderText = "Horario";
-            this.Hora_ini.Name = "Hora_ini";
-            this.Hora_ini.ReadOnly = true;
-            // 
-            // btnElegir
-            // 
-            this.btnElegir.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(72)))), ((int)(((byte)(21)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            this.btnElegir.DefaultCellStyle = dataGridViewCellStyle7;
-            this.btnElegir.FillWeight = 150F;
-            this.btnElegir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnElegir.HeaderText = "";
-            this.btnElegir.Name = "btnElegir";
-            this.btnElegir.ReadOnly = true;
-            this.btnElegir.Text = "Elegir";
-            this.btnElegir.UseColumnTextForButtonValue = true;
-            this.btnElegir.Width = 150;
             // 
             // panel4
             // 
@@ -281,6 +218,78 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Seleccione la película";
             // 
+            // ID_funcion
+            // 
+            this.ID_funcion.DataPropertyName = "ID_funcion";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ID_funcion.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ID_funcion.HeaderText = "ID Funcion";
+            this.ID_funcion.Name = "ID_funcion";
+            this.ID_funcion.ReadOnly = true;
+            // 
+            // NUM_SALA
+            // 
+            this.NUM_SALA.DataPropertyName = "NUM_SALA";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUM_SALA.DefaultCellStyle = dataGridViewCellStyle4;
+            this.NUM_SALA.HeaderText = "Sala";
+            this.NUM_SALA.Name = "NUM_SALA";
+            this.NUM_SALA.ReadOnly = true;
+            // 
+            // cod_sala
+            // 
+            this.cod_sala.DataPropertyName = "cod_sala";
+            this.cod_sala.HeaderText = "id sala";
+            this.cod_sala.Name = "cod_sala";
+            this.cod_sala.ReadOnly = true;
+            // 
+            // tipo_sala
+            // 
+            this.tipo_sala.DataPropertyName = "tipo_sala";
+            this.tipo_sala.HeaderText = "Tipo de Sala";
+            this.tipo_sala.Name = "tipo_sala";
+            this.tipo_sala.ReadOnly = true;
+            // 
+            // nombre_peli
+            // 
+            this.nombre_peli.DataPropertyName = "nombre_peli";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre_peli.DefaultCellStyle = dataGridViewCellStyle5;
+            this.nombre_peli.HeaderText = "Película";
+            this.nombre_peli.Name = "nombre_peli";
+            this.nombre_peli.ReadOnly = true;
+            // 
+            // Hora_ini
+            // 
+            this.Hora_ini.DataPropertyName = "Hora_ini";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hora_ini.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Hora_ini.HeaderText = "Horario";
+            this.Hora_ini.Name = "Hora_ini";
+            this.Hora_ini.ReadOnly = true;
+            // 
+            // btnElegir
+            // 
+            this.btnElegir.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(72)))), ((int)(((byte)(21)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.btnElegir.DefaultCellStyle = dataGridViewCellStyle7;
+            this.btnElegir.FillWeight = 150F;
+            this.btnElegir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnElegir.HeaderText = "";
+            this.btnElegir.Name = "btnElegir";
+            this.btnElegir.ReadOnly = true;
+            this.btnElegir.Text = "Elegir";
+            this.btnElegir.UseColumnTextForButtonValue = true;
+            this.btnElegir.Width = 150;
+            // 
             // MenuPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,6 +328,7 @@
         private System.Windows.Forms.PictureBox picMinimizar;
         private System.Windows.Forms.PictureBox picCerrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_funcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NUM_SALA;
         private System.Windows.Forms.DataGridViewTextBoxColumn cod_sala;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipo_sala;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre_peli;

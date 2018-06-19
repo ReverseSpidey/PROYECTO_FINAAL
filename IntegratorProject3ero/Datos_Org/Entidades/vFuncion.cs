@@ -15,6 +15,7 @@ namespace Datos_Org.Entidades
         public int ID_funcion { get; set; }
         public string nombre_peli { get; set; }
         public string tipo_sala { get; set; }
+        public int NUM_SALA { get; set; }
 
 
 

@@ -102,7 +102,7 @@ namespace AppDesktop.GUI
         {
 
             this.Hide();
-            MenuAdministrador obj = new MenuAdministrador();
+            MenuEmpleado obj = new MenuEmpleado();
             obj.Show();
         }
 

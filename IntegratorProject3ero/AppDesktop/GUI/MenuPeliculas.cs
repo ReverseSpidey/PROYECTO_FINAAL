@@ -55,14 +55,15 @@ namespace AppDesktop.GUI
         private void dgvHorarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             vFuncion func = new vFuncion();
-            if (e.ColumnIndex == 5)
+            if (e.ColumnIndex == 6)
             {
                 func.ID_funcion = int.Parse
                     (dgvHorarios.Rows[e.RowIndex].Cells[0].Value.ToString());
-                func.Cod_sala = Convert.ToInt32(dgvHorarios.Rows[e.RowIndex].Cells[1].Value.ToString());
-                func.tipo_sala = dgvHorarios.Rows[e.RowIndex].Cells[2].Value.ToString();
-                func.nombre_peli = dgvHorarios.Rows[e.RowIndex].Cells[3].Value.ToString();
-                func.Hora_ini = dgvHorarios.Rows[e.RowIndex].Cells[4].Value.ToString();
+                func.NUM_SALA = Convert.ToInt32(dgvHorarios.Rows[e.RowIndex].Cells[1].Value.ToString());
+                func.Cod_sala = Convert.ToInt32(dgvHorarios.Rows[e.RowIndex].Cells[2].Value.ToString());
+                func.tipo_sala = dgvHorarios.Rows[e.RowIndex].Cells[3].Value.ToString();
+                func.nombre_peli = dgvHorarios.Rows[e.RowIndex].Cells[4].Value.ToString();
+                func.Hora_ini = dgvHorarios.Rows[e.RowIndex].Cells[5].Value.ToString();
 
                 SeccionAsientos selec = new SeccionAsientos(func);
                 selec.ShowDialog();

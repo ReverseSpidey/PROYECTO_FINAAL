@@ -95,9 +95,9 @@
             <PropertyRef Name="Id_pelicula" />
           </Key>
           <Property Name="Id_pelicula" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nombre_pelicula" Type="varchar" MaxLength="10" />
+          <Property Name="nombre_pelicula" Type="varchar" MaxLength="50" />
           <Property Name="Duracion" Type="varchar" MaxLength="20" />
-          <Property Name="Sinopsis" Type="varchar" MaxLength="200" />
+          <Property Name="Sinopsis" Type="varchar" MaxLength="500" />
           <Property Name="ID_genero" Type="int" Nullable="false" />
           <Property Name="Cod_idioma" Type="int" Nullable="false" />
           <Property Name="id_clasif" Type="int" />
@@ -686,9 +686,9 @@
             <PropertyRef Name="Id_pelicula" />
           </Key>
           <Property Name="Id_pelicula" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nombre_pelicula" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="nombre_pelicula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Duracion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Sinopsis" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Sinopsis" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="ID_genero" Type="Int32" Nullable="false" />
           <Property Name="Cod_idioma" Type="Int32" Nullable="false" />
           <Property Name="id_clasif" Type="Int32" />

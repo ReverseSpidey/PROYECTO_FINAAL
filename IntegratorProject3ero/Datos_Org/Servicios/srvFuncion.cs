@@ -24,7 +24,8 @@ namespace Datos_Org.Servicios
                            Cod_sala = x.Cod_sala,
                            ID_funcion = x.ID_funcion,
                            Id_pelicula = x.Id_pelicula,
-                           tipo_sala = x.Sala.Tipo_sala.Nombre_sala
+                           tipo_sala = x.Sala.Tipo_sala.Nombre_sala,
+                           NUM_SALA = x.Sala.Num_sala.Value
 
                        }).Where(a => a.Id_pelicula == id).ToList();
                 return obj;

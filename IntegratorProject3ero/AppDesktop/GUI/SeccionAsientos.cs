@@ -68,7 +68,7 @@ namespace AppDesktop.GUI
         private void nupNinio_ValueChanged(object sender, EventArgs e)
         {
             decimal tot = PrecioNinio();
-            acumulador_tot = tot + PrecioAbuelo() + PrecioAdulto(); ;
+            acumulador_tot = tot + PrecioAbuelo() + PrecioAdulto();
             txtTotal.Text = acumulador_tot.ToString();
         }
 
@@ -103,7 +103,7 @@ namespace AppDesktop.GUI
                 MessageBox.Show("Aquí van instrucciones", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Asientos_Elegir asiento = new Asientos_Elegir(fun, total,cant_abuelo,cant_adulto,cant_ninio);
                 asiento.ShowDialog();
-                
+                this.Close();
             }
         }
     }

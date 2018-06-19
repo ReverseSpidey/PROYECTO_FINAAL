@@ -43,6 +43,8 @@
             this.nupAdulto = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.picMinimizar = new System.Windows.Forms.PictureBox();
+            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.pnlTipo_Funcion.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -50,6 +52,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupNinio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAbuelo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAdulto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -84,6 +88,8 @@
             // 
             // pnlTipo_Funcion
             // 
+            this.pnlTipo_Funcion.Controls.Add(this.picMinimizar);
+            this.pnlTipo_Funcion.Controls.Add(this.picCerrar);
             this.pnlTipo_Funcion.Controls.Add(this.lblSALA);
             this.pnlTipo_Funcion.Controls.Add(this.label5);
             this.pnlTipo_Funcion.Dock = System.Windows.Forms.DockStyle.Top;
@@ -260,6 +266,26 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Adulto (Mayor de 60):\r\n";
             // 
+            // picMinimizar
+            // 
+            this.picMinimizar.Image = global::AppDesktop.Properties.Resources.Minimizar_32;
+            this.picMinimizar.Location = new System.Drawing.Point(249, 0);
+            this.picMinimizar.Name = "picMinimizar";
+            this.picMinimizar.Size = new System.Drawing.Size(24, 23);
+            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMinimizar.TabIndex = 66;
+            this.picMinimizar.TabStop = false;
+            // 
+            // picCerrar
+            // 
+            this.picCerrar.Image = global::AppDesktop.Properties.Resources.cerrar_32;
+            this.picCerrar.Location = new System.Drawing.Point(279, 0);
+            this.picCerrar.Name = "picCerrar";
+            this.picCerrar.Size = new System.Drawing.Size(24, 23);
+            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCerrar.TabIndex = 65;
+            this.picCerrar.TabStop = false;
+            // 
             // SeccionAsientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,6 +307,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupNinio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAbuelo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAdulto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -301,5 +329,7 @@
         private System.Windows.Forms.Panel pnlTipo_Funcion;
         private System.Windows.Forms.Label lblSALA;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox picMinimizar;
+        private System.Windows.Forms.PictureBox picCerrar;
     }
 }
