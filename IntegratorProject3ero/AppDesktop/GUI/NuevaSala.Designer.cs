@@ -53,7 +53,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(577, 183);
+            this.tabControl1.Size = new System.Drawing.Size(674, 209);
             this.tabControl1.TabIndex = 10;
             // 
             // tabPage1
@@ -66,14 +66,14 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(569, 153);
+            this.tabPage1.Size = new System.Drawing.Size(666, 179);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "     Editar     ";
             // 
             // txtNumSala
             // 
             this.txtNumSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumSala.Location = new System.Drawing.Point(222, 46);
+            this.txtNumSala.Location = new System.Drawing.Point(260, 52);
             this.txtNumSala.Name = "txtNumSala";
             this.txtNumSala.Size = new System.Drawing.Size(223, 22);
             this.txtNumSala.TabIndex = 17;
@@ -83,7 +83,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(132, 92);
+            this.label2.Location = new System.Drawing.Point(170, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 17);
             this.label2.TabIndex = 16;
@@ -94,7 +94,7 @@
             this.cboSala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSala.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSala.FormattingEnabled = true;
-            this.cboSala.Location = new System.Drawing.Point(222, 83);
+            this.cboSala.Location = new System.Drawing.Point(260, 107);
             this.cboSala.Name = "cboSala";
             this.cboSala.Size = new System.Drawing.Size(223, 26);
             this.cboSala.TabIndex = 15;
@@ -104,7 +104,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(142, 50);
+            this.label1.Location = new System.Drawing.Point(180, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 17);
             this.label1.TabIndex = 14;
@@ -118,9 +118,9 @@
             this.panel2.Controls.Add(this.btnGuardar);
             this.panel2.Controls.Add(this.btnCancelar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 183);
+            this.panel2.Location = new System.Drawing.Point(0, 209);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(577, 75);
+            this.panel2.Size = new System.Drawing.Size(674, 81);
             this.panel2.TabIndex = 59;
             // 
             // btnLimpiar
@@ -130,7 +130,7 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(471, 19);
+            this.btnLimpiar.Location = new System.Drawing.Point(529, 26);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 29);
             this.btnLimpiar.TabIndex = 52;
@@ -144,7 +144,7 @@
             this.bntGuardarYSeguir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntGuardarYSeguir.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.bntGuardarYSeguir.ForeColor = System.Drawing.Color.White;
-            this.bntGuardarYSeguir.Location = new System.Drawing.Point(116, 19);
+            this.bntGuardarYSeguir.Location = new System.Drawing.Point(174, 26);
             this.bntGuardarYSeguir.Name = "bntGuardarYSeguir";
             this.bntGuardarYSeguir.Size = new System.Drawing.Size(173, 29);
             this.bntGuardarYSeguir.TabIndex = 50;
@@ -158,7 +158,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(295, 19);
+            this.btnEliminar.Location = new System.Drawing.Point(353, 26);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(77, 29);
             this.btnEliminar.TabIndex = 51;
@@ -172,7 +172,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(33, 19);
+            this.btnGuardar.Location = new System.Drawing.Point(91, 26);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(77, 29);
             this.btnGuardar.TabIndex = 48;
@@ -187,7 +187,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(378, 19);
+            this.btnCancelar.Location = new System.Drawing.Point(436, 26);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(87, 29);
             this.btnCancelar.TabIndex = 49;
@@ -199,7 +199,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(10)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(577, 258);
+            this.ClientSize = new System.Drawing.Size(674, 290);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

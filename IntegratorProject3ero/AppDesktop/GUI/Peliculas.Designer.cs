@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.picMinimizar = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.picCerrar = new System.Windows.Forms.PictureBox();
+            this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.cboClasif = new System.Windows.Forms.ComboBox();
             this.btnEstablecer = new System.Windows.Forms.Button();
             this.picPelicula = new System.Windows.Forms.PictureBox();
@@ -51,14 +53,12 @@
             this.btnSaveNext = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPelicula)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -82,30 +82,53 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(835, 490);
+            this.panel2.Size = new System.Drawing.Size(659, 467);
             this.panel2.TabIndex = 2;
             // 
-            // picMinimizar
+            // panel3
             // 
-            this.picMinimizar.Image = global::AppDesktop.Properties.Resources.Minimizar_32;
-            this.picMinimizar.Location = new System.Drawing.Point(781, 0);
-            this.picMinimizar.Name = "picMinimizar";
-            this.picMinimizar.Size = new System.Drawing.Size(24, 25);
-            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMinimizar.TabIndex = 55;
-            this.picMinimizar.TabStop = false;
-            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.picCerrar);
+            this.panel3.Controls.Add(this.picMinimizar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(659, 28);
+            this.panel3.TabIndex = 56;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(50, 1);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(294, 24);
+            this.label7.TabIndex = 61;
+            this.label7.Text = "Gestionar Datos de Película";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picCerrar
             // 
             this.picCerrar.Image = global::AppDesktop.Properties.Resources.cerrar_32;
-            this.picCerrar.Location = new System.Drawing.Point(811, 0);
+            this.picCerrar.Location = new System.Drawing.Point(622, 3);
             this.picCerrar.Name = "picCerrar";
             this.picCerrar.Size = new System.Drawing.Size(24, 25);
             this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCerrar.TabIndex = 54;
             this.picCerrar.TabStop = false;
             this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
+            // 
+            // picMinimizar
+            // 
+            this.picMinimizar.Image = global::AppDesktop.Properties.Resources.Minimizar_32;
+            this.picMinimizar.Location = new System.Drawing.Point(592, 3);
+            this.picMinimizar.Name = "picMinimizar";
+            this.picMinimizar.Size = new System.Drawing.Size(24, 25);
+            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMinimizar.TabIndex = 55;
+            this.picMinimizar.TabStop = false;
+            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
             // 
             // cboClasif
             // 
@@ -114,7 +137,7 @@
             this.cboClasif.FormattingEnabled = true;
             this.cboClasif.Location = new System.Drawing.Point(183, 227);
             this.cboClasif.Name = "cboClasif";
-            this.cboClasif.Size = new System.Drawing.Size(236, 29);
+            this.cboClasif.Size = new System.Drawing.Size(205, 29);
             this.cboClasif.TabIndex = 53;
             // 
             // btnEstablecer
@@ -124,9 +147,9 @@
             this.btnEstablecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstablecer.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstablecer.ForeColor = System.Drawing.Color.White;
-            this.btnEstablecer.Location = new System.Drawing.Point(543, 214);
+            this.btnEstablecer.Location = new System.Drawing.Point(474, 211);
             this.btnEstablecer.Name = "btnEstablecer";
-            this.btnEstablecer.Size = new System.Drawing.Size(124, 40);
+            this.btnEstablecer.Size = new System.Drawing.Size(93, 40);
             this.btnEstablecer.TabIndex = 52;
             this.btnEstablecer.Text = "Seleccionar imágen para Pelicula\r\n";
             this.btnEstablecer.UseVisualStyleBackColor = false;
@@ -134,9 +157,9 @@
             // 
             // picPelicula
             // 
-            this.picPelicula.Location = new System.Drawing.Point(536, 42);
+            this.picPelicula.Location = new System.Drawing.Point(477, 80);
             this.picPelicula.Name = "picPelicula";
-            this.picPelicula.Size = new System.Drawing.Size(140, 166);
+            this.picPelicula.Size = new System.Drawing.Size(109, 125);
             this.picPelicula.TabIndex = 25;
             this.picPelicula.TabStop = false;
             // 
@@ -180,7 +203,7 @@
             this.cboIdioma.FormattingEnabled = true;
             this.cboIdioma.Location = new System.Drawing.Point(182, 192);
             this.cboIdioma.Name = "cboIdioma";
-            this.cboIdioma.Size = new System.Drawing.Size(236, 29);
+            this.cboIdioma.Size = new System.Drawing.Size(205, 29);
             this.cboIdioma.TabIndex = 20;
             // 
             // cboGenero
@@ -190,7 +213,7 @@
             this.cboGenero.FormattingEnabled = true;
             this.cboGenero.Location = new System.Drawing.Point(182, 157);
             this.cboGenero.Name = "cboGenero";
-            this.cboGenero.Size = new System.Drawing.Size(236, 29);
+            this.cboGenero.Size = new System.Drawing.Size(205, 29);
             this.cboGenero.TabIndex = 19;
             // 
             // txtSinopsis
@@ -199,7 +222,7 @@
             this.txtSinopsis.Location = new System.Drawing.Point(182, 262);
             this.txtSinopsis.Multiline = true;
             this.txtSinopsis.Name = "txtSinopsis";
-            this.txtSinopsis.Size = new System.Drawing.Size(485, 132);
+            this.txtSinopsis.Size = new System.Drawing.Size(434, 132);
             this.txtSinopsis.TabIndex = 18;
             // 
             // txtNombre
@@ -207,7 +230,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtNombre.Location = new System.Drawing.Point(182, 91);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(236, 27);
+            this.txtNombre.Size = new System.Drawing.Size(205, 27);
             this.txtNombre.TabIndex = 13;
             // 
             // label3
@@ -237,7 +260,7 @@
             this.txtDuracion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtDuracion.Location = new System.Drawing.Point(182, 124);
             this.txtDuracion.Name = "txtDuracion";
-            this.txtDuracion.Size = new System.Drawing.Size(236, 27);
+            this.txtDuracion.Size = new System.Drawing.Size(205, 27);
             this.txtDuracion.TabIndex = 16;
             // 
             // label2
@@ -259,9 +282,9 @@
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 418);
+            this.panel1.Location = new System.Drawing.Point(0, 395);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(835, 72);
+            this.panel1.Size = new System.Drawing.Size(659, 72);
             this.panel1.TabIndex = 3;
             // 
             // btnLimpiar
@@ -271,7 +294,7 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(601, 31);
+            this.btnLimpiar.Location = new System.Drawing.Point(519, 21);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 29);
             this.btnLimpiar.TabIndex = 52;
@@ -285,7 +308,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(425, 31);
+            this.btnEliminar.Location = new System.Drawing.Point(343, 21);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(77, 29);
             this.btnEliminar.TabIndex = 51;
@@ -299,7 +322,7 @@
             this.btnSaveNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveNext.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnSaveNext.ForeColor = System.Drawing.Color.White;
-            this.btnSaveNext.Location = new System.Drawing.Point(246, 31);
+            this.btnSaveNext.Location = new System.Drawing.Point(164, 21);
             this.btnSaveNext.Name = "btnSaveNext";
             this.btnSaveNext.Size = new System.Drawing.Size(173, 29);
             this.btnSaveNext.TabIndex = 50;
@@ -314,7 +337,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(508, 31);
+            this.btnCancelar.Location = new System.Drawing.Point(426, 21);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(87, 29);
             this.btnCancelar.TabIndex = 49;
@@ -328,7 +351,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(163, 31);
+            this.btnGuardar.Location = new System.Drawing.Point(81, 21);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(77, 29);
             this.btnGuardar.TabIndex = 48;
@@ -336,35 +359,12 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.picCerrar);
-            this.panel3.Controls.Add(this.picMinimizar);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(835, 28);
-            this.panel3.TabIndex = 56;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(296, 2);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(294, 24);
-            this.label7.TabIndex = 61;
-            this.label7.Text = "Gestionar Datos de Película";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Peliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(10)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(835, 490);
+            this.ClientSize = new System.Drawing.Size(659, 467);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -373,12 +373,12 @@
             this.Text = "Peliculas";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPelicula)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPelicula)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

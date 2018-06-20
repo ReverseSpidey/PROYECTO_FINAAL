@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppDesktop.GUI
+namespace Imagenes
 {
-    public partial class NuevaCompra : Form
+    public partial class UserControl1: PictureBox
     {
-        public NuevaCompra()
+        public UserControl1()
         {
             InitializeComponent();
         }

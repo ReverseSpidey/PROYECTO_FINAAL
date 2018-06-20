@@ -91,12 +91,6 @@
     <Compile Include="GUI\MenuPeliculas.Designer.cs">
       <DependentUpon>MenuPeliculas.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\NuevaCompra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\NuevaCompra.Designer.cs">
-      <DependentUpon>NuevaCompra.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\LOGIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,9 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MenuPeliculas.resx">
       <DependentUpon>MenuPeliculas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\NuevaCompra.resx">
-      <DependentUpon>NuevaCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LOGIN.resx">
       <DependentUpon>LOGIN.cs</DependentUpon>
@@ -281,6 +272,15 @@
     <Content Include="bin\Debug\MySql.Data.dll" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <None Include="Resources\movie-symbol-of-video-camera1.png" />
+    <None Include="Resources\booking.png" />
+    <None Include="Resources\tickets.png" />
+    <None Include="Resources\icons8-salir-redondeado-801.png" />
+    <None Include="Resources\icons8-salir-redondeado-80.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\icons8-accesorios-de-interior-80.png" />
+    <None Include="Resources\conference-hall.png" />
+    <None Include="Resources\movie-symbol-of-video-camera.png" />
     <None Include="Resources\SeatScreen.png" />
     <None Include="Resources\ImagenCine.png" />
     <None Include="Resources\Silla.ico" />

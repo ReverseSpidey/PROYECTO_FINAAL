@@ -73,7 +73,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(34, 40);
+            this.label5.Location = new System.Drawing.Point(72, 40);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 21);
             this.label5.TabIndex = 19;
@@ -85,7 +85,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(256, 40);
+            this.label6.Location = new System.Drawing.Point(294, 40);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 21);
             this.label6.TabIndex = 21;
@@ -127,9 +127,9 @@
             this.gpbDatosUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbDatosUsuario.ForeColor = System.Drawing.Color.White;
             this.gpbDatosUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gpbDatosUsuario.Location = new System.Drawing.Point(12, 27);
+            this.gpbDatosUsuario.Location = new System.Drawing.Point(43, 59);
             this.gpbDatosUsuario.Name = "gpbDatosUsuario";
-            this.gpbDatosUsuario.Size = new System.Drawing.Size(514, 121);
+            this.gpbDatosUsuario.Size = new System.Drawing.Size(592, 121);
             this.gpbDatosUsuario.TabIndex = 38;
             this.gpbDatosUsuario.TabStop = false;
             this.gpbDatosUsuario.Text = "Datos del empleado";
@@ -193,9 +193,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.groupBox1.Location = new System.Drawing.Point(13, 172);
+            this.groupBox1.Location = new System.Drawing.Point(43, 203);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(514, 130);
+            this.groupBox1.Size = new System.Drawing.Size(592, 130);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acceso a cuenta";
@@ -203,7 +203,7 @@
             // cboTipoUsuario
             // 
             this.cboTipoUsuario.FormattingEnabled = true;
-            this.cboTipoUsuario.Location = new System.Drawing.Point(249, 82);
+            this.cboTipoUsuario.Location = new System.Drawing.Point(287, 82);
             this.cboTipoUsuario.Name = "cboTipoUsuario";
             this.cboTipoUsuario.Size = new System.Drawing.Size(121, 27);
             this.cboTipoUsuario.TabIndex = 46;
@@ -213,7 +213,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(126, 85);
+            this.label3.Location = new System.Drawing.Point(164, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 20);
             this.label3.TabIndex = 45;
@@ -221,14 +221,14 @@
             // 
             // txtContrasenia
             // 
-            this.txtContrasenia.Location = new System.Drawing.Point(365, 38);
+            this.txtContrasenia.Location = new System.Drawing.Point(403, 38);
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.Size = new System.Drawing.Size(106, 27);
             this.txtContrasenia.TabIndex = 28;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(100, 38);
+            this.txtEmail.Location = new System.Drawing.Point(138, 38);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(117, 27);
             this.txtEmail.TabIndex = 22;
@@ -240,7 +240,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(13, 322);
+            this.btnGuardar.Location = new System.Drawing.Point(77, 383);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(77, 29);
             this.btnGuardar.TabIndex = 41;
@@ -255,7 +255,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(358, 322);
+            this.btnCancelar.Location = new System.Drawing.Point(422, 383);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(87, 29);
             this.btnCancelar.TabIndex = 42;
@@ -270,7 +270,7 @@
             this.bntGuardarYSeguir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntGuardarYSeguir.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.bntGuardarYSeguir.ForeColor = System.Drawing.Color.White;
-            this.bntGuardarYSeguir.Location = new System.Drawing.Point(96, 322);
+            this.bntGuardarYSeguir.Location = new System.Drawing.Point(160, 383);
             this.bntGuardarYSeguir.Name = "bntGuardarYSeguir";
             this.bntGuardarYSeguir.Size = new System.Drawing.Size(173, 29);
             this.bntGuardarYSeguir.TabIndex = 45;
@@ -284,7 +284,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(275, 322);
+            this.btnEliminar.Location = new System.Drawing.Point(339, 383);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(77, 29);
             this.btnEliminar.TabIndex = 46;
@@ -298,7 +298,7 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(451, 322);
+            this.btnLimpiar.Location = new System.Drawing.Point(515, 383);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 29);
             this.btnLimpiar.TabIndex = 47;
@@ -308,7 +308,7 @@
             // picMinimizar
             // 
             this.picMinimizar.Image = global::AppDesktop.Properties.Resources.Minimizar_32;
-            this.picMinimizar.Location = new System.Drawing.Point(473, 12);
+            this.picMinimizar.Location = new System.Drawing.Point(574, 12);
             this.picMinimizar.Name = "picMinimizar";
             this.picMinimizar.Size = new System.Drawing.Size(24, 23);
             this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -319,7 +319,7 @@
             // picCerrar
             // 
             this.picCerrar.Image = global::AppDesktop.Properties.Resources.cerrar_32;
-            this.picCerrar.Location = new System.Drawing.Point(503, 12);
+            this.picCerrar.Location = new System.Drawing.Point(623, 12);
             this.picCerrar.Name = "picCerrar";
             this.picCerrar.Size = new System.Drawing.Size(24, 23);
             this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -333,7 +333,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(10)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(539, 363);
+            this.ClientSize = new System.Drawing.Size(659, 467);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.bntGuardarYSeguir);

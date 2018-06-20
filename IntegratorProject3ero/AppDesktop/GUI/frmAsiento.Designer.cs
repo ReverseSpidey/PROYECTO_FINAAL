@@ -31,8 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnNuevo = new System.Windows.Forms.Button();
+            this.picMinimizar = new System.Windows.Forms.PictureBox();
+            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvAsiento = new System.Windows.Forms.DataGridView();
             this.id_asiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fila = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,13 +47,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFila = new System.Windows.Forms.TextBox();
-            this.picMinimizar = new System.Windows.Forms.PictureBox();
-            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAsiento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupCodigo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsiento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupCodigo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,24 +62,28 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(539, 40);
+            this.panel1.Size = new System.Drawing.Size(659, 40);
             this.panel1.TabIndex = 0;
             // 
-            // btnNuevo
+            // picMinimizar
             // 
-            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(72)))), ((int)(((byte)(21)))));
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(411, 52);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(107, 31);
-            this.btnNuevo.TabIndex = 61;
-            this.btnNuevo.Text = "Nuevo Asiento";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnValidar_Click);
+            this.picMinimizar.Image = global::AppDesktop.Properties.Resources.Minimizar_32;
+            this.picMinimizar.Location = new System.Drawing.Point(602, 3);
+            this.picMinimizar.Name = "picMinimizar";
+            this.picMinimizar.Size = new System.Drawing.Size(24, 23);
+            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMinimizar.TabIndex = 63;
+            this.picMinimizar.TabStop = false;
+            // 
+            // picCerrar
+            // 
+            this.picCerrar.Image = global::AppDesktop.Properties.Resources.cerrar_32;
+            this.picCerrar.Location = new System.Drawing.Point(632, 3);
+            this.picCerrar.Name = "picCerrar";
+            this.picCerrar.Size = new System.Drawing.Size(24, 23);
+            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCerrar.TabIndex = 62;
+            this.picCerrar.TabStop = false;
             // 
             // label3
             // 
@@ -92,6 +96,22 @@
             this.label3.TabIndex = 60;
             this.label3.Text = "ASIENTOS";
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(72)))), ((int)(((byte)(21)))));
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Location = new System.Drawing.Point(519, 58);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(107, 29);
+            this.btnNuevo.TabIndex = 61;
+            this.btnNuevo.Text = "Nuevo Asiento";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnValidar_Click);
+            // 
             // dgvAsiento
             // 
             this.dgvAsiento.AllowUserToAddRows = false;
@@ -99,7 +119,7 @@
             this.dgvAsiento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAsiento.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(72)))), ((int)(((byte)(21)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -117,10 +137,10 @@
             this.dgvAsiento.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvAsiento.EnableHeadersVisualStyles = false;
             this.dgvAsiento.GridColor = System.Drawing.Color.White;
-            this.dgvAsiento.Location = new System.Drawing.Point(0, 104);
+            this.dgvAsiento.Location = new System.Drawing.Point(0, 120);
             this.dgvAsiento.Name = "dgvAsiento";
             this.dgvAsiento.ReadOnly = true;
-            this.dgvAsiento.Size = new System.Drawing.Size(539, 259);
+            this.dgvAsiento.Size = new System.Drawing.Size(659, 347);
             this.dgvAsiento.TabIndex = 1;
             this.dgvAsiento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Click_Registro);
             // 
@@ -179,7 +199,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(321, 52);
+            this.btnBuscar.Location = new System.Drawing.Point(351, 58);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(84, 31);
             this.btnBuscar.TabIndex = 59;
@@ -191,7 +211,7 @@
             this.nupCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.nupCodigo.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nupCodigo.Location = new System.Drawing.Point(122, 54);
+            this.nupCodigo.Location = new System.Drawing.Point(142, 64);
             this.nupCodigo.Name = "nupCodigo";
             this.nupCodigo.Size = new System.Drawing.Size(50, 25);
             this.nupCodigo.TabIndex = 58;
@@ -203,7 +223,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(21, 56);
+            this.label1.Location = new System.Drawing.Point(41, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 21);
             this.label1.TabIndex = 57;
@@ -216,7 +236,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(187, 56);
+            this.label2.Location = new System.Drawing.Point(207, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 21);
             this.label2.TabIndex = 60;
@@ -225,37 +245,17 @@
             // txtFila
             // 
             this.txtFila.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFila.Location = new System.Drawing.Point(241, 56);
+            this.txtFila.Location = new System.Drawing.Point(261, 65);
             this.txtFila.Name = "txtFila";
             this.txtFila.Size = new System.Drawing.Size(49, 22);
             this.txtFila.TabIndex = 61;
-            // 
-            // picMinimizar
-            // 
-            this.picMinimizar.Image = global::AppDesktop.Properties.Resources.Minimizar_32;
-            this.picMinimizar.Location = new System.Drawing.Point(476, 9);
-            this.picMinimizar.Name = "picMinimizar";
-            this.picMinimizar.Size = new System.Drawing.Size(24, 23);
-            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMinimizar.TabIndex = 63;
-            this.picMinimizar.TabStop = false;
-            // 
-            // picCerrar
-            // 
-            this.picCerrar.Image = global::AppDesktop.Properties.Resources.cerrar_32;
-            this.picCerrar.Location = new System.Drawing.Point(506, 9);
-            this.picCerrar.Name = "picCerrar";
-            this.picCerrar.Size = new System.Drawing.Size(24, 23);
-            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCerrar.TabIndex = 62;
-            this.picCerrar.TabStop = false;
             // 
             // frmAsiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(10)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(539, 363);
+            this.ClientSize = new System.Drawing.Size(659, 467);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.txtFila);
             this.Controls.Add(this.label2);
@@ -270,10 +270,10 @@
             this.Load += new System.EventHandler(this.frmAsiento_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAsiento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupCodigo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsiento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupCodigo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
