@@ -14,21 +14,15 @@ namespace Datos_Org.Modelo
     
     public partial class Detalle_compra
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Detalle_compra()
-        {
-            this.Compra = new HashSet<Compra>();
-        }
-    
         public int id_detalle { get; set; }
         public Nullable<int> id_asiento { get; set; }
         public Nullable<int> ID_TIPOBOLETO { get; set; }
         public Nullable<int> Id_funcion { get; set; }
+        public Nullable<int> id_compra { get; set; }
     
         public virtual Asiento Asiento { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Compra> Compra { get; set; }
-        public virtual Tipo_boleto Tipo_boleto { get; set; }
+        public virtual Compra Compra { get; set; }
         public virtual Funcion Funcion { get; set; }
+        public virtual Tipo_boleto Tipo_boleto { get; set; }
     }
 }

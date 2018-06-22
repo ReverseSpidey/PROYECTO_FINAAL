@@ -27,37 +27,38 @@ namespace AppDesktop.GUI
         int total_asiento;
         int contador = 0;
         int ID;
-        int ID_DETALLE;
+        public int[] id_boleto;
         Detalle_compra det;
-        Asiento objasiento;
+        public decimal Total_FIN;
         int[] tipos = new int[3];//para allmacenar los totales de cada tipo de boleto
-
-        public Asientos_Elegir(vFuncion obj, int num, int abuelo, int adul, int ninio)
+        public decimal prec_sala;
+        public Asientos_Elegir(vFuncion obj, int num, int abuelo, int adul, int ninio, decimal total_pagar, decimal precio_sala)
         {
             InitializeComponent();
             vista = obj;
-            RecupFilaColumn();           
+            RecupFilaColumn();
             total_asiento = num;
             tipos[0] = abuelo;
             tipos[1] = adul;
             tipos[2] = ninio;
-            
-            
+            id_boleto = new int[total_asiento];//arreglo para almacenar los id de boleto
+            prec_sala = precio_sala;
             contador = total_asiento;
-            but = new Button[fila,columna];
+            but = new Button[fila, columna];
             titulo = new Label[fila];
             CrearAsientos();
             Asignar_Datos();
             Recorrer();
+            Total_FIN = total_pagar;
 
             //MessageBox.Show("EL CODIGO DE LA SALA ES: " + vista.Cod_sala +" y el número de la sala es"+ vista.NUM_SALA);
         }
 
-        private void RecupFilaColumn()
+        private void RecupFilaColumn()//Recupero filas y columnas de la sala
         {
             foreach (var item in objsal.getListSALAS().Where(a => a.Num_sala == vista.NUM_SALA))
             {
-                fila =Convert.ToInt32(item.CANT_FILAS);
+                fila = Convert.ToInt32(item.CANT_FILAS);
                 columna = Convert.ToInt32(item.CANT_COLUMNAS);
             }
         }
@@ -65,10 +66,9 @@ namespace AppDesktop.GUI
         int val;
         private void CrearAsientos()
         {
-            
             for (int f = 0; f <= fila - 1; f++)
             {
-                 
+
                 for (c = 0; c <= columna - 1; c++)
                 {
                     but[f, c] = new Button();
@@ -80,7 +80,7 @@ namespace AppDesktop.GUI
                     but[f, c].FlatStyle = FlatStyle.Flat;
                     but[f, c].Click += new EventHandler(but_Click);
                     val = f + 1;
-                    but[f, c].Text =val.ToString();
+                    but[f, c].Text = val.ToString();
                     but[f, c].Name = letra.ToString();
 
                     letra++;
@@ -88,23 +88,21 @@ namespace AppDesktop.GUI
                     {
                         letra = 'A';
                     }
-                    
+
                 }
 
             }
         }
 
-        private Detalle_compra RecupDatos()
+        //este método me servía para asignarle un id de boleto a cada asiento
+        public Detalle_compra RecupDatos(int id_comp, int cont)
         {
             det = new Detalle_compra();
-            det.id_asiento = ID;
+            det.id_asiento = id_boleto[cont];
             det.Id_funcion = vista.ID_funcion;
+            det.id_compra = id_comp;
 
-            foreach (var x in deeet.getDetalles_Compra(this.ID))
-            {
-                det.id_detalle = x.id_detalle;
-            }
-            MessageBox.Show("RECUP ID ES: "+det.id_asiento);
+            MessageBox.Show("RECUP ID del asiento ES: " + det.id_asiento);
             if (tipos[0] > 0)
             {
                 det.ID_TIPOBOLETO = 8;
@@ -125,7 +123,7 @@ namespace AppDesktop.GUI
         }
 
 
-        
+
 
         private void Asignar_Datos()
         {
@@ -144,19 +142,27 @@ namespace AppDesktop.GUI
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-  
-            Reserva OBJ = new Reserva(vista, total_asiento);
+            for (int i = 0; i <= contador - 1; i++)
+            {
+                MessageBox.Show("El contador en la posición " + i + " es: " + id_boleto[i]);
+            }
+            Reserva OBJ = new Reserva(vista, total_asiento, this);
             OBJ.Show();
         }
 
-        private void Asientos_Elegir_Load(object sender, EventArgs e)
+        private void picCerrar_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void picMinimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
 
         private void Recorrer()
         {
-            foreach (Control x in Cuerpo.Controls )
+            foreach (Control x in Cuerpo.Controls)
             {
                 if (x is Button)
                 {
@@ -171,7 +177,8 @@ namespace AppDesktop.GUI
                         {
                             ID = i.id_siento;//necesito el id para hacer el insert en detalle_compra
                         }
-                        deeet.Ingresar_Detalle(RecupDatos());
+                        //deeet.Ingresar_Detalle(RecupDatos());
+                        id_boleto[cont] = ID;
                         cont++;
                     }
                     else
@@ -179,7 +186,7 @@ namespace AppDesktop.GUI
                         x.BackColor = Color.Green;
 
                     }
-                    
+
                 }
             }
         }
@@ -198,10 +205,9 @@ namespace AppDesktop.GUI
 
             if (butt.BackColor == Color.Red)
             {
-
-                    butt.BackColor = Color.Green;
-                    contador--;
-                    int falta = total_asiento - contador;
+                butt.BackColor = Color.Green;
+                contador--;
+                id_boleto[contador] = ID;
             }
             else if (butt.BackColor == Color.Green)
             {
@@ -212,15 +218,16 @@ namespace AppDesktop.GUI
                 else
                 {
                     butt.BackColor = Color.Red;
-                    deeet.Actualizar(RecupDatos());//metodo para hacer act
-                    MessageBox.Show("id asiento"+ID+"El id detalle es: "+ ID_DETALLE);
+                    //deeet.Actualizar(RecupDatos());//metodo para hacer act
+                    id_boleto[contador] = ID;
+
                     contador++;
                     int falta = total_asiento - contador;
                 }
 
             }
-         }
-            
+        }
+
     }
 }
 

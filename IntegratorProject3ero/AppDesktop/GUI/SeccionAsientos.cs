@@ -36,7 +36,7 @@ namespace AppDesktop.GUI
                 tipe.Precio = x.Precio;//precio del tipo de sala
             }
             precio_sala = Convert.ToDecimal(tipe.Precio);
-            
+
         }
         private decimal PrecioNinio()
         {
@@ -98,10 +98,10 @@ namespace AppDesktop.GUI
             {
                 MessageBox.Show("La cantidad de boletos máximos son 8", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if(total > 0 && total <= 8)
+            else if (total > 0 && total <= 8)
             {
                 MessageBox.Show("Aquí van instrucciones", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Asientos_Elegir asiento = new Asientos_Elegir(fun, total,cant_abuelo,cant_adulto,cant_ninio);
+                Asientos_Elegir asiento = new Asientos_Elegir(fun, total, cant_abuelo, cant_adulto, cant_ninio, acumulador_tot, precio_sala);
                 asiento.ShowDialog();
                 this.Close();
             }

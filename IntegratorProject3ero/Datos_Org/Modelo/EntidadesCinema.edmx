@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="CinemaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="CINEMA_PROJECTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Asiento">
           <Key>
             <PropertyRef Name="id_siento" />
@@ -38,8 +38,6 @@
           <Property Name="total_fin" Type="decimal" Precision="10" Scale="0" />
           <Property Name="id_tipo" Type="int" Nullable="false" />
           <Property Name="id_user" Type="int" Nullable="false" />
-          <Property Name="ID_funcion" Type="int" />
-          <Property Name="ID_DETALLE" Type="int" />
         </EntityType>
         <EntityType Name="Cuenta">
           <Key>
@@ -58,6 +56,7 @@
           <Property Name="id_asiento" Type="int" />
           <Property Name="ID_TIPOBOLETO" Type="int" />
           <Property Name="Id_funcion" Type="int" />
+          <Property Name="id_compra" Type="int" />
         </EntityType>
         <EntityType Name="Estado">
           <Key>
@@ -207,30 +206,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Compra__ID_DETAL__4D5F7D71">
-          <End Role="Detalle_compra" Type="Self.Detalle_compra" Multiplicity="0..1" />
-          <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Detalle_compra">
-              <PropertyRef Name="id_detalle" />
-            </Principal>
-            <Dependent Role="Compra">
-              <PropertyRef Name="ID_DETALLE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Compra__ID_funci__3D2915A8">
-          <End Role="Funcion" Type="Self.Funcion" Multiplicity="0..1" />
-          <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Funcion">
-              <PropertyRef Name="ID_funcion" />
-            </Principal>
-            <Dependent Role="Compra">
-              <PropertyRef Name="ID_funcion" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Detalle_c__id_as__3C34F16F">
           <End Role="Asiento" Type="Self.Asiento" Multiplicity="0..1" />
           <End Role="Detalle_compra" Type="Self.Detalle_compra" Multiplicity="*" />
@@ -240,6 +215,18 @@
             </Principal>
             <Dependent Role="Detalle_compra">
               <PropertyRef Name="id_asiento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Detalle_c__id_co__19AACF41">
+          <End Role="Compra" Type="Self.Compra" Multiplicity="0..1" />
+          <End Role="Detalle_compra" Type="Self.Detalle_compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Compra">
+              <PropertyRef Name="id_compra" />
+            </Principal>
+            <Dependent Role="Detalle_compra">
+              <PropertyRef Name="id_compra" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -459,7 +446,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="CinemaModelStoreContainer">
+        <EntityContainer Name="CINEMA_PROJECTModelStoreContainer">
           <EntitySet Name="Asiento" EntityType="Self.Asiento" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ciudad" EntityType="Self.Ciudad" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Clasificacion" EntityType="Self.Clasificacion" Schema="dbo" store:Type="Tables" />
@@ -485,16 +472,12 @@
             <End Role="Sala" EntitySet="Sala" />
             <End Role="Asiento" EntitySet="Asiento" />
           </AssociationSet>
-          <AssociationSet Name="FK__Compra__ID_DETAL__4D5F7D71" Association="Self.FK__Compra__ID_DETAL__4D5F7D71">
-            <End Role="Detalle_compra" EntitySet="Detalle_compra" />
-            <End Role="Compra" EntitySet="Compra" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Compra__ID_funci__3D2915A8" Association="Self.FK__Compra__ID_funci__3D2915A8">
-            <End Role="Funcion" EntitySet="Funcion" />
-            <End Role="Compra" EntitySet="Compra" />
-          </AssociationSet>
           <AssociationSet Name="FK__Detalle_c__id_as__3C34F16F" Association="Self.FK__Detalle_c__id_as__3C34F16F">
             <End Role="Asiento" EntitySet="Asiento" />
+            <End Role="Detalle_compra" EntitySet="Detalle_compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Detalle_c__id_co__19AACF41" Association="Self.FK__Detalle_c__id_co__19AACF41">
+            <End Role="Compra" EntitySet="Compra" />
             <End Role="Detalle_compra" EntitySet="Detalle_compra" />
           </AssociationSet>
           <AssociationSet Name="FK__Detalle_c__Id_fu__0697FACD" Association="Self.FK__Detalle_c__Id_fu__0697FACD">
@@ -570,10 +553,11 @@
             <End Role="Cuenta" EntitySet="Cuenta" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="CinemaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="CINEMA_PROJECTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Asiento">
           <Key>
             <PropertyRef Name="id_siento" />
@@ -612,10 +596,7 @@
           <Property Name="total_fin" Type="Decimal" Precision="10" Scale="0" />
           <Property Name="id_tipo" Type="Int32" Nullable="false" />
           <Property Name="id_user" Type="Int32" Nullable="false" />
-          <Property Name="ID_funcion" Type="Int32" />
-          <Property Name="ID_DETALLE" Type="Int32" />
-          <NavigationProperty Name="Detalle_compra" Relationship="Self.FK__Compra__ID_DETAL__4D5F7D71" FromRole="Compra" ToRole="Detalle_compra" />
-          <NavigationProperty Name="Funcion" Relationship="Self.FK__Compra__ID_funci__3D2915A8" FromRole="Compra" ToRole="Funcion" />
+          <NavigationProperty Name="Detalle_compra" Relationship="Self.FK__Detalle_c__id_co__19AACF41" FromRole="Compra" ToRole="Detalle_compra" />
           <NavigationProperty Name="Tipo_pago" Relationship="Self.RefTipo_pago16" FromRole="Compra" ToRole="Tipo_pago" />
           <NavigationProperty Name="Usuario" Relationship="Self.RefUsuario17" FromRole="Compra" ToRole="Usuario" />
         </EntityType>
@@ -637,11 +618,12 @@
           <Property Name="id_detalle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_asiento" Type="Int32" />
           <Property Name="ID_TIPOBOLETO" Type="Int32" />
-          <NavigationProperty Name="Asiento" Relationship="Self.FK__Detalle_c__id_as__3C34F16F" FromRole="Detalle_compra" ToRole="Asiento" />
-          <NavigationProperty Name="Compra" Relationship="Self.FK__Compra__ID_DETAL__4D5F7D71" FromRole="Detalle_compra" ToRole="Compra" />
-          <NavigationProperty Name="Tipo_boleto" Relationship="Self.FK__Detalle_c__ID_TI__73852659" FromRole="Detalle_compra" ToRole="Tipo_boleto" />
           <Property Name="Id_funcion" Type="Int32" />
-          <NavigationProperty Name="Funcion" Relationship="CinemaModel.FK__Detalle_c__Id_fu__0697FACD" FromRole="Detalle_compra" ToRole="Funcion" />
+          <Property Name="id_compra" Type="Int32" />
+          <NavigationProperty Name="Asiento" Relationship="Self.FK__Detalle_c__id_as__3C34F16F" FromRole="Detalle_compra" ToRole="Asiento" />
+          <NavigationProperty Name="Compra" Relationship="Self.FK__Detalle_c__id_co__19AACF41" FromRole="Detalle_compra" ToRole="Compra" />
+          <NavigationProperty Name="Funcion" Relationship="Self.FK__Detalle_c__Id_fu__0697FACD" FromRole="Detalle_compra" ToRole="Funcion" />
+          <NavigationProperty Name="Tipo_boleto" Relationship="Self.FK__Detalle_c__ID_TI__73852659" FromRole="Detalle_compra" ToRole="Tipo_boleto" />
         </EntityType>
         <EntityType Name="Estado">
           <Key>
@@ -659,10 +641,9 @@
           <Property Name="Id_pelicula" Type="Int32" Nullable="false" />
           <Property Name="Hora_ini" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="ID_funcion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Compra" Relationship="Self.FK__Compra__ID_funci__3D2915A8" FromRole="Funcion" ToRole="Compra" />
+          <NavigationProperty Name="Detalle_compra" Relationship="Self.FK__Detalle_c__Id_fu__0697FACD" FromRole="Funcion" ToRole="Detalle_compra" />
           <NavigationProperty Name="Sala" Relationship="Self.FK__Funcion__Cod_sal__4E53A1AA" FromRole="Funcion" ToRole="Sala" />
           <NavigationProperty Name="Pelicula" Relationship="Self.RefPelicula13" FromRole="Funcion" ToRole="Pelicula" />
-          <NavigationProperty Name="Detalle_compra" Relationship="CinemaModel.FK__Detalle_c__Id_fu__0697FACD" FromRole="Funcion" ToRole="Detalle_compra" />
         </EntityType>
         <EntityType Name="Genero">
           <Key>
@@ -868,27 +849,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Compra__ID_DETAL__4D5F7D71">
-          <End Role="Detalle_compra" Type="Self.Detalle_compra" Multiplicity="0..1" />
-          <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
+        <Association Name="FK__Detalle_c__id_co__19AACF41">
+          <End Role="Compra" Type="Self.Compra" Multiplicity="0..1" />
+          <End Role="Detalle_compra" Type="Self.Detalle_compra" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Detalle_compra">
-              <PropertyRef Name="id_detalle" />
+            <Principal Role="Compra">
+              <PropertyRef Name="id_compra" />
             </Principal>
-            <Dependent Role="Compra">
-              <PropertyRef Name="ID_DETALLE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Compra__ID_funci__3D2915A8">
-          <End Role="Funcion" Type="Self.Funcion" Multiplicity="0..1" />
-          <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Funcion">
-              <PropertyRef Name="ID_funcion" />
-            </Principal>
-            <Dependent Role="Compra">
-              <PropertyRef Name="ID_funcion" />
+            <Dependent Role="Detalle_compra">
+              <PropertyRef Name="id_compra" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -937,6 +906,18 @@
             </Principal>
             <Dependent Role="Cuenta">
               <PropertyRef Name="id_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Detalle_c__Id_fu__0697FACD">
+          <End Role="Funcion" Type="Self.Funcion" Multiplicity="0..1" />
+          <End Role="Detalle_compra" Type="Self.Detalle_compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Funcion">
+              <PropertyRef Name="ID_funcion" />
+            </Principal>
+            <Dependent Role="Detalle_compra">
+              <PropertyRef Name="Id_funcion" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1102,13 +1083,9 @@
             <End Role="Clasificacion" EntitySet="Clasificacion" />
             <End Role="Pelicula" EntitySet="Pelicula" />
           </AssociationSet>
-          <AssociationSet Name="FK__Compra__ID_DETAL__4D5F7D71" Association="Self.FK__Compra__ID_DETAL__4D5F7D71">
+          <AssociationSet Name="FK__Detalle_c__id_co__19AACF41" Association="Self.FK__Detalle_c__id_co__19AACF41">
+            <End Role="Compra" EntitySet="Compra" />
             <End Role="Detalle_compra" EntitySet="Detalle_compra" />
-            <End Role="Compra" EntitySet="Compra" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Compra__ID_funci__3D2915A8" Association="Self.FK__Compra__ID_funci__3D2915A8">
-            <End Role="Funcion" EntitySet="Funcion" />
-            <End Role="Compra" EntitySet="Compra" />
           </AssociationSet>
           <AssociationSet Name="RefTipo_pago16" Association="Self.RefTipo_pago16">
             <End Role="Tipo_pago" EntitySet="Tipo_pago" />
@@ -1125,6 +1102,10 @@
           <AssociationSet Name="RefUsuario22" Association="Self.RefUsuario22">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Cuenta" EntitySet="Cuenta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Detalle_c__Id_fu__0697FACD" Association="Self.FK__Detalle_c__Id_fu__0697FACD">
+            <End Role="Funcion" EntitySet="Funcion" />
+            <End Role="Detalle_compra" EntitySet="Detalle_compra" />
           </AssociationSet>
           <AssociationSet Name="FK__Detalle_c__ID_TI__73852659" Association="Self.FK__Detalle_c__ID_TI__73852659">
             <End Role="Tipo_boleto" EntitySet="Tipo_boleto" />
@@ -1166,31 +1147,15 @@
             <End Role="Tarjeta_credito" EntitySet="Tarjeta_credito" />
             <End Role="Tipo_pago" EntitySet="Tipo_pago" />
           </AssociationSet>
-          <AssociationSet Name="FK__Detalle_c__Id_fu__0697FACD" Association="CinemaModel.FK__Detalle_c__Id_fu__0697FACD">
-            <End Role="Funcion" EntitySet="Funcion" />
-            <End Role="Detalle_compra" EntitySet="Detalle_compra" />
-          </AssociationSet>
         </EntityContainer>
-        <Association Name="FK__Detalle_c__Id_fu__0697FACD">
-          <End Type="CinemaModel.Funcion" Role="Funcion" Multiplicity="0..1" />
-          <End Type="CinemaModel.Detalle_compra" Role="Detalle_compra" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Funcion">
-              <PropertyRef Name="ID_funcion" />
-            </Principal>
-            <Dependent Role="Detalle_compra">
-              <PropertyRef Name="Id_funcion" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="CinemaModelStoreContainer" CdmEntityContainer="EntidadesCinema">
+        <EntityContainerMapping StorageEntityContainer="CINEMA_PROJECTModelStoreContainer" CdmEntityContainer="EntidadesCinema">
           <EntitySetMapping Name="Asiento">
-            <EntityTypeMapping TypeName="CinemaModel.Asiento">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Asiento">
               <MappingFragment StoreEntitySet="Asiento">
                 <ScalarProperty Name="id_siento" ColumnName="id_siento" />
                 <ScalarProperty Name="fila" ColumnName="fila" />
@@ -1200,7 +1165,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Ciudad">
-            <EntityTypeMapping TypeName="CinemaModel.Ciudad">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Ciudad">
               <MappingFragment StoreEntitySet="Ciudad">
                 <ScalarProperty Name="Cod_ciudad" ColumnName="Cod_ciudad" />
                 <ScalarProperty Name="Nombre_ciudad" ColumnName="Nombre_ciudad" />
@@ -1209,7 +1174,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Clasificacion">
-            <EntityTypeMapping TypeName="CinemaModel.Clasificacion">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Clasificacion">
               <MappingFragment StoreEntitySet="Clasificacion">
                 <ScalarProperty Name="id_clasif" ColumnName="id_clasif" />
                 <ScalarProperty Name="nombre_clasif" ColumnName="nombre_clasif" />
@@ -1217,20 +1182,18 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Compra">
-            <EntityTypeMapping TypeName="CinemaModel.Compra">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Compra">
               <MappingFragment StoreEntitySet="Compra">
                 <ScalarProperty Name="id_compra" ColumnName="id_compra" />
                 <ScalarProperty Name="fecha_exp" ColumnName="fecha_exp" />
                 <ScalarProperty Name="total_fin" ColumnName="total_fin" />
                 <ScalarProperty Name="id_tipo" ColumnName="id_tipo" />
                 <ScalarProperty Name="id_user" ColumnName="id_user" />
-                <ScalarProperty Name="ID_funcion" ColumnName="ID_funcion" />
-                <ScalarProperty Name="ID_DETALLE" ColumnName="ID_DETALLE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Cuenta">
-            <EntityTypeMapping TypeName="CinemaModel.Cuenta">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Cuenta">
               <MappingFragment StoreEntitySet="Cuenta">
                 <ScalarProperty Name="id_cuenta" ColumnName="id_cuenta" />
                 <ScalarProperty Name="correo" ColumnName="correo" />
@@ -1240,17 +1203,18 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Detalle_compra">
-            <EntityTypeMapping TypeName="CinemaModel.Detalle_compra">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Detalle_compra">
               <MappingFragment StoreEntitySet="Detalle_compra">
-                <ScalarProperty Name="Id_funcion" ColumnName="Id_funcion" />
                 <ScalarProperty Name="id_detalle" ColumnName="id_detalle" />
                 <ScalarProperty Name="id_asiento" ColumnName="id_asiento" />
                 <ScalarProperty Name="ID_TIPOBOLETO" ColumnName="ID_TIPOBOLETO" />
+                <ScalarProperty Name="Id_funcion" ColumnName="Id_funcion" />
+                <ScalarProperty Name="id_compra" ColumnName="id_compra" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Estado">
-            <EntityTypeMapping TypeName="CinemaModel.Estado">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Estado">
               <MappingFragment StoreEntitySet="Estado">
                 <ScalarProperty Name="Cod_estado" ColumnName="Cod_estado" />
                 <ScalarProperty Name="Nombre_estado" ColumnName="Nombre_estado" />
@@ -1258,7 +1222,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Funcion">
-            <EntityTypeMapping TypeName="CinemaModel.Funcion">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Funcion">
               <MappingFragment StoreEntitySet="Funcion">
                 <ScalarProperty Name="Cod_sala" ColumnName="Cod_sala" />
                 <ScalarProperty Name="Id_pelicula" ColumnName="Id_pelicula" />
@@ -1268,7 +1232,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Genero">
-            <EntityTypeMapping TypeName="CinemaModel.Genero">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Genero">
               <MappingFragment StoreEntitySet="Genero">
                 <ScalarProperty Name="ID_genero" ColumnName="ID_genero" />
                 <ScalarProperty Name="nombre_gen" ColumnName="nombre_gen" />
@@ -1276,7 +1240,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Idioma">
-            <EntityTypeMapping TypeName="CinemaModel.Idioma">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Idioma">
               <MappingFragment StoreEntitySet="Idioma">
                 <ScalarProperty Name="Cod_idioma" ColumnName="Cod_idioma" />
                 <ScalarProperty Name="Sibtitulos_idiom" ColumnName="Sibtitulos_idiom" />
@@ -1285,7 +1249,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Pelicula">
-            <EntityTypeMapping TypeName="CinemaModel.Pelicula">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Pelicula">
               <MappingFragment StoreEntitySet="Pelicula">
                 <ScalarProperty Name="Id_pelicula" ColumnName="Id_pelicula" />
                 <ScalarProperty Name="nombre_pelicula" ColumnName="nombre_pelicula" />
@@ -1299,7 +1263,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Perfil">
-            <EntityTypeMapping TypeName="CinemaModel.Perfil">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Perfil">
               <MappingFragment StoreEntitySet="Perfil">
                 <ScalarProperty Name="id_perfil" ColumnName="id_perfil" />
                 <ScalarProperty Name="nombre_perfil" ColumnName="nombre_perfil" />
@@ -1307,7 +1271,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Persona">
-            <EntityTypeMapping TypeName="CinemaModel.Persona">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Persona">
               <MappingFragment StoreEntitySet="Persona">
                 <ScalarProperty Name="id_persona" ColumnName="id_persona" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
@@ -1318,7 +1282,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Sala">
-            <EntityTypeMapping TypeName="CinemaModel.Sala">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Sala">
               <MappingFragment StoreEntitySet="Sala">
                 <ScalarProperty Name="Cod_sala" ColumnName="Cod_sala" />
                 <ScalarProperty Name="Num_sala" ColumnName="Num_sala" />
@@ -1329,7 +1293,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Sucursal">
-            <EntityTypeMapping TypeName="CinemaModel.Sucursal">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Sucursal">
               <MappingFragment StoreEntitySet="Sucursal">
                 <ScalarProperty Name="id_sucursal" ColumnName="id_sucursal" />
                 <ScalarProperty Name="nombre_sucursal" ColumnName="nombre_sucursal" />
@@ -1339,7 +1303,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="CinemaModel.sysdiagrams">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -1350,7 +1314,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Tarjeta_credito">
-            <EntityTypeMapping TypeName="CinemaModel.Tarjeta_credito">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Tarjeta_credito">
               <MappingFragment StoreEntitySet="Tarjeta_credito">
                 <ScalarProperty Name="id_tarjeta" ColumnName="id_tarjeta" />
                 <ScalarProperty Name="numero" ColumnName="numero" />
@@ -1362,7 +1326,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Tipo_boleto">
-            <EntityTypeMapping TypeName="CinemaModel.Tipo_boleto">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Tipo_boleto">
               <MappingFragment StoreEntitySet="Tipo_boleto">
                 <ScalarProperty Name="id_tipoBoleto" ColumnName="id_tipoBoleto" />
                 <ScalarProperty Name="nombre_tipo" ColumnName="nombre_tipo" />
@@ -1371,7 +1335,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Tipo_pago">
-            <EntityTypeMapping TypeName="CinemaModel.Tipo_pago">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Tipo_pago">
               <MappingFragment StoreEntitySet="Tipo_pago">
                 <ScalarProperty Name="id_pago" ColumnName="id_pago" />
                 <ScalarProperty Name="Tipo" ColumnName="Tipo" />
@@ -1381,7 +1345,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Tipo_sala">
-            <EntityTypeMapping TypeName="CinemaModel.Tipo_sala">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Tipo_sala">
               <MappingFragment StoreEntitySet="Tipo_sala">
                 <ScalarProperty Name="Cod_sala" ColumnName="Cod_sala" />
                 <ScalarProperty Name="Nombre_sala" ColumnName="Nombre_sala" />
@@ -1390,7 +1354,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuario">
-            <EntityTypeMapping TypeName="CinemaModel.Usuario">
+            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
                 <ScalarProperty Name="id_user" ColumnName="id_user" />
                 <ScalarProperty Name="correo" ColumnName="correo" />

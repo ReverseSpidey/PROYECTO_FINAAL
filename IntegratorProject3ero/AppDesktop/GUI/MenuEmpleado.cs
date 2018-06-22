@@ -17,23 +17,23 @@ namespace AppDesktop.GUI
         {
             InitializeComponent();
             timer1.Enabled = true;
-            pnlCatalogos.Visible = false;
+            //pnlCatalogos.Visible = false;
 
         }
 
         private void btnPelicula_Click(object sender, EventArgs e)
         {
-            pnlCatalogos.Visible = false;
+            // pnlCatalogos.Visible = false;
 
 
             if (cont % 2 > 0)
             {
-                pnlCatalogos.Visible = false;
+                //pnlCatalogos.Visible = false;
 
             }
             else if (cont % 2 == 0)
             {
-                pnlCatalogos.Visible = true;
+                // pnlCatalogos.Visible = true;
             }
 
             cont++;
@@ -86,6 +86,12 @@ namespace AppDesktop.GUI
         private void label3_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MenuPeliculas menu = new MenuPeliculas();
+            menu.Show();
         }
     }
 }

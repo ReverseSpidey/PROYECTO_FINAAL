@@ -105,7 +105,6 @@
             this.Name = "Asientos_Elegir";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asientos_Elegir";
-            this.Load += new System.EventHandler(this.Asientos_Elegir_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picPantalla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

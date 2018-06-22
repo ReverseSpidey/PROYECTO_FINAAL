@@ -73,16 +73,18 @@ namespace Datos_Org.Servicios
             }
         }
 
-        public List<vDetallecompra> getDetalles_Compra(int asiento)
+        public List<vDetallecompra> getDetalles_Compra(int id_asi, int id_comp)
         {
             List<vDetallecompra> obj = new List<vDetallecompra>();
             using (var db = new EntidadesCinema())
             {
                 obj = (from x in db.Detalle_compra
-                       where x.id_asiento == asiento
+                       where x.id_asiento == id_asi && x.id_compra == id_comp
                        select new vDetallecompra
                        {
-                           id_detalle = x.id_detalle
+                           tipo_bol_nom = x.Tipo_boleto.nombre_tipo,
+                           fila = x.Asiento.fila,
+                           columna = x.Asiento.columna
                        }).ToList();
                 return obj;
             }

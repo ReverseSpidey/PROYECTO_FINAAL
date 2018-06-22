@@ -13,8 +13,8 @@ namespace Datos_Org.Entidades
 
         public string fila { get; set; }
 
-
-        public string pelicula_nom { get; set; } 
+        public string tipo_bol_nom { get; set; }
+        public string pelicula_nom { get; set; }
 
         public int sala_num { get; set; }
 

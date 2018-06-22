@@ -153,6 +153,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ticket\CrearTicket.cs" />
     <EmbeddedResource Include="GUI\Asientos_Elegir.resx">
       <DependentUpon>Asientos_Elegir.cs</DependentUpon>
     </EmbeddedResource>

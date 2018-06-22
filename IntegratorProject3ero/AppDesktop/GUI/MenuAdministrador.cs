@@ -21,14 +21,14 @@ namespace AppDesktop.GUI
         {
             InitializeComponent();
             timer1.Enabled = true;
-            pnlCatalogos.Visible = false;
+            //pnlCatalogos.Visible = false;
         }
 
 
 
 
 
-        private void AbrirFormHija(object formhija)
+        /*private void AbrirFormHija(object formhija)
         {
             if (this.panelcine.Controls.Count > 0)
                 this.panelcine.Controls.RemoveAt(0);
@@ -40,12 +40,12 @@ namespace AppDesktop.GUI
         
             this.panelcine.Tag = frm;
             frm.Show();
-        }
+        }*/
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
 
-            AbrirFormHija(new frm_PERSONA());
+            //AbrirFormHija(new frm_PERSONA());
         }
 
         private void btnDatos_Click(object sender, EventArgs e)
@@ -88,10 +88,10 @@ namespace AppDesktop.GUI
         {
             
 
-            pnlCatalogos.Visible = false;
+            //pnlCatalogos.Visible = false;
             
 
-            if(cont%2 > 0)
+            /*if(cont%2 > 0)
             {
                 pnlCatalogos.Visible = false;
 
@@ -101,7 +101,7 @@ namespace AppDesktop.GUI
                 pnlCatalogos.Visible = true;
             }
 
-            cont++;
+            cont++;*/
 
 
         }
@@ -109,13 +109,13 @@ namespace AppDesktop.GUI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-           AbrirFormHija(new PELICULA());
+           //AbrirFormHija(new PELICULA());
         }
 
 
         private void btnSala_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new SALA());
+            //AbrirFormHija(new SALA());
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -126,7 +126,7 @@ namespace AppDesktop.GUI
 
         private void btnAsiento_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new frmAsiento());
+            //AbrirFormHija(new frmAsiento());
 
         }
 
