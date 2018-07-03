@@ -147,9 +147,9 @@
             this.btnEstablecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstablecer.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstablecer.ForeColor = System.Drawing.Color.White;
-            this.btnEstablecer.Location = new System.Drawing.Point(474, 211);
+            this.btnEstablecer.Location = new System.Drawing.Point(467, 211);
             this.btnEstablecer.Name = "btnEstablecer";
-            this.btnEstablecer.Size = new System.Drawing.Size(93, 40);
+            this.btnEstablecer.Size = new System.Drawing.Size(127, 40);
             this.btnEstablecer.TabIndex = 52;
             this.btnEstablecer.Text = "Seleccionar imágen para Pelicula\r\n";
             this.btnEstablecer.UseVisualStyleBackColor = false;

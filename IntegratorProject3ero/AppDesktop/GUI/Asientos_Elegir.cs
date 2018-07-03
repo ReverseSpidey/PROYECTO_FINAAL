@@ -8,11 +8,11 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+namespace AppDesktop.GUI
+{
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppDesktop.GUI
-{
     public partial class Asientos_Elegir : Form
     {
         char letter = 'A';
@@ -142,10 +142,6 @@ namespace AppDesktop.GUI
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i <= contador - 1; i++)
-            {
-                MessageBox.Show("El contador en la posición " + i + " es: " + id_boleto[i]);
-            }
             Reserva OBJ = new Reserva(vista, total_asiento, this);
             OBJ.Show();
         }
@@ -158,6 +154,12 @@ namespace AppDesktop.GUI
         private void picMinimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
         }
 
         private void Recorrer()

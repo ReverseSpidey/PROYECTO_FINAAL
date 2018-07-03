@@ -19,7 +19,6 @@ namespace Datos_Org.Servicios
                 {
                     db.Detalle_compra.Add(item);
                     db.SaveChanges();
-                    MessageBox.Show("SI ENTRO PAPU");
                 }
             }
             catch (Exception)
@@ -82,6 +81,7 @@ namespace Datos_Org.Servicios
                        where x.id_asiento == id_asi && x.id_compra == id_comp
                        select new vDetallecompra
                        {
+                           ID_TIPOBOLETO = x.ID_TIPOBOLETO,
                            tipo_bol_nom = x.Tipo_boleto.nombre_tipo,
                            fila = x.Asiento.fila,
                            columna = x.Asiento.columna

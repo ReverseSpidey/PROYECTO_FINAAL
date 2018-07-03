@@ -80,7 +80,7 @@ namespace AppDesktop.GUI
 
         private void label2_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void label3_Click_1(object sender, EventArgs e)

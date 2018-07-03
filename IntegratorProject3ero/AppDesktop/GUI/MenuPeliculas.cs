@@ -69,5 +69,10 @@ namespace AppDesktop.GUI
                 selec.ShowDialog();
             }
         }
+
+        private void picCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

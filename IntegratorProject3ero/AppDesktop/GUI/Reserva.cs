@@ -76,15 +76,17 @@ namespace AppDesktop.GUI
 
         private void CrearTicket()
         {
-            decimal precio_bol = 0;
-            string tipo_bol = "";
-            string fila = "";
-            string columna = "";
+
             //Creamos una instancia d ela clase CrearTicket
-            CrearTicket ticket = new CrearTicket();
+            CrearTicket ticket;
             //NECESITO UN METODO QUE ME RECUPERE FILA Y COLUMA SEGUN EL ID DEL ASIENTO, TIPO DE BOLETO ETC..
             for (int i = 0; i < total_asientos; i++)
             {
+                 ticket= new CrearTicket();
+                decimal precio_bol = 0;
+                string tipo_bol = "";
+                string fila = "";
+                string columna = "";
                 asientos.RecupDatos(com, i);
                 int id = asientos.id_boleto[i];
                 foreach (var x in det.getDetalles_Compra(id, com))
@@ -92,6 +94,7 @@ namespace AppDesktop.GUI
                     tipo_bol = x.tipo_bol_nom;
                     fila = x.fila;
                     columna = x.columna;
+
                     if (tipo_bol == "Niño" || tipo_bol == "Adulto (Mayor 60)")
                     {
                         precio_bol = 30M + asientos.prec_sala;
@@ -100,58 +103,78 @@ namespace AppDesktop.GUI
                     {
                         precio_bol = 40M + asientos.prec_sala;
                     }
+
+
+                    #region BoletosImprimir
+                    //Ya podemos usar todos sus metodos
+                    ticket.AbreCajon();//Para abrir el cajon de dinero.
+
+                    //De aqui en adelante pueden formar su ticket a su gusto... Les muestro un ejemplo
+
+                    //Datos de la cabecera del Ticket.
+                    ticket.TextoCentro("CINEXCESO");
+                    ticket.TextoIzquierda("EXPEDIDO EN: LOCAL PRINCIPAL");
+                    ticket.TextoIzquierda("DIREC: DIRECCION DE LA EMPRESA");
+                    ticket.TextoIzquierda("TELEF: 4530000");
+                    ticket.TextoIzquierda("R.F.C: XXXXXXXXX-XX");
+                    ticket.TextoIzquierda("EMAIL: cmcmarce14@gmail.com");//Es el mio por si me quieren contactar ...
+                    ticket.TextoIzquierda("");
+                    ticket.TextoExtremos("Caja # 1", "Ticket # 002-00000" + i + "" + "0" + "0");
+                    ticket.lineasAsteriscos();
+
+                    //Sub cabecera.
+                    ticket.TextoIzquierda("");
+                    ticket.TextoIzquierda("ATENDIÓ: ALAN JOSÉ COLLI TUN");
+                    ticket.TextoIzquierda("CLIENTE: PUBLICO EN GENERAL");
+                    ticket.TextoIzquierda("");
+                    ticket.TextoExtremos("FECHA: " + DateTime.Now.ToShortDateString(), "HORA: " + DateTime.Now.ToShortTimeString());
+                    ticket.lineasAsteriscos();
+
+                    //Articulos a vender.
+                    ticket.EncabezadoVenta();//NOMBRE DEL ARTICULO, CANT, PRECIO, IMPORTE
+
+                    ticket.AgregaArticulo(fun.nombre_peli, fun.NUM_SALA.ToString(), fun.Hora_ini, precio_bol);
+                    ticket.TextoIzquierda("Asiento: " + fila + "" + columna);
+                    ticket.TextoIzquierda("Sala: " + "" + fun.NUM_SALA + "");
+                    ticket.TextoIzquierda(tipo_bol);
+                    ticket.lineasIgual();
+
+                    //Resumen de la venta. Sólo son ejemplos
+                    ticket.AgregarTotales("         SUBTOTAL......$", precio_bol);
+                    //ticket.AgregarTotales("         IVA...........$", 10.04M);//La M indica que es un decimal en C#
+                    ticket.TextoIzquierda("");
+                    ticket.AgregarTotales("         EFECTIVO......$", pago_cli);
+                    ticket.AgregarTotales("         CAMBIO........$", CAMBIO);
+                    //Texto final del Ticket.
+                    ticket.TextoIzquierda("");
+                    ticket.TextoCentro("¡DISFRUTE LA FUNCIÓN!");
+                    ticket.CortaTicket();
+                    ticket.GuardarTicket(i);
+                    //ticket.ImprimirTicket("Microsoft XPS Document Writer");//Nombre de la impresora ticketera
+                    #endregion
                 }
 
-                #region BoletosImprimir
-                //Ya podemos usar todos sus metodos
-                ticket.AbreCajon();//Para abrir el cajon de dinero.
+            }
+        }
 
-                //De aqui en adelante pueden formar su ticket a su gusto... Les muestro un ejemplo
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Seguro que desea cancelar la venta?", "Cancelar", MessageBoxButtons.YesNoCancel,MessageBoxIcon.Asterisk);
 
-                //Datos de la cabecera del Ticket.
-                ticket.TextoCentro("CINEXCESO");
-                ticket.TextoIzquierda("EXPEDIDO EN: LOCAL PRINCIPAL");
-                ticket.TextoIzquierda("DIREC: DIRECCION DE LA EMPRESA");
-                ticket.TextoIzquierda("TELEF: 4530000");
-                ticket.TextoIzquierda("R.F.C: XXXXXXXXX-XX");
-                ticket.TextoIzquierda("EMAIL: cmcmarce14@gmail.com");//Es el mio por si me quieren contactar ...
-                ticket.TextoIzquierda("");
-                ticket.TextoExtremos("Caja # 1", "Ticket # 002-00000" + i + "" + "0" + "0");
-                ticket.lineasAsteriscos();
+            switch (result)
+            {
+                case DialogResult.Yes:
+                    MenuPeliculas obj = new MenuPeliculas();
+                    obj.Show();
+                    break;
 
-                //Sub cabecera.
-                ticket.TextoIzquierda("");
-                ticket.TextoIzquierda("ATENDIÓ: ALAN JOSÉ COLLI TUN");
-                ticket.TextoIzquierda("CLIENTE: PUBLICO EN GENERAL");
-                ticket.TextoIzquierda("");
-                ticket.TextoExtremos("FECHA: " + DateTime.Now.ToShortDateString(), "HORA: " + DateTime.Now.ToShortTimeString());
-                ticket.lineasAsteriscos();
-
-                //Articulos a vender.
-                ticket.EncabezadoVenta();//NOMBRE DEL ARTICULO, CANT, PRECIO, IMPORTE
-
-                ticket.AgregaArticulo(fun.nombre_peli, fun.NUM_SALA.ToString(), fun.Hora_ini, precio_bol);
-                ticket.TextoIzquierda("Asiento: " + fila + "" + columna);
-                ticket.TextoIzquierda("Sala: " + fun.NUM_SALA);
-
-                ticket.lineasIgual();
-
-                //Resumen de la venta. Sólo son ejemplos
-                ticket.AgregarTotales("         SUBTOTAL......$", precio_bol);
-                //ticket.AgregarTotales("         IVA...........$", 10.04M);//La M indica que es un decimal en C#
-                ticket.TextoIzquierda("");
-                ticket.AgregarTotales("         EFECTIVO......$", pago_cli);
-                ticket.AgregarTotales("         CAMBIO........$", CAMBIO);
-                //Texto final del Ticket.
-                ticket.TextoIzquierda("");
-                ticket.TextoCentro("¡DISFRUTE LA FUNCIÓN!");
-                ticket.CortaTicket();
-                ticket.GuardarTicket();
-                //ticket.ImprimirTicket("Microsoft XPS Document Writer");//Nombre de la impresora ticketera
-                #endregion
             }
 
+        }
 
+        private void picCerrar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -174,7 +197,7 @@ namespace AppDesktop.GUI
                     det.Ingresar_Detalle(asientos.RecupDatos(com, i));
 
                 }
-                MessageBox.Show("GRACIAS POR TU COMPRA PRRO", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Compra realizada con éxito", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnImprimir.Visible = true;
             }
             else

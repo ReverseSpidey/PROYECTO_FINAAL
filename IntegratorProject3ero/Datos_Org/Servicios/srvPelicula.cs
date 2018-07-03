@@ -40,6 +40,22 @@ namespace Datos_Org.Entidades
             {
                 return db.Pelicula.ToList();
             }
+
+        
+        }
+        public List<vPelicula> ObtenerImagen(int id)
+        {
+            List<vPelicula> peli = new List<vPelicula>();
+            using (var db = new EntidadesCinema())
+            {
+                peli = (from x in db.Pelicula
+                        where x.Id_pelicula == id
+                        select new vPelicula
+                        {
+                            Imagen_pelicula = x.Imagen_pelicula
+                        }).ToList();
+                return peli;
+            }
         }
 
         public List<Clasificacion> GetClasificacions()
@@ -68,7 +84,14 @@ namespace Datos_Org.Entidades
         }
 
 
-
+        public int TotalPelis()
+        {
+            List<Pelicula> list = new List<Pelicula>();
+            using (var db = new EntidadesCinema())
+            {
+                return db.Pelicula.Count();
+            }
+        }
 
 
 
@@ -80,6 +103,7 @@ namespace Datos_Org.Entidades
                 {
                     db.Pelicula.Add(item);
                     db.SaveChanges();
+                    MessageBox.Show("si sirvió paps");
                 }
             }
             catch (Exception e)

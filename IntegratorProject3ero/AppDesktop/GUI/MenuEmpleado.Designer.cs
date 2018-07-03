@@ -38,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panelcine = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -57,6 +58,7 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelcine.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -156,14 +158,14 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(216, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(216, 33);
+            this.label4.Size = new System.Drawing.Size(292, 33);
             this.label4.TabIndex = 17;
-            this.label4.Text = "NameEmleado";
+            this.label4.Text = "ALAN JOSÉ COLLI TUN";
             // 
             // panelcine
             // 
             this.panelcine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(10)))), ((int)(((byte)(18)))));
-            this.panelcine.Controls.Add(this.tableLayoutPanel1);
+            this.panelcine.Controls.Add(this.panel1);
             this.panelcine.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelcine.Location = new System.Drawing.Point(0, 49);
             this.panelcine.Name = "panelcine";
@@ -171,8 +173,20 @@
             this.panelcine.TabIndex = 2;
             this.panelcine.Paint += new System.Windows.Forms.PaintEventHandler(this.panelcine_Paint);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1023, 569);
+            this.panel1.TabIndex = 6;
+            // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -182,7 +196,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel6, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel7, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel10, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(156, 20);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(152, 54);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -367,6 +381,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panelcine.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -405,5 +420,6 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -155,5 +155,17 @@ namespace AppDesktop.GUI
         {
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PELICULA pelis = new PELICULA();
+            pelis.Show();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            PeliculasDisp disp = new PeliculasDisp();
+            disp.Show();
+        }
     }
 }

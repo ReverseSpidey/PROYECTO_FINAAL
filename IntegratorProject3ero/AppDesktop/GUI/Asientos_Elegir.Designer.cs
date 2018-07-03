@@ -34,6 +34,7 @@
             this.picPantalla = new System.Windows.Forms.PictureBox();
             this.pnlNombre = new System.Windows.Forms.Panel();
             this.btnSiguiente = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picPantalla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,13 +82,28 @@
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSiguiente.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.Location = new System.Drawing.Point(904, 623);
+            this.btnSiguiente.Location = new System.Drawing.Point(954, 623);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(92, 29);
             this.btnSiguiente.TabIndex = 42;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = false;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(72)))), ((int)(((byte)(21)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(24, 623);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 29);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Regresar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Asientos_Elegir
             // 
@@ -96,6 +112,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(10)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(1067, 664);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.pnlNombre);
             this.Controls.Add(this.Cuerpo);
@@ -118,5 +135,6 @@
         private System.Windows.Forms.Panel Cuerpo;
         private System.Windows.Forms.Panel pnlNombre;
         private System.Windows.Forms.Button btnSiguiente;
+        private System.Windows.Forms.Button button1;
     }
 }

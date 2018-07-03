@@ -345,19 +345,23 @@ namespace AppDesktop.Ticket_Venta
         }
         //Para mandara a imprimir el texto a la impresora que le indiquemos.
 
-        string direccion = "";
-        public void GuardarTicket()
+        //System.IO.Path.GetTempFilename
+        public void GuardarTicket(int i)
         {
+            string direccion = "C:/Users/pumas/Desktop/Boletos/boleto" +(i+1)+".txt";
+
             SaveFileDialog guadar = new SaveFileDialog();
             guadar.Title = "Guardar Archivo";
             guadar.Filter = "Archivos txt(*.txt)|*.txt";
-            if (guadar.ShowDialog() == DialogResult.OK)
-            {
-                direccion = guadar.FileName;
+           // if (guadar.ShowDialog() == DialogResult.OK)
+           // {
+                //direccion = guadar.FileName;
+                
                 StreamWriter write = File.AppendText(direccion);
                 write.Write(linea);
                 write.Close();
-            }
+            //}
+            
         }
         public void ImprimirTicket(string impresora)
         {

@@ -20,7 +20,7 @@ namespace Datos_Org.Servicios
                     db.Compra.Add(item);
                     db.SaveChanges();
                     ID = item.id_compra;
-                    MessageBox.Show("SI se insertó la compra");
+                    
                 }
             }
             catch (Exception)

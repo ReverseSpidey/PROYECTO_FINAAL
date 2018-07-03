@@ -103,8 +103,18 @@ namespace AppDesktop.GUI
                 MessageBox.Show("Aquí van instrucciones", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Asientos_Elegir asiento = new Asientos_Elegir(fun, total, cant_abuelo, cant_adulto, cant_ninio, acumulador_tot, precio_sala);
                 asiento.ShowDialog();
-                this.Close();
+                
             }
+        }
+
+        private void picCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void picMinimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

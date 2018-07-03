@@ -46,6 +46,7 @@ namespace AppDesktop.GUI
             preparaNuevo();
             nuevo = true;
             inf_peli = frm;
+            Llenar_combo();
         }
 
 
@@ -102,12 +103,36 @@ namespace AppDesktop.GUI
             peli_org.id_clasif = Convert.ToInt16(cboClasif.SelectedValue);
             peli_org.ID_genero = Convert.ToInt16(cboGenero.SelectedValue);
             peli_org.Cod_idioma = Convert.ToInt16(cboIdioma.SelectedValue);
+            peli_org.Imagen_pelicula = RecupPicture();
             return peli_org;
+        }
+
+
+
+
+        public byte[] RecupPicture()
+        {
+            MemoryStream ms = new MemoryStream();
+
+            picPelicula.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+
+            byte[] buff = ms.GetBuffer();
+            return buff;
         }
         private void btnEstablecer_Click(object sender, EventArgs e)
         {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Title = "Selecciona una imágen";
+            open.Filter = "Imagen (JPG,BMP,PNG)|*.JPG;*.BMP;*.PNG|All files (*.*)|*.*";
 
-            
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap image = new Bitmap(open.FileName);
+                picPelicula.Image = null;
+                picPelicula.Image = image;
+
+            }
+
         }
         private void preparaNuevo()
         {
@@ -131,9 +156,9 @@ namespace AppDesktop.GUI
             txtDuracion.Clear();
             txtNombre.Clear();
             txtSinopsis.Clear();
-            cboClasif.SelectedIndex = 0;
+            /*cboClasif.SelectedIndex = 0;
             cboGenero.SelectedIndex = 0;
-            cboIdioma.SelectedIndex = 0;
+            cboIdioma.SelectedIndex = 0;*/
             picPelicula.Image = null;
         }
 

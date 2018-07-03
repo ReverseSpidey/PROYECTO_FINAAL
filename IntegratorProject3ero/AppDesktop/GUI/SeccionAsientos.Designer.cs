@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pnlTipo_Funcion = new System.Windows.Forms.Panel();
+            this.picMinimizar = new System.Windows.Forms.PictureBox();
+            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.lblSALA = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnValidar = new System.Windows.Forms.Button();
@@ -43,17 +45,15 @@
             this.nupAdulto = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.picMinimizar = new System.Windows.Forms.PictureBox();
-            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.pnlTipo_Funcion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupNinio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAbuelo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAdulto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -97,6 +97,28 @@
             this.pnlTipo_Funcion.Name = "pnlTipo_Funcion";
             this.pnlTipo_Funcion.Size = new System.Drawing.Size(303, 56);
             this.pnlTipo_Funcion.TabIndex = 59;
+            // 
+            // picMinimizar
+            // 
+            this.picMinimizar.Image = global::AppDesktop.Properties.Resources.Minimizar_32;
+            this.picMinimizar.Location = new System.Drawing.Point(249, 0);
+            this.picMinimizar.Name = "picMinimizar";
+            this.picMinimizar.Size = new System.Drawing.Size(24, 23);
+            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMinimizar.TabIndex = 66;
+            this.picMinimizar.TabStop = false;
+            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
+            // 
+            // picCerrar
+            // 
+            this.picCerrar.Image = global::AppDesktop.Properties.Resources.cerrar_32;
+            this.picCerrar.Location = new System.Drawing.Point(279, 0);
+            this.picCerrar.Name = "picCerrar";
+            this.picCerrar.Size = new System.Drawing.Size(24, 23);
+            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCerrar.TabIndex = 65;
+            this.picCerrar.TabStop = false;
+            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
             // 
             // lblSALA
             // 
@@ -266,26 +288,6 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Adulto (Mayor de 60):\r\n";
             // 
-            // picMinimizar
-            // 
-            this.picMinimizar.Image = global::AppDesktop.Properties.Resources.Minimizar_32;
-            this.picMinimizar.Location = new System.Drawing.Point(249, 0);
-            this.picMinimizar.Name = "picMinimizar";
-            this.picMinimizar.Size = new System.Drawing.Size(24, 23);
-            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMinimizar.TabIndex = 66;
-            this.picMinimizar.TabStop = false;
-            // 
-            // picCerrar
-            // 
-            this.picCerrar.Image = global::AppDesktop.Properties.Resources.cerrar_32;
-            this.picCerrar.Location = new System.Drawing.Point(279, 0);
-            this.picCerrar.Name = "picCerrar";
-            this.picCerrar.Size = new System.Drawing.Size(24, 23);
-            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCerrar.TabIndex = 65;
-            this.picCerrar.TabStop = false;
-            // 
             // SeccionAsientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,6 +302,8 @@
             this.groupBox1.ResumeLayout(false);
             this.pnlTipo_Funcion.ResumeLayout(false);
             this.pnlTipo_Funcion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -307,8 +311,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupNinio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAbuelo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAdulto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }

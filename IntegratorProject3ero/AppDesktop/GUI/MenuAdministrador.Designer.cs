@@ -277,9 +277,10 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(224, 234);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Asiento";
+            this.button1.Text = "MENUPELIIISS";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // panel4
             // 
@@ -315,6 +316,7 @@
             this.button4.Text = "Pelicula";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel5
             // 
@@ -329,7 +331,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(72)))), ((int)(((byte)(21)))));
             this.pictureBox5.Image = global::AppDesktop.Properties.Resources.conference_hall;
-            this.pictureBox5.Location = new System.Drawing.Point(82, 62);
+            this.pictureBox5.Location = new System.Drawing.Point(62, 62);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(100, 100);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
