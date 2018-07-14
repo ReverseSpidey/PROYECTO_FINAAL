@@ -1,0 +1,319 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C55BDA25-4121-4129-A1C8-B309EE5E89B6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PROYECTO_WEB</RootNamespace>
+    <AssemblyName>PROYECTO_WEB</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GUI\Clasificacion.aspx" />
+    <Content Include="GUI\Clasificacionprincipal.aspx" />
+    <Content Include="GUI\Genero.aspx" />
+    <Content Include="GUI\Login.aspx" />
+    <Content Include="GUI\TIPOBOLETO.aspx" />
+    <Content Include="GUI\TIPOBOLETOPRINCIPAL.aspx" />
+    <Content Include="GUI\TipoSala.aspx" />
+    <Content Include="GUI\Usuario.aspx" />
+    <Content Include="MasterPage\index.html" />
+    <Content Include="Recurso\assets\css\bootstrap.css" />
+    <Content Include="Recurso\assets\css\style-responsive.css" />
+    <Content Include="Recurso\assets\css\style.css" />
+    <Content Include="Recurso\assets\css\table-responsive.css" />
+    <Content Include="Recurso\assets\css\to-do.css" />
+    <Content Include="Recurso\assets\css\zabuto_calendar.css" />
+    <Content Include="Recurso\assets\font-awesome\css\font-awesome.css" />
+    <Content Include="Recurso\assets\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Recurso\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Recurso\assets\img\blog-bg.jpg" />
+    <Content Include="Recurso\assets\img\checkbox-gray.png" />
+    <Content Include="Recurso\assets\img\friends\fr-01.jpg" />
+    <Content Include="Recurso\assets\img\friends\fr-02.jpg" />
+    <Content Include="Recurso\assets\img\friends\fr-03.jpg" />
+    <Content Include="Recurso\assets\img\friends\fr-04.jpg" />
+    <Content Include="Recurso\assets\img\friends\fr-05.jpg" />
+    <Content Include="Recurso\assets\img\friends\fr-06.jpg" />
+    <Content Include="Recurso\assets\img\friends\fr-07.jpg" />
+    <Content Include="Recurso\assets\img\friends\fr-08.jpg" />
+    <Content Include="Recurso\assets\img\friends\fr-09.jpg" />
+    <Content Include="Recurso\assets\img\friends\fr-10.jpg" />
+    <Content Include="Recurso\assets\img\friends\fr-11.jpg" />
+    <Content Include="Recurso\assets\img\instagram.jpg" />
+    <Content Include="Recurso\assets\img\login-bg.jpg" />
+    <Content Include="Recurso\assets\img\lorde.jpg" />
+    <Content Include="Recurso\assets\img\mask.png" />
+    <Content Include="Recurso\assets\img\ny.jpg" />
+    <Content Include="Recurso\assets\img\portfolio\port01.jpg" />
+    <Content Include="Recurso\assets\img\portfolio\port02.jpg" />
+    <Content Include="Recurso\assets\img\portfolio\port03.jpg" />
+    <Content Include="Recurso\assets\img\portfolio\port04.jpg" />
+    <Content Include="Recurso\assets\img\portfolio\port05.jpg" />
+    <Content Include="Recurso\assets\img\portfolio\port06.jpg" />
+    <Content Include="Recurso\assets\img\product.jpg" />
+    <Content Include="Recurso\assets\img\product.png" />
+    <Content Include="Recurso\assets\img\profile-01.jpg" />
+    <Content Include="Recurso\assets\img\profile-02.jpg" />
+    <Content Include="Recurso\assets\img\radio-gray.png" />
+    <Content Include="Recurso\assets\img\ui-danro.jpg" />
+    <Content Include="Recurso\assets\img\ui-divya.jpg" />
+    <Content Include="Recurso\assets\img\ui-sam.jpg" />
+    <Content Include="Recurso\assets\img\ui-sherman.jpg" />
+    <Content Include="Recurso\assets\img\ui-zac.jpg" />
+    <Content Include="Recurso\assets\img\weather.jpg" />
+    <Content Include="Recurso\assets\img\zoom.png" />
+    <Content Include="Recurso\assets\js\bootstrap-inputmask\bootstrap-inputmask.min.js" />
+    <Content Include="Recurso\assets\js\bootstrap-switch.js" />
+    <Content Include="Recurso\assets\js\bootstrap.min.js" />
+    <Content Include="Recurso\assets\js\calendar-conf-events.js" />
+    <Content Include="Recurso\assets\js\chart-master\Chart.js" />
+    <Content Include="Recurso\assets\js\chartjs-conf.js" />
+    <Content Include="Recurso\assets\js\common-scripts.js" />
+    <Content Include="Recurso\assets\js\easy-pie-chart.js" />
+    <Content Include="Recurso\assets\js\fancybox\jquery.fancybox.css" />
+    <Content Include="Recurso\assets\js\fancybox\jquery.fancybox.js" />
+    <Content Include="Recurso\assets\js\form-component.js" />
+    <Content Include="Recurso\assets\js\fullcalendar\bootstrap-fullcalendar.css" />
+    <Content Include="Recurso\assets\js\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Recurso\assets\js\gritter-conf.js" />
+    <Content Include="Recurso\assets\js\gritter\css\jquery.gritter.css" />
+    <Content Include="Recurso\assets\js\gritter\css\jquery.gritter0.css" />
+    <Content Include="Recurso\assets\js\gritter\images\gritter-light.png" />
+    <Content Include="Recurso\assets\js\gritter\images\gritter-long.png" />
+    <Content Include="Recurso\assets\js\gritter\images\gritter.png" />
+    <Content Include="Recurso\assets\js\gritter\images\ie-spacer.gif" />
+    <Content Include="Recurso\assets\js\gritter\js\jquery.gritter.js" />
+    <Content Include="Recurso\assets\js\jquery-1.8.3.min.js" />
+    <Content Include="Recurso\assets\js\jquery-easy-pie-chart\jquery.easy-pie-chart.css" />
+    <Content Include="Recurso\assets\js\jquery-easy-pie-chart\jquery.easy-pie-chart.js" />
+    <Content Include="Recurso\assets\js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="Recurso\assets\js\jquery.backstretch.min.js" />
+    <Content Include="Recurso\assets\js\jquery.dcjqaccordion.2.7.js" />
+    <Content Include="Recurso\assets\js\jquery.js" />
+    <Content Include="Recurso\assets\js\jquery.nicescroll.js" />
+    <Content Include="Recurso\assets\js\jquery.scrollTo.min.js" />
+    <Content Include="Recurso\assets\js\jquery.sparkline.js" />
+    <Content Include="Recurso\assets\js\jquery.tagsinput.js" />
+    <Content Include="Recurso\assets\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="Recurso\assets\js\morris-conf.js" />
+    <Content Include="Recurso\assets\js\sparkline-chart.js" />
+    <Content Include="Recurso\assets\js\tasks.js" />
+    <Content Include="Recurso\assets\js\zabuto_calendar.js" />
+    <Content Include="Recurso\assets\lineicons\fonts\linecons.svg" />
+    <Content Include="Recurso\assets\lineicons\index.html" />
+    <Content Include="Recurso\assets\lineicons\lte-ie7.js" />
+    <Content Include="Recurso\assets\lineicons\style.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\Clasificacion.aspx.cs">
+      <DependentUpon>Clasificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Clasificacion.aspx.designer.cs">
+      <DependentUpon>Clasificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Clasificacionprincipal.aspx.cs">
+      <DependentUpon>Clasificacionprincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Clasificacionprincipal.aspx.designer.cs">
+      <DependentUpon>Clasificacionprincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Genero.aspx.cs">
+      <DependentUpon>Genero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Genero.aspx.designer.cs">
+      <DependentUpon>Genero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TIPOBOLETO.aspx.cs">
+      <DependentUpon>TIPOBOLETO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\TIPOBOLETO.aspx.designer.cs">
+      <DependentUpon>TIPOBOLETO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TIPOBOLETOPRINCIPAL.aspx.cs">
+      <DependentUpon>TIPOBOLETOPRINCIPAL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\TIPOBOLETOPRINCIPAL.aspx.designer.cs">
+      <DependentUpon>TIPOBOLETOPRINCIPAL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TipoSala.aspx.cs">
+      <DependentUpon>TipoSala.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\TipoSala.aspx.designer.cs">
+      <DependentUpon>TipoSala.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Usuario.aspx.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Usuario.aspx.designer.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Recurso\assets\.DS_Store" />
+    <Content Include="Recurso\assets\css\.DS_Store" />
+    <Content Include="Recurso\assets\font-awesome\.DS_Store" />
+    <Content Include="Recurso\assets\font-awesome\css\.DS_Store" />
+    <Content Include="Recurso\assets\font-awesome\fonts\.DS_Store" />
+    <Content Include="Recurso\assets\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Recurso\assets\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Recurso\assets\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Recurso\assets\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Recurso\assets\fonts\.DS_Store" />
+    <Content Include="Recurso\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Recurso\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Recurso\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Recurso\assets\img\.DS_Store" />
+    <Content Include="Recurso\assets\img\friends\.DS_Store" />
+    <Content Include="Recurso\assets\img\portfolio\.DS_Store" />
+    <Content Include="Recurso\assets\js\.DS_Store" />
+    <Content Include="Recurso\assets\js\bootstrap-inputmask\.DS_Store" />
+    <Content Include="Recurso\assets\js\chart-master\.DS_Store" />
+    <Content Include="Recurso\assets\js\fancybox\.DS_Store" />
+    <Content Include="Recurso\assets\js\fullcalendar\.DS_Store" />
+    <Content Include="Recurso\assets\js\gritter\.DS_Store" />
+    <Content Include="Recurso\assets\js\gritter\css\.DS_Store" />
+    <Content Include="Recurso\assets\js\gritter\images\.DS_Store" />
+    <Content Include="Recurso\assets\js\gritter\js\.DS_Store" />
+    <Content Include="Recurso\assets\js\jquery-easy-pie-chart\.DS_Store" />
+    <Content Include="Recurso\assets\lineicons\.DS_Store" />
+    <Content Include="Recurso\assets\lineicons\fonts\.DS_Store" />
+    <Content Include="Recurso\assets\lineicons\fonts\linecons.eot" />
+    <Content Include="Recurso\assets\lineicons\fonts\linecons.ttf" />
+    <Content Include="Recurso\assets\lineicons\fonts\linecons.woff" />
+    <Content Include="MasterPage\MasterPage.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos_Org\Datos_Org.csproj">
+      <Project>{b5131367-bdd8-4d3b-989d-c0bcb3948b1f}</Project>
+      <Name>Datos_Org</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51443</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51443/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
