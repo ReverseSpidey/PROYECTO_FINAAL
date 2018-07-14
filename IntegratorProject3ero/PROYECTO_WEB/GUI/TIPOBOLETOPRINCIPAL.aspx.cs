@@ -43,7 +43,7 @@ namespace PROYECTO_WEB.GUI
                 
 
                 Session["oCurso"] = obj;//primero esto antes del redirect
-                Session["operacion"] = "editando";
+                Session["operacion"] = "editando";//
                 Response.Redirect("wrfmCursoEdit.aspx");
             }
         }
