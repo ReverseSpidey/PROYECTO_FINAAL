@@ -89,5 +89,22 @@ namespace Datos_Org.Servicios
                 return obj;
             }
         }
+
+        public List<AsientoVendido> getAsientoVendido(int id_funcion)
+        {
+            List<AsientoVendido> asi = new List<AsientoVendido>();
+            using (var db = new EntidadesCinema())
+            {
+                asi = (from x in db.Detalle_compra where x.Id_funcion == id_funcion
+                       select new AsientoVendido
+                       {
+                           columna = x.Asiento.columna,
+                           fila = x.Asiento.fila
+                       }).ToList();
+
+                return asi;
+                }
+
+            }
+        }
     }
-}

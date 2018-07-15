@@ -1,0 +1,496 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0DE4D28-CD98-429F-8BCF-5C8A8E42F3CD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebCinexceso</RootNamespace>
+    <AssemblyName>WebCinexceso</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\MEGA\UTM\3ER CUATRIMESTRE\Desarrollo de aplicaciones web (Moreno)\Escuela3A\WebFormEscuela\bin\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\AppDesktop\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="GUI\wfrmPrueba.aspx" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\css\bootstrap-responsive.css" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\css\bootstrap.css" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\css\documenter_style.css" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\images\image_1.gif" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\images\image_2.png" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\img\glyphicons-halflings.png" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\img\glyphicons\glyphicons_009_magic.png" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\img\glyphicons\glyphicons_042_group.png" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\img\glyphicons\glyphicons_079_podium.png" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\img\glyphicons\glyphicons_082_roundabout.png" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\img\glyphicons\glyphicons_155_show_thumbnails.png" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\img\glyphicons\glyphicons_163_iphone.png" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\img\glyphicons\glyphicons_214_resize_small.png" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\img\glyphicons\glyphicons_266_book_open.png" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\json.txt" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\js\bootstrap-min.js" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\js\google-code-prettify\prettify.css" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\js\google-code-prettify\prettify.js" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\js\jquery.easing.js" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\js\jquery.js" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\js\jquery.scrollTo.js" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\js\scripts.js" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\css\documenter_style.css" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\css\img\info.png" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\css\img\pre_bg.png" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\css\img\warning.png" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\css\shDocumenter.css" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\documentation.html" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\js\jquery.1.6.4.js" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\js\jquery.easing.js" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\js\jquery.scrollTo-1.4.2-min.js" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\js\script.js" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\js\shBrushCss.js" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\js\shBrushJScript.js" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\js\shBrushXml.js" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\js\shCore.js" />
+    <Content Include="Recursos\Estilos\css\external\idangerous.swiper.css" />
+    <Content Include="Recursos\Estilos\css\external\jquery.selectbox.css" />
+    <Content Include="Recursos\Estilos\css\external\magnific-popup.css" />
+    <Content Include="Recursos\Estilos\css\gozha-nav.css" />
+    <Content Include="Recursos\Estilos\css\img\select-icons.png" />
+    <Content Include="Recursos\Estilos\css\MyStyle.css" />
+    <Content Include="Recursos\Estilos\css\style.css" />
+    <Content Include="Recursos\Estilos\css\touch.css" />
+    <Content Include="Recursos\Estilos\fonts\aleo-bold.svg" />
+    <Content Include="Recursos\Estilos\fonts\aleo-bolditalic.svg" />
+    <Content Include="Recursos\Estilos\fonts\aleo-italic.svg" />
+    <Content Include="Recursos\Estilos\fonts\aleo-regular.svg" />
+    <Content Include="Recursos\Estilos\fonts\MuseoSans_500-webfont.svg" />
+    <Content Include="Recursos\Estilos\images\ajax-loader.GIF" />
+    <Content Include="Recursos\Estilos\images\apple-store.svg" />
+    <Content Include="Recursos\Estilos\images\bg-image.jpg" />
+    <Content Include="Recursos\Estilos\images\bg-video.jpg" />
+    <Content Include="Recursos\Estilos\images\blanck.png" />
+    <Content Include="Recursos\Estilos\images\close-open-menu-icon.png" />
+    <Content Include="Recursos\Estilos\images\components\arrow.svg" />
+    <Content Include="Recursos\Estilos\images\components\bg-movie.png" />
+    <Content Include="Recursos\Estilos\images\components\bg-time-hover.png" />
+    <Content Include="Recursos\Estilos\images\components\bg-time.png" />
+    <Content Include="Recursos\Estilos\images\components\bg-tooltip.png" />
+    <Content Include="Recursos\Estilos\images\components\checked.png" />
+    <Content Include="Recursos\Estilos\images\components\close.svg" />
+    <Content Include="Recursos\Estilos\images\components\corner-lb.png" />
+    <Content Include="Recursos\Estilos\images\components\corner-left.png" />
+    <Content Include="Recursos\Estilos\images\components\corner-lt.png" />
+    <Content Include="Recursos\Estilos\images\components\corner-rb.png" />
+    <Content Include="Recursos\Estilos\images\components\corner-right.png" />
+    <Content Include="Recursos\Estilos\images\components\corner-rt.png" />
+    <Content Include="Recursos\Estilos\images\components\cursor.png" />
+    <Content Include="Recursos\Estilos\images\components\line-marker.png" />
+    <Content Include="Recursos\Estilos\images\components\plus-minus-icon.png" />
+    <Content Include="Recursos\Estilos\images\components\price-pattern.jpg" />
+    <Content Include="Recursos\Estilos\images\components\scarf.png" />
+    <Content Include="Recursos\Estilos\images\components\sits_mobile.png" />
+    <Content Include="Recursos\Estilos\images\components\wave-danger.svg" />
+    <Content Include="Recursos\Estilos\images\components\wave-dark-sm.svg" />
+    <Content Include="Recursos\Estilos\images\components\wave-dark.svg" />
+    <Content Include="Recursos\Estilos\images\components\wave-hover.svg" />
+    <Content Include="Recursos\Estilos\images\components\wave-light-sm.svg" />
+    <Content Include="Recursos\Estilos\images\components\wave-light.svg" />
+    <Content Include="Recursos\Estilos\images\components\wave-main.svg" />
+    <Content Include="Recursos\Estilos\images\components\wave.svg" />
+    <Content Include="Recursos\Estilos\images\error.png" />
+    <Content Include="Recursos\Estilos\images\google-play.svg" />
+    <Content Include="Recursos\Estilos\images\icons\actors.svg" />
+    <Content Include="Recursos\Estilos\images\icons\camera.svg" />
+    <Content Include="Recursos\Estilos\images\icons\comment.svg" />
+    <Content Include="Recursos\Estilos\images\icons\countrr.svg" />
+    <Content Include="Recursos\Estilos\images\icons\country.svg" />
+    <Content Include="Recursos\Estilos\images\icons\director.svg" />
+    <Content Include="Recursos\Estilos\images\icons\fave-hover.svg" />
+    <Content Include="Recursos\Estilos\images\icons\fave.svg" />
+    <Content Include="Recursos\Estilos\images\icons\film.svg" />
+    <Content Include="Recursos\Estilos\images\icons\fiml.svg" />
+    <Content Include="Recursos\Estilos\images\icons\gift-dark.svg" />
+    <Content Include="Recursos\Estilos\images\icons\gift-light.svg" />
+    <Content Include="Recursos\Estilos\images\icons\heart.svg" />
+    <Content Include="Recursos\Estilos\images\icons\left-arrow-danger.svg" />
+    <Content Include="Recursos\Estilos\images\icons\left-arrow-dark.svg" />
+    <Content Include="Recursos\Estilos\images\icons\left-arrow.svg" />
+    <Content Include="Recursos\Estilos\images\icons\location.svg" />
+    <Content Include="Recursos\Estilos\images\icons\mause.svg" />
+    <Content Include="Recursos\Estilos\images\icons\reply-hover.svg" />
+    <Content Include="Recursos\Estilos\images\icons\reply.svg" />
+    <Content Include="Recursos\Estilos\images\icons\retweet-hover.svg" />
+    <Content Include="Recursos\Estilos\images\icons\retweet.svg" />
+    <Content Include="Recursos\Estilos\images\icons\right-arrow-danger.svg" />
+    <Content Include="Recursos\Estilos\images\icons\right-arrow-dark.svg" />
+    <Content Include="Recursos\Estilos\images\icons\right-arrow.svg" />
+    <Content Include="Recursos\Estilos\images\icons\sm-left-arrow-hover.svg" />
+    <Content Include="Recursos\Estilos\images\icons\sm-left-arrow.svg" />
+    <Content Include="Recursos\Estilos\images\icons\sm-right-arrow-hover.svg" />
+    <Content Include="Recursos\Estilos\images\icons\sm-right-arrow.svg" />
+    <Content Include="Recursos\Estilos\images\icons\smile-dark.svg" />
+    <Content Include="Recursos\Estilos\images\icons\smile-light.svg" />
+    <Content Include="Recursos\Estilos\images\icons\snow-dark.svg" />
+    <Content Include="Recursos\Estilos\images\icons\snow-light.svg" />
+    <Content Include="Recursos\Estilos\images\icons\speech.svg" />
+    <Content Include="Recursos\Estilos\images\icons\stars-light.svg" />
+    <Content Include="Recursos\Estilos\images\icons\stars.svg" />
+    <Content Include="Recursos\Estilos\images\icons\stroke.svg" />
+    <Content Include="Recursos\Estilos\images\icons\users-dark.svg" />
+    <Content Include="Recursos\Estilos\images\icons\users-light.svg" />
+    <Content Include="Recursos\Estilos\images\icons\wizard-dark.svg" />
+    <Content Include="Recursos\Estilos\images\icons\wizard-light.svg" />
+    <Content Include="Recursos\Estilos\images\logo-dark.png" />
+    <Content Include="Recursos\Estilos\images\logo-lg.png" />
+    <Content Include="Recursos\Estilos\images\logo.png" />
+    <Content Include="Recursos\Estilos\images\payment\pay1.png" />
+    <Content Include="Recursos\Estilos\images\payment\pay2.png" />
+    <Content Include="Recursos\Estilos\images\payment\pay3.png" />
+    <Content Include="Recursos\Estilos\images\payment\pay4.png" />
+    <Content Include="Recursos\Estilos\images\payment\pay5.png" />
+    <Content Include="Recursos\Estilos\images\payment\pay6.png" />
+    <Content Include="Recursos\Estilos\images\payment\pay7.png" />
+    <Content Include="Recursos\Estilos\images\rate\cancel-off.png" />
+    <Content Include="Recursos\Estilos\images\rate\cancel-on.png" />
+    <Content Include="Recursos\Estilos\images\rate\star-half.png" />
+    <Content Include="Recursos\Estilos\images\rate\star-off.png" />
+    <Content Include="Recursos\Estilos\images\rate\star-off.svg" />
+    <Content Include="Recursos\Estilos\images\rate\star-on.png" />
+    <Content Include="Recursos\Estilos\images\rate\star-on.svg" />
+    <Content Include="Recursos\Estilos\images\tickets.png" />
+    <Content Include="Recursos\Estilos\images\windows-store.svg" />
+    <Content Include="Recursos\Estilos\js\custom.js" />
+    <Content Include="Recursos\Estilos\js\external\count.down.js" />
+    <Content Include="Recursos\Estilos\js\external\form-element.js" />
+    <Content Include="Recursos\Estilos\js\external\idangerous.swiper.min.js" />
+    <Content Include="Recursos\Estilos\js\external\infobox.js" />
+    <Content Include="Recursos\Estilos\js\external\jquery-1.10.1.min.js" />
+    <Content Include="Recursos\Estilos\js\external\jquery-migrate-1.2.1.min.js" />
+    <Content Include="Recursos\Estilos\js\external\jquery.inview.js" />
+    <Content Include="Recursos\Estilos\js\external\jquery.knob.js" />
+    <Content Include="Recursos\Estilos\js\external\jquery.magnific-popup.min.js" />
+    <Content Include="Recursos\Estilos\js\external\jquery.raty.js" />
+    <Content Include="Recursos\Estilos\js\external\jquery.selectbox-0.2.min.js" />
+    <Content Include="Recursos\Estilos\js\external\min\count.down.min.js" />
+    <Content Include="Recursos\Estilos\js\external\min\jquery.knob.min.js" />
+    <Content Include="Recursos\Estilos\js\external\min\twitterfeed.min.js" />
+    <Content Include="Recursos\Estilos\js\external\modernizr.custom.js" />
+    <Content Include="Recursos\Estilos\js\external\twitterfeed.js" />
+    <Content Include="Recursos\Estilos\js\form.js" />
+    <Content Include="Recursos\Estilos\js\jquery.mobile.menu.js" />
+    <Content Include="Recursos\Estilos\js\min\custom.min.js" />
+    <Content Include="Recursos\Estilos\js\min\form.min.js" />
+    <Content Include="Recursos\Estilos\js\min\jquery.mobile.menu.min.js" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\arrowleft.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\arrowright.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\arrow_large_left.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\arrow_large_right.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\arrow_left.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\arrow_left2.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\arrow_right.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\arrow_right2.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\black50.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\boxed_bgtile.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\bullet.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\bullets.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\bullets2.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\bullet_boxed.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\coloredbg.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\grain.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\gridtile.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\gridtile_3x3.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\gridtile_3x3_white.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\gridtile_white.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\large_left.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\large_right.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\loader.gif" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\loader2.gif" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\navigdots.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\navigdots_bgtile.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\shadow1.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\shadow2.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\shadow3.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\small_left.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\small_left_boxed.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\small_right.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\small_right_boxed.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\timer.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\timerdot.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\transparent.jpg" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\white50.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\css\settings-ie8.css" />
+    <Content Include="Recursos\Estilos\rs-plugin\css\settings.css" />
+    <Content Include="Recursos\Estilos\rs-plugin\font\revicons.svg" />
+    <Content Include="Recursos\Estilos\rs-plugin\images\decor_inside.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\images\decor_inside_white.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\images\decor_testimonial.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\images\gradient\g30.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\images\gradient\g40.png" />
+    <Content Include="Recursos\Estilos\rs-plugin\js\jquery.themepunch.plugins.min.js" />
+    <Content Include="Recursos\Estilos\rs-plugin\js\jquery.themepunch.revolution.js" />
+    <Content Include="Recursos\Estilos\rs-plugin\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="Recursos\Estilos\twitteroauth\OAuth.php" />
+    <Content Include="Recursos\Estilos\twitteroauth\twitteroauth.php" />
+    <Content Include="Recursos\Estilos\video\53170154.mp4" />
+    <Content Include="Recursos\Estilos\video\53170154.webm" />
+    <Content Include="Recursos\img\accordion-dark.png" />
+    <Content Include="Recursos\img\accordion-light.png" />
+    <Content Include="Recursos\img\gal-photo.png" />
+    <Content Include="Recursos\img\gal-video.png" />
+    <Content Include="Recursos\img\glyphicons-halflings-white.png" />
+    <Content Include="Recursos\img\glyphicons-halflings.png" />
+    <Content Include="Recursos\img\movie-preview.png" />
+    <Content Include="Recursos\img\movie-test.png" />
+    <Content Include="Recursos\img\movie-time.png" />
+    <Content Include="Recursos\img\movie.png" />
+    <Content Include="Recursos\img\post-more.png" />
+    <Content Include="Recursos\img\post-news.png" />
+    <Content Include="Recursos\img\post-preview.png" />
+    <Content Include="Recursos\img\post.png" />
+    <Content Include="Recursos\img\tabs-horisontal.png" />
+    <Content Include="Recursos\img\tabs-vertical.png" />
+    <Content Include="Recursos\img\testimonial-corner.png" />
+    <Content Include="Recursos\img\testimonial-rect.png" />
+    <Content Include="Recursos\img\testimonial.png" />
+    <Content Include="Recursos\scripts\jquery-ui-1.9.1.custom.min.js" />
+    <Content Include="Recursos\scripts\jquery.min.js" />
+    <Content Include="Recursos\scripts\jquery.tocify.js" />
+    <Content Include="Recursos\styles\jquery.tocify.css" />
+    <Content Include="Recursos\styles\site.appic.css" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shAutoloader.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushAS3.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushBash.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushCpp.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushCSharp.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushCss.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushDelphi.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushDiff.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushErlang.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushGroovy.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushJava.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushJScript.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushPerl.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushPhp.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushPlain.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushPython.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushRuby.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushSass.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushScala.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushSql.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushVb.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shBrushXml.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shCore.js" />
+    <Content Include="Recursos\syntax-highlighter\scripts\shLegacy.js" />
+    <Content Include="Recursos\syntax-highlighter\styles\shCore.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shCoreDefault.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shCoreDjango.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shCoreEclipse.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shCoreEmacs.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shCoreMDUltra.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shCoreMidnight.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shCoreRDark.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shThemeDefault.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shThemeDjango.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shThemeEclipse.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shThemeEmacs.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shThemeMDUltra.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shThemeMidnight.css" />
+    <Content Include="Recursos\syntax-highlighter\styles\shThemeRDark.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\wfrmPrueba.aspx.cs">
+      <DependentUpon>wfrmPrueba.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\wfrmPrueba.aspx.designer.cs">
+      <DependentUpon>wfrmPrueba.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\IndexMaster.Master.cs">
+      <DependentUpon>IndexMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\IndexMaster.Master.designer.cs">
+      <DependentUpon>IndexMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage\IndexMaster.Master" />
+    <Content Include="Recursos\assets\slider_documentation\documentation\assets\js\README.md" />
+    <None Include="packages.config" />
+    <Content Include="Recursos\Estilos\css\less\base\base.less" />
+    <Content Include="Recursos\Estilos\css\less\base\bootstrap-mixins.less" />
+    <Content Include="Recursos\Estilos\css\less\base\bootstrap-scaffolding.less" />
+    <Content Include="Recursos\Estilos\css\less\base\bootstrap-type.less" />
+    <Content Include="Recursos\Estilos\css\less\base\bootstrap-variables.less" />
+    <Content Include="Recursos\Estilos\css\less\base\normalize.less" />
+    <Content Include="Recursos\Estilos\css\less\base\vars.less" />
+    <Content Include="Recursos\Estilos\css\less\layout\bootstrap-grid.less" />
+    <Content Include="Recursos\Estilos\css\less\layout\responsive-utilities.less" />
+    <Content Include="Recursos\Estilos\css\less\objects\alerts.less" />
+    <Content Include="Recursos\Estilos\css\less\objects\buttons.less" />
+    <Content Include="Recursos\Estilos\css\less\objects\component-animations.less" />
+    <Content Include="Recursos\Estilos\css\less\objects\navbar.less" />
+    <Content Include="Recursos\Estilos\css\less\objects\navs.less" />
+    <Content Include="Recursos\Estilos\css\less\objects\objects.less" />
+    <Content Include="Recursos\Estilos\css\less\objects\panels.less" />
+    <Content Include="Recursos\Estilos\css\less\state\state.less" />
+    <Content Include="Recursos\Estilos\css\style.less" />
+    <Content Include="Recursos\Estilos\fonts\aleo-bold.eot" />
+    <Content Include="Recursos\Estilos\fonts\aleo-bold.ttf" />
+    <Content Include="Recursos\Estilos\fonts\aleo-bold.woff" />
+    <Content Include="Recursos\Estilos\fonts\aleo-bolditalic.eot" />
+    <Content Include="Recursos\Estilos\fonts\aleo-bolditalic.ttf" />
+    <Content Include="Recursos\Estilos\fonts\aleo-bolditalic.woff" />
+    <Content Include="Recursos\Estilos\fonts\aleo-italic.eot" />
+    <Content Include="Recursos\Estilos\fonts\aleo-italic.ttf" />
+    <Content Include="Recursos\Estilos\fonts\aleo-italic.woff" />
+    <Content Include="Recursos\Estilos\fonts\aleo-regular.eot" />
+    <Content Include="Recursos\Estilos\fonts\aleo-regular.ttf" />
+    <Content Include="Recursos\Estilos\fonts\aleo-regular.woff" />
+    <Content Include="Recursos\Estilos\fonts\MuseoSans_500-webfont.eot" />
+    <Content Include="Recursos\Estilos\fonts\MuseoSans_500-webfont.ttf" />
+    <Content Include="Recursos\Estilos\fonts\MuseoSans_500-webfont.woff" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\arrows.psd" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\bullets.psd" />
+    <Content Include="Recursos\Estilos\rs-plugin\assets\small_arrows.psd" />
+    <Content Include="Recursos\Estilos\rs-plugin\font\revicons.eot" />
+    <Content Include="Recursos\Estilos\rs-plugin\font\revicons.ttf" />
+    <Content Include="Recursos\Estilos\rs-plugin\font\revicons.woff" />
+    <Content Include="Recursos\Estilos\video\53170154.ogv" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Recursos\Estilos\images\banners\" />
+    <Folder Include="Recursos\Estilos\images\cinema\" />
+    <Folder Include="Recursos\Estilos\images\client-photo\" />
+    <Folder Include="Recursos\Estilos\images\comment\" />
+    <Folder Include="Recursos\Estilos\images\gallery\large\" />
+    <Folder Include="Recursos\Estilos\images\gallery\thumb\" />
+    <Folder Include="Recursos\Estilos\images\movie\" />
+    <Folder Include="Recursos\Estilos\images\new\" />
+    <Folder Include="Recursos\Estilos\images\slides\" />
+    <Folder Include="Recursos\Estilos\images\trailers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos_Org\Datos_Org.csproj">
+      <Project>{b5131367-bdd8-4d3b-989d-c0bcb3948b1f}</Project>
+      <Name>Datos_Org</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55265</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55265/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\AsientoVendido.cs" />
     <Compile Include="Entidades\vDetallecompra.cs" />
     <Compile Include="Entidades\vPelicula.cs" />
     <Compile Include="Entidades\vTipo_Boleto.cs" />
@@ -134,6 +135,7 @@
     </Compile>
     <Compile Include="Servicios\srvCompra.cs" />
     <Compile Include="Servicios\srvDetalle_Compra.cs" />
+    <Compile Include="Servicios\srvFiltro.cs" />
     <Compile Include="Servicios\srvPelicula.cs" />
     <Compile Include="Entidades\vAsiento.cs" />
     <Compile Include="Entidades\vFuncion.cs" />

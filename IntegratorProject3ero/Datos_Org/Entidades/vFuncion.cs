@@ -16,6 +16,8 @@ namespace Datos_Org.Entidades
         public string nombre_peli { get; set; }
         public string tipo_sala { get; set; }
         public int NUM_SALA { get; set; }
+        public DateTime? FechaFun { get; set; }
+
 
 
 

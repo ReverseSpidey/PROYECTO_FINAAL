@@ -1,0 +1,20 @@
+﻿body {
+}
+
+.Filtro {
+    position: relative !important;
+    left: 40% !important;
+    top: 33% !important;
+}
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*EN ESTA PARTE IRÁN MIS ESTILOS PAPU*/
+#Filtro {
+    margin: auto;
+    position:relative;
+    left:40%;
+}
+
+.card-img-top img {
+    width: 50px;
+    height: 50px;
+}

@@ -52,7 +52,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnFunciones = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -321,7 +321,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.pictureBox5);
-            this.panel5.Controls.Add(this.button2);
+            this.panel5.Controls.Add(this.btnFunciones);
             this.panel5.Location = new System.Drawing.Point(236, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(227, 240);
@@ -338,20 +338,21 @@
             this.pictureBox5.TabIndex = 10;
             this.pictureBox5.TabStop = false;
             // 
-            // button2
+            // btnFunciones
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(72)))), ((int)(((byte)(21)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(224, 234);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Sala";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnFunciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(72)))), ((int)(((byte)(21)))));
+            this.btnFunciones.FlatAppearance.BorderSize = 0;
+            this.btnFunciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFunciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFunciones.ForeColor = System.Drawing.Color.White;
+            this.btnFunciones.Location = new System.Drawing.Point(3, 3);
+            this.btnFunciones.Name = "btnFunciones";
+            this.btnFunciones.Size = new System.Drawing.Size(224, 234);
+            this.btnFunciones.TabIndex = 1;
+            this.btnFunciones.Text = "Funciones";
+            this.btnFunciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnFunciones.UseVisualStyleBackColor = false;
+            this.btnFunciones.Click += new System.EventHandler(this.btnFunciones_Click);
             // 
             // panel6
             // 
@@ -417,7 +418,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnFunciones;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label1;
     }

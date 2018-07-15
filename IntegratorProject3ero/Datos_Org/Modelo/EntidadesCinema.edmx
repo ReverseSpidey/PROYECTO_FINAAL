@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CINEMA_PROJECTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="CINEMA_PROJECTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Asiento">
           <Key>
             <PropertyRef Name="id_siento" />
@@ -73,6 +73,7 @@
           <Property Name="Id_pelicula" Type="int" Nullable="false" />
           <Property Name="Hora_ini" Type="varchar" MaxLength="10" />
           <Property Name="ID_funcion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FechaFun" Type="date" />
         </EntityType>
         <EntityType Name="Genero">
           <Key>
@@ -101,6 +102,7 @@
           <Property Name="Cod_idioma" Type="int" Nullable="false" />
           <Property Name="id_clasif" Type="int" />
           <Property Name="Imagen_pelicula" Type="image" />
+          <Property Name="RutaFoto" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Perfil">
           <Key>
@@ -553,8 +555,7 @@
             <End Role="Cuenta" EntitySet="Cuenta" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CINEMA_PROJECTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -644,6 +645,7 @@
           <NavigationProperty Name="Detalle_compra" Relationship="Self.FK__Detalle_c__Id_fu__0697FACD" FromRole="Funcion" ToRole="Detalle_compra" />
           <NavigationProperty Name="Sala" Relationship="Self.FK__Funcion__Cod_sal__4E53A1AA" FromRole="Funcion" ToRole="Sala" />
           <NavigationProperty Name="Pelicula" Relationship="Self.RefPelicula13" FromRole="Funcion" ToRole="Pelicula" />
+          <Property Name="FechaFun" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Genero">
           <Key>
@@ -678,6 +680,7 @@
           <NavigationProperty Name="Funcion" Relationship="Self.RefPelicula13" FromRole="Pelicula" ToRole="Funcion" />
           <NavigationProperty Name="Genero" Relationship="Self.RefGenero14" FromRole="Pelicula" ToRole="Genero" />
           <NavigationProperty Name="Idioma" Relationship="Self.RefIdioma18" FromRole="Pelicula" ToRole="Idioma" />
+          <Property Name="RutaFoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Perfil">
           <Key>
@@ -1224,6 +1227,7 @@
           <EntitySetMapping Name="Funcion">
             <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Funcion">
               <MappingFragment StoreEntitySet="Funcion">
+                <ScalarProperty Name="FechaFun" ColumnName="FechaFun" />
                 <ScalarProperty Name="Cod_sala" ColumnName="Cod_sala" />
                 <ScalarProperty Name="Id_pelicula" ColumnName="Id_pelicula" />
                 <ScalarProperty Name="Hora_ini" ColumnName="Hora_ini" />
@@ -1251,6 +1255,7 @@
           <EntitySetMapping Name="Pelicula">
             <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Pelicula">
               <MappingFragment StoreEntitySet="Pelicula">
+                <ScalarProperty Name="RutaFoto" ColumnName="RutaFoto" />
                 <ScalarProperty Name="Id_pelicula" ColumnName="Id_pelicula" />
                 <ScalarProperty Name="nombre_pelicula" ColumnName="nombre_pelicula" />
                 <ScalarProperty Name="Duracion" ColumnName="Duracion" />

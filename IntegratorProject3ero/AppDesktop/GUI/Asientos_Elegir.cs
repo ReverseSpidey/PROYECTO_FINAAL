@@ -22,6 +22,7 @@ using System.Windows.Forms;
         vFuncion vista;
         srvSala objsal = new srvSala();
         srvAsiento asi = new srvAsiento();
+        srvDetalle_Compra vend = new srvDetalle_Compra();
         srvDetalle_Compra deeet = new srvDetalle_Compra();
         int fila, columna;
         int total_asiento;
@@ -32,9 +33,12 @@ using System.Windows.Forms;
         public decimal Total_FIN;
         int[] tipos = new int[3];//para allmacenar los totales de cada tipo de boleto
         public decimal prec_sala;
+        int id_fun;
         public Asientos_Elegir(vFuncion obj, int num, int abuelo, int adul, int ninio, decimal total_pagar, decimal precio_sala)
         {
             InitializeComponent();
+            //AlinearPanel();
+            id_fun = obj.ID_funcion;
             vista = obj;
             RecupFilaColumn();
             total_asiento = num;
@@ -50,6 +54,7 @@ using System.Windows.Forms;
             Asignar_Datos();
             Recorrer();
             Total_FIN = total_pagar;
+            
 
             //MessageBox.Show("EL CODIGO DE LA SALA ES: " + vista.Cod_sala +" y el número de la sala es"+ vista.NUM_SALA);
         }
@@ -64,11 +69,11 @@ using System.Windows.Forms;
         }
         int c, cont = 0;
         int val;
+        
         private void CrearAsientos()
         {
             for (int f = 0; f <= fila - 1; f++)
             {
-
                 for (c = 0; c <= columna - 1; c++)
                 {
                     but[f, c] = new Button();
@@ -82,12 +87,23 @@ using System.Windows.Forms;
                     val = f + 1;
                     but[f, c].Text = val.ToString();
                     but[f, c].Name = letra.ToString();
-
+                    //lista donde yo recupere fila y columna de la base de datos
+                    MessageBox.Show("el boton esta en la posicion "+f+" "+"columna " + c);
                     letra++;
                     if (letra == (65 + columna))
                     {
                         letra = 'A';
                     }
+                    foreach (var x in vend.getAsientoVendido(id_fun))
+                    {
+                        //MessageBox.Show("Columna de la matriz"+ but[f, c].Text + "\nFila de matriz " + but[f, c].Name + "Columna de lista" + x.columna + "fila de la lista" + x.fila);
+                        if (x.columna.Trim().Equals(but[f, c].Text) && x.fila.Trim().Equals(but[f, c].Name))
+                        {
+                            MessageBox.Show("ENTRA");
+                            but[f, c].Enabled = false;                           
+                        }
+                    }
+                    
 
                 }
 
@@ -168,7 +184,7 @@ using System.Windows.Forms;
             {
                 if (x is Button)
                 {
-                    if (cont <= total_asiento - 1)
+                    if (cont <= total_asiento - 1 && x.Enabled == true)
                     {
                         x.BackColor = Color.Red;
                         string valor = x.Text;
@@ -185,7 +201,15 @@ using System.Windows.Forms;
                     }
                     else
                     {
-                        x.BackColor = Color.Green;
+                        if (x.Enabled == false)
+                        {
+                            x.BackColor = Color.Gray;
+                        }
+                        else
+                        {
+                            x.BackColor = Color.Green;
+
+                        }
 
                     }
 

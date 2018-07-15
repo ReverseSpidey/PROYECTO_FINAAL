@@ -45,9 +45,6 @@ namespace Datos_Org.Servicios
             {
                 using (var db = new EntidadesCinema())
                 {
-
-                  
-
                     db.Asiento.Add(item);
                     db.SaveChanges();
                 }

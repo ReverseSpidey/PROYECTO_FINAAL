@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -360,6 +361,7 @@ namespace AppDesktop.Ticket_Venta
                 StreamWriter write = File.AppendText(direccion);
                 write.Write(linea);
                 write.Close();
+            Process.Start(direccion);
             //}
             
         }

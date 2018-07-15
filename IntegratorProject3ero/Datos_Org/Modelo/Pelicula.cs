@@ -28,6 +28,7 @@ namespace Datos_Org.Modelo
         public int Cod_idioma { get; set; }
         public Nullable<int> id_clasif { get; set; }
         public byte[] Imagen_pelicula { get; set; }
+        public string RutaFoto { get; set; }
     
         public virtual Clasificacion Clasificacion { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

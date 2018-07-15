@@ -24,6 +24,7 @@ namespace Datos_Org.Modelo
         public int Id_pelicula { get; set; }
         public string Hora_ini { get; set; }
         public int ID_funcion { get; set; }
+        public Nullable<System.DateTime> FechaFun { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Detalle_compra> Detalle_compra { get; set; }

@@ -16,5 +16,6 @@ namespace Datos_Org.Entidades
         public string nom_idioma { get; set; }
         public string nom_clasif { get; set; }
         public byte[] Imagen_pelicula { get; set; }
+        public string RutaFoto { get; set; }
     }
 }

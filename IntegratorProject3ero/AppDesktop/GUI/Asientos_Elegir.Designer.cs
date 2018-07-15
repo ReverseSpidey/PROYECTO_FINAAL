@@ -50,7 +50,7 @@
             // 
             this.Cuerpo.AutoSize = true;
             this.Cuerpo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Cuerpo.Location = new System.Drawing.Point(68, 125);
+            this.Cuerpo.Location = new System.Drawing.Point(221, 127);
             this.Cuerpo.Name = "Cuerpo";
             this.Cuerpo.Size = new System.Drawing.Size(0, 0);
             this.Cuerpo.TabIndex = 6;
@@ -70,7 +70,7 @@
             // 
             this.pnlNombre.AutoSize = true;
             this.pnlNombre.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnlNombre.Location = new System.Drawing.Point(37, 136);
+            this.pnlNombre.Location = new System.Drawing.Point(170, 143);
             this.pnlNombre.Name = "pnlNombre";
             this.pnlNombre.Size = new System.Drawing.Size(0, 0);
             this.pnlNombre.TabIndex = 7;

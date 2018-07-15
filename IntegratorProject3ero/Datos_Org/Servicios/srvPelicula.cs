@@ -14,7 +14,7 @@ namespace Datos_Org.Entidades
 {
    public class srvPelicula
     {
-        public List<vPelicula> ObtenerSalas()
+        public List<vPelicula> ObtenrDatePeli()
         {
             List<vPelicula> vsal = new List<vPelicula>();
             using (var db = new EntidadesCinema())
@@ -28,7 +28,12 @@ namespace Datos_Org.Entidades
                             nom_clasif = x.Clasificacion.nombre_clasif,
                             nom_genero = x.Genero.nombre_gen,
                             nom_idioma = x.Idioma.Nombre_idioma,
-                            Sinopsis = x.Sinopsis
+                            Sinopsis = x.Sinopsis,
+                            Imagen_pelicula = x.Imagen_pelicula,
+                            RutaFoto = x.RutaFoto,
+                            
+                            
+                            
                         }).ToList();
                 return vsal;
             }
@@ -129,6 +134,7 @@ namespace Datos_Org.Entidades
                         obj.Cod_idioma = item.Cod_idioma;
                         obj.id_clasif = item.id_clasif;
                         obj.Imagen_pelicula = item.Imagen_pelicula;
+                        obj.RutaFoto = item.RutaFoto;
 
                         db.SaveChanges();
                         MessageBox.Show("Si se actualizó paps");
@@ -152,9 +158,10 @@ namespace Datos_Org.Entidades
                     Pelicula obj = db.Pelicula.Where(x => x.Id_pelicula == item.Id_pelicula).FirstOrDefault();
                     if (obj != null)
                     {
-                        MessageBox.Show("si entro");
                         db.Pelicula.Remove(obj);
                         db.SaveChanges();
+                        MessageBox.Show("si entro");
+
                     }
                 }
             }
@@ -164,6 +171,47 @@ namespace Datos_Org.Entidades
 
             }
         }
+        public List<Pelicula> getListPelis(Hashtable datos)
+        {
+            try
+            {
+                using (var db = new EntidadesCinema())
+                {
+                    string query = @"SELECT VALUE Pelicula FROM EntidadesCinema.Pelicula As Pelicula ";
+                    StringBuilder whereis = new StringBuilder();
+                    List<ObjectParameter> parameters = new List<ObjectParameter>();
+
+
+                    if (datos.Contains("nombre_pelicula"))
+                    {
+                        if (whereis.Length > 0) whereis.Append(" AND ");
+                        whereis.Append("Pelicula.nombre_pelicula=@nombre_pelicula");
+                        parameters.Add(new ObjectParameter("nombre_pelicula", datos["nombre_pelicula"]));
+                    }
+                    if (whereis.Length > 0)
+                        query += " WHERE " + whereis.ToString();
+
+                    ObjectContext oc;
+                    oc = ((IObjectContextAdapter)db).ObjectContext;
+
+                    var q = new ObjectQuery<Datos_Org.Modelo.Pelicula>(query, oc);
+
+                    if (whereis.Length > 0)
+                    {
+                        foreach (ObjectParameter parametro in parameters)
+                            q.Parameters.Add(parametro);
+
+                    }
+                    return q.ToList();
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Verifica los datos a buscar");
+            }
+        }
+
     }
 
 }

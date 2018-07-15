@@ -26,15 +26,18 @@ namespace AppDesktop.GUI
         int valor_gen;
         int valor_idioma;
         int valor_clasif;
+        int id_peli;
+        string ruta_img;
         public Peliculas(vPelicula obj,PELICULA frm)
         {
             //este es para editar peloculas es decir su informacion
             InitializeComponent();
-            //preparaEdicion();
+            Llenar_combo();
+            preparaEdicion();
             nuevo = false;
             this.obj = obj;   
             inf_peli = frm;
-            Llenar_combo();
+            
             datosInterface();
 
         }
@@ -43,10 +46,11 @@ namespace AppDesktop.GUI
         {
             //este quier decir que agregare una nueva peli
             InitializeComponent();
+            Llenar_combo();
             preparaNuevo();
             nuevo = true;
             inf_peli = frm;
-            Llenar_combo();
+            
         }
 
 
@@ -85,18 +89,29 @@ namespace AppDesktop.GUI
         public void datosInterface()
         {
             RecuperarValoresdeCombo();
+            id_peli = obj.Id_pelicula;
             txtNombre.Text = obj.nombre_pelicula;
             txtSinopsis.Text = obj.Sinopsis;
             txtDuracion.Text = obj.Duracion;
             cboClasif.SelectedValue = valor_clasif;
             cboGenero.SelectedValue = valor_gen;
             cboIdioma.SelectedValue = valor_idioma;
+            ruta_img = obj.RutaFoto;
+            byte[] imageSource = obj.Imagen_pelicula;
+            Bitmap image;
+            using (MemoryStream stream = new MemoryStream(imageSource))
+            {
+                image = new Bitmap(stream);
+            }
+            picPelicula.Image = image;
+          
 
         }
 
         public Pelicula interfaceDatos()
         {
             peli_org = new Pelicula();
+            peli_org.Id_pelicula = id_peli;
             peli_org.nombre_pelicula = txtNombre.Text.Trim();
             peli_org.Sinopsis = txtSinopsis.Text.Trim();
             peli_org.Duracion = txtDuracion.Text;
@@ -104,6 +119,8 @@ namespace AppDesktop.GUI
             peli_org.ID_genero = Convert.ToInt16(cboGenero.SelectedValue);
             peli_org.Cod_idioma = Convert.ToInt16(cboIdioma.SelectedValue);
             peli_org.Imagen_pelicula = RecupPicture();
+            peli_org.RutaFoto = ruta_img;
+            MessageBox.Show("la ruta es: " + peli_org.RutaFoto);
             return peli_org;
         }
 
@@ -130,8 +147,10 @@ namespace AppDesktop.GUI
                 Bitmap image = new Bitmap(open.FileName);
                 picPelicula.Image = null;
                 picPelicula.Image = image;
-
+                ruta_img = open.FileName;
+                
             }
+          
 
         }
         private void preparaNuevo()
@@ -156,9 +175,9 @@ namespace AppDesktop.GUI
             txtDuracion.Clear();
             txtNombre.Clear();
             txtSinopsis.Clear();
-            /*cboClasif.SelectedIndex = 0;
+            cboClasif.SelectedIndex = 0;
             cboGenero.SelectedIndex = 0;
-            cboIdioma.SelectedIndex = 0;*/
+            cboIdioma.SelectedIndex = 0;
             picPelicula.Image = null;
         }
 
@@ -181,7 +200,6 @@ namespace AppDesktop.GUI
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -189,7 +207,7 @@ namespace AppDesktop.GUI
             if (nuevo == true)
             {
                 srv.AgregarPelicula(interfaceDatos());
-
+                inf_peli.listar();
                 this.Close();
             }
             else if(nuevo == false)
@@ -214,7 +232,27 @@ namespace AppDesktop.GUI
         private void bntGuardarYSeguir_Click(object sender, EventArgs e)
         {
             srv.AgregarPelicula(interfaceDatos());
+            inf_peli.listar();
+            limpiar();
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            srv.Borrarpelicula(interfaceDatos());
+            inf_peli.listar();
+            limpiar();
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }
