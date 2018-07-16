@@ -18,11 +18,13 @@
     <link href="../Recurso/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../Recurso/assets/css/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="../Recurso/assets/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="../Recurso/assets/lineicons/style.css">    
+    <link rel="stylesheet" type="text/css" href="../Recurso/assets/lineicons/style.css"> 
+    <link href="../Recurso/assets/css/MisEstilos.css" rel="stylesheet" type="text/css" />
     
     <!-- Custom styles for this template -->
     <link href="../Recurso/assets/css/style.css" rel="stylesheet">
     <link href="../Recurso/assets/css/style-responsive.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 
     <script src="../Recurso/assets/js/chart-master/Chart.js"></script>
     

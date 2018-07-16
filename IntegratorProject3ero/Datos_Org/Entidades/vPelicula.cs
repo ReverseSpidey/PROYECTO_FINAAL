@@ -8,6 +8,7 @@ namespace Datos_Org.Entidades
 {
     public class vPelicula
     {
+        
         public int Id_pelicula { get; set; }
         public string nombre_pelicula { get; set; }
         public string Duracion { get; set; }

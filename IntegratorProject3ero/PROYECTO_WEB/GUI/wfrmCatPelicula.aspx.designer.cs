@@ -22,15 +22,6 @@ namespace PROYECTO_WEB.GUI {
         protected global::System.Web.UI.WebControls.Label lblPelicula;
         
         /// <summary>
-        /// Control btnNuevo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNuevo;
-        
-        /// <summary>
         /// Control dptPelículas.
         /// </summary>
         /// <remarks>
@@ -40,12 +31,21 @@ namespace PROYECTO_WEB.GUI {
         protected global::System.Web.UI.WebControls.DropDownList dptPelículas;
         
         /// <summary>
-        /// Control dgvPeliculas.
+        /// Control btnNuevaPelicula.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgvPeliculas;
+        protected global::System.Web.UI.WebControls.Button btnNuevaPelicula;
+        
+        /// <summary>
+        /// Control gvPelículas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvPelículas;
     }
 }

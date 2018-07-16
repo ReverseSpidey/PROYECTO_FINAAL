@@ -13,11 +13,12 @@ namespace PROYECTO_WEB.GUI
         srvPelicula serv = new srvPelicula();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //btnSexy.ServerClick += new EventHandler(btnSexy_Click);
-           
-                dptPelículas.DataSource = serv.GetPeliculas();
-                dptPelículas.DataBind();
-
+            if (!IsPostBack)
+            {
+                
+            }
+            LlenarDrop();
+            listarData();
         }
 
         private void CrearEventos()
@@ -25,7 +26,38 @@ namespace PROYECTO_WEB.GUI
         }
         //private void btnSexy_Click(object sender, EventArgs e)
         //{
-            
+
         //}
+        public void listarData()
+        {
+            gvPelículas.AutoGenerateColumns = false;
+            gvPelículas.DataSource = serv.ObtenerSalas();
+            gvPelículas.DataBind();
+            gvPelículas.Columns[0].Visible = false;
+            gvPelículas.Columns[1].ItemStyle.Width = 100;
+        }
+        private void LlenarDrop()
+        {
+            dptPelículas.DataSource = serv.GetPeliculas();
+            dptPelículas.DataBind();
+        }
+        /*Evento rowcommand*/
+        protected void SeleccionarPelicula(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName.ToString() == "Editar")
+            {       /*YA RECUPERE LOS DATOS DEL OBJECT*/              
+                vPelicula peli = new vPelicula();
+                int index = Convert.ToInt32(e.CommandArgument.ToString());
+                peli.Id_pelicula = (Int32)gvPelículas.DataKeys[index].Value;
+                peli.nombre_pelicula = gvPelículas.Rows[index].Cells[2].Text.Trim();
+                peli.nom_clasif = gvPelículas.Rows[index].Cells[3].Text.Trim();
+                peli.nom_genero = gvPelículas.Rows[index].Cells[4].Text.Trim();
+                peli.nom_idioma = gvPelículas.Rows[index].Cells[5].Text.Trim();
+                peli.Sinopsis = gvPelículas.Rows[index].Cells[6].Text.Trim();
+
+                /*Se van a crear dos sesiones ya que una almacena datos porque se editan
+                 y la otra es caundo se agrega una Nueva Película*/
+            }
+        }
     }
 }

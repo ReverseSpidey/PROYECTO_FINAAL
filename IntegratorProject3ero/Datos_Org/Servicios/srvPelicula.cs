@@ -22,6 +22,7 @@ namespace Datos_Org.Entidades
                 vsal = (from x in db.Pelicula
                         select new vPelicula
                         {
+                            
                             Id_pelicula = x.Id_pelicula,
                             nombre_pelicula = x.nombre_pelicula,
                             Duracion = x.Duracion,

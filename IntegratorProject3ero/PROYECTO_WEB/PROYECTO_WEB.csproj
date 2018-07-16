@@ -79,6 +79,7 @@
     <Content Include="GUI\wfrmCatPelicula.aspx" />
     <Content Include="MasterPage\index.html" />
     <Content Include="Recurso\assets\css\bootstrap.css" />
+    <Content Include="Recurso\assets\css\MisEstilos.css" />
     <Content Include="Recurso\assets\css\style-responsive.css" />
     <Content Include="Recurso\assets\css\style.css" />
     <Content Include="Recurso\assets\css\table-responsive.css" />
