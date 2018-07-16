@@ -93,7 +93,7 @@
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
-                          <span>Pelicula</span>
+                          <span>Catálogos</span>
                       </a>
                       <ul class="sub">
                           <li><a  href="general.html">Pelicula</a></li>
