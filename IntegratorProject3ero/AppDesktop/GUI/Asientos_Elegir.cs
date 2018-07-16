@@ -37,7 +37,6 @@ using System.Windows.Forms;
         public Asientos_Elegir(vFuncion obj, int num, int abuelo, int adul, int ninio, decimal total_pagar, decimal precio_sala)
         {
             InitializeComponent();
-            //AlinearPanel();
             id_fun = obj.ID_funcion;
             vista = obj;
             RecupFilaColumn();
@@ -88,7 +87,6 @@ using System.Windows.Forms;
                     but[f, c].Text = val.ToString();
                     but[f, c].Name = letra.ToString();
                     //lista donde yo recupere fila y columna de la base de datos
-                    MessageBox.Show("el boton esta en la posicion "+f+" "+"columna " + c);
                     letra++;
                     if (letra == (65 + columna))
                     {
