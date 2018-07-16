@@ -21,13 +21,6 @@ namespace PROYECTO_WEB.GUI
             listarData();
         }
 
-        private void CrearEventos()
-        {
-        }
-        //private void btnSexy_Click(object sender, EventArgs e)
-        //{
-
-        //}
         public void listarData()
         {
             gvPelículas.AutoGenerateColumns = false;

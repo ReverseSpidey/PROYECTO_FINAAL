@@ -18,7 +18,7 @@
                                     <asp:DropDownList ID="dptPelículas" Width ="40%" Height="100%" CssClass="form-control " runat="server" DataTextField="nombre_pelicula" DataValueField="id_pelicula" Font-Size="Medium"></asp:DropDownList>
                                   </div>
                                   <div class="col-xl-4">
-                                      <asp:Button ID="btnNuevaPelicula" runat="server" class="btn btn-success" Text="Nueva Película" Font-Size="Medium" />
+                                      <asp:Button ID="btnNuevaPelicula" runat="server" class="btn btn-success" Text="Nueva Película" Font-Size="Medium" />                             
                                   </div>
                               </div>
                           </div>
