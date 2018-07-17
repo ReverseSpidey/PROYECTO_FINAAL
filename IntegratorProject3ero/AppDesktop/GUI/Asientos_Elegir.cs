@@ -2,8 +2,6 @@
 using Datos_Org.Modelo;
 using Datos_Org.Servicios;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
