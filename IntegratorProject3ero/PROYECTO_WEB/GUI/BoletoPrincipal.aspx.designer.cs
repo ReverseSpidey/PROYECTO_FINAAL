@@ -10,16 +10,25 @@
 namespace PROYECTO_WEB.GUI {
     
     
-    public partial class TIPOBOLETOPRINCIPAL {
+    public partial class BoletoPrincipal {
         
         /// <summary>
-        /// Control btnNuevo.
+        /// Control lblTipoboleto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNuevo;
+        protected global::System.Web.UI.WebControls.Label lblTipoboleto;
+        
+        /// <summary>
+        /// Control txtTurno.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTurno;
         
         /// <summary>
         /// Control btnBuscar.
@@ -31,21 +40,21 @@ namespace PROYECTO_WEB.GUI {
         protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
-        /// Control txtSala.
+        /// Control btnNuevo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSala;
+        protected global::System.Web.UI.WebControls.Button btnNuevo;
         
         /// <summary>
-        /// Control gvResultado.
+        /// Control gvTipoBoleto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvResultado;
+        protected global::System.Web.UI.WebControls.GridView gvTipoBoleto;
     }
 }

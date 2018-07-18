@@ -100,8 +100,8 @@
                       <ul class="sub">
                           <li><a  href="general.html">Pelicula</a></li>
                           <li><a  href="buttons.html">Funcion</a></li>
-                          <li><a  href="../GUI/Clasificacion.aspx">Clasificación</a></li>
-                          <li><a  href="panels.html">Género</a></li>
+                          <li><a  href="../GUI/Clasificacionprincipal.aspx">Clasificación</a></li>
+                          <li><a  href="../GUI/GeneroPrincipal.aspx">Género</a></li>
                       </ul>
                   </li>
 
@@ -112,8 +112,9 @@
                       </a>
                       <ul class="sub">
                           <li><a  href="calendar.html">Sala</a></li>
-                          <li><a  href="../GUI/TipoSala">Tipo sala</a></li>
+                          <li><a  href="../GUI/TipoSala.aspx">Tipo sala</a></li>
                           <li><a  href="gallery.html">Asientos</a></li>
+                          <li><a  href="../GUI/BoletoPrincipal.aspx">Boletos</a></li>
                           
                       </ul>
                   </li>

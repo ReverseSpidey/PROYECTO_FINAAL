@@ -37,7 +37,7 @@ namespace PROYECTO_WEB.GUI
         /*Evento rowcommand*/
         protected void SeleccionarPelicula(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName.ToString() == "Editar")
+            if (e.CommandName.ToString() == "Editar")//si el comando dice editar recupera los datos y los devuelve al otro form
             {       /*YA RECUPERE LOS DATOS DEL OBJECT*/              
                 vPelicula peli = new vPelicula();
                 int index = Convert.ToInt32(e.CommandArgument.ToString());

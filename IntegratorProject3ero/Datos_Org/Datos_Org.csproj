@@ -132,8 +132,10 @@
     <Compile Include="Modelo\Usuario.cs">
       <DependentUpon>EntidadesCinema.tt</DependentUpon>
     </Compile>
+    <Compile Include="Servicios\srvClasificacion.cs" />
     <Compile Include="Servicios\srvCompra.cs" />
     <Compile Include="Servicios\srvDetalle_Compra.cs" />
+    <Compile Include="Servicios\srvGenero.cs" />
     <Compile Include="Servicios\srvPelicula.cs" />
     <Compile Include="Entidades\vAsiento.cs" />
     <Compile Include="Entidades\vFuncion.cs" />

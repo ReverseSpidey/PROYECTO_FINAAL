@@ -68,12 +68,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GUI\BoletoEdit.aspx" />
+    <Content Include="GUI\BoletoPrincipal.aspx" />
     <Content Include="GUI\Clasificacion.aspx" />
     <Content Include="GUI\Clasificacionprincipal.aspx" />
-    <Content Include="GUI\Genero.aspx" />
+    <Content Include="GUI\GeneroPrincipal.aspx" />
     <Content Include="GUI\Login.aspx" />
-    <Content Include="GUI\TIPOBOLETO.aspx" />
-    <Content Include="GUI\TIPOBOLETOPRINCIPAL.aspx" />
     <Content Include="GUI\TipoSala.aspx" />
     <Content Include="GUI\Usuario.aspx" />
     <Content Include="GUI\wfrmCatPelicula.aspx" />
@@ -165,9 +165,25 @@
     <Content Include="Recurso\assets\lineicons\index.html" />
     <Content Include="Recurso\assets\lineicons\lte-ie7.js" />
     <Content Include="Recurso\assets\lineicons\style.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\BoletoEdit.aspx.cs">
+      <DependentUpon>BoletoEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\BoletoEdit.aspx.designer.cs">
+      <DependentUpon>BoletoEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BoletoPrincipal.aspx.cs">
+      <DependentUpon>BoletoPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\BoletoPrincipal.aspx.designer.cs">
+      <DependentUpon>BoletoPrincipal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Clasificacion.aspx.cs">
       <DependentUpon>Clasificacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -182,12 +198,12 @@
     <Compile Include="GUI\Clasificacionprincipal.aspx.designer.cs">
       <DependentUpon>Clasificacionprincipal.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Genero.aspx.cs">
-      <DependentUpon>Genero.aspx</DependentUpon>
+    <Compile Include="GUI\GeneroPrincipal.aspx.cs">
+      <DependentUpon>GeneroPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GUI\Genero.aspx.designer.cs">
-      <DependentUpon>Genero.aspx</DependentUpon>
+    <Compile Include="GUI\GeneroPrincipal.aspx.designer.cs">
+      <DependentUpon>GeneroPrincipal.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -195,20 +211,6 @@
     </Compile>
     <Compile Include="GUI\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\TIPOBOLETO.aspx.cs">
-      <DependentUpon>TIPOBOLETO.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GUI\TIPOBOLETO.aspx.designer.cs">
-      <DependentUpon>TIPOBOLETO.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\TIPOBOLETOPRINCIPAL.aspx.cs">
-      <DependentUpon>TIPOBOLETOPRINCIPAL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GUI\TIPOBOLETOPRINCIPAL.aspx.designer.cs">
-      <DependentUpon>TIPOBOLETOPRINCIPAL.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\TipoSala.aspx.cs">
       <DependentUpon>TipoSala.aspx</DependentUpon>
