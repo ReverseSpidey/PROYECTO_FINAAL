@@ -167,5 +167,11 @@ namespace AppDesktop.GUI
             PeliculasDisp disp = new PeliculasDisp();
             disp.Show();
         }
+
+        private void btnFunciones_Click(object sender, EventArgs e)
+        {
+            Funciones fun = new Funciones();
+            fun.Show();
+        }
     }
 }
