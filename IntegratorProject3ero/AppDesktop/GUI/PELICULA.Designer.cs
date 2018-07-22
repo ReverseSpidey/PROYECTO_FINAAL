@@ -50,7 +50,6 @@
             this.Sinopsis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen_pelicula = new System.Windows.Forms.DataGridViewImageColumn();
             this.id_pelicula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RutaFoto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ver = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -190,7 +189,6 @@
             this.Sinopsis,
             this.Imagen_pelicula,
             this.id_pelicula,
-            this.RutaFoto,
             this.Ver});
             this.dgvPeliculas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPeliculas.EnableHeadersVisualStyles = false;
@@ -278,13 +276,6 @@
             this.id_pelicula.Name = "id_pelicula";
             this.id_pelicula.ReadOnly = true;
             // 
-            // RutaFoto
-            // 
-            this.RutaFoto.DataPropertyName = "RutaFoto";
-            this.RutaFoto.HeaderText = "Ruta";
-            this.RutaFoto.Name = "RutaFoto";
-            this.RutaFoto.ReadOnly = true;
-            // 
             // Ver
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -348,7 +339,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Sinopsis;
         private System.Windows.Forms.DataGridViewImageColumn Imagen_pelicula;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_pelicula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RutaFoto;
         private System.Windows.Forms.DataGridViewButtonColumn Ver;
     }
 }

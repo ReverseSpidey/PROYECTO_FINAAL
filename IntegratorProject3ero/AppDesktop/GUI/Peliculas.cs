@@ -96,7 +96,6 @@ namespace AppDesktop.GUI
             cboClasif.SelectedValue = valor_clasif;
             cboGenero.SelectedValue = valor_gen;
             cboIdioma.SelectedValue = valor_idioma;
-            ruta_img = obj.RutaFoto;
             byte[] imageSource = obj.Imagen_pelicula;
             Bitmap image;
             using (MemoryStream stream = new MemoryStream(imageSource))
@@ -119,8 +118,6 @@ namespace AppDesktop.GUI
             peli_org.ID_genero = Convert.ToInt16(cboGenero.SelectedValue);
             peli_org.Cod_idioma = Convert.ToInt16(cboIdioma.SelectedValue);
             peli_org.Imagen_pelicula = RecupPicture();
-            peli_org.RutaFoto = ruta_img;
-            MessageBox.Show("la ruta es: " + peli_org.RutaFoto);
             return peli_org;
         }
 

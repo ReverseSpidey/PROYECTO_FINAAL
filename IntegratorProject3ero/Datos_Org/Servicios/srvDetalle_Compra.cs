@@ -15,7 +15,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new CinemaEntidades())
                 {
                     db.Detalle_compra.Add(item);
                     db.SaveChanges();
@@ -31,7 +31,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new CinemaEntidades())
                 {
                     Detalle_compra obj = db.Detalle_compra.Where(x => x.id_detalle == item.id_detalle).FirstOrDefault();
                     if (obj != null)
@@ -54,7 +54,7 @@ namespace Datos_Org.Servicios
         public List<vDetallecompra> Detalle(vFuncion ji)
         {
             List<vDetallecompra> obj = new List<vDetallecompra>();
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 obj = (from x in db.Detalle_compra where x.Id_funcion == ji.ID_funcion
                        select new vDetallecompra
@@ -75,7 +75,7 @@ namespace Datos_Org.Servicios
         public List<vDetallecompra> getDetalles_Compra(int id_asi, int id_comp)
         {
             List<vDetallecompra> obj = new List<vDetallecompra>();
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 obj = (from x in db.Detalle_compra
                        where x.id_asiento == id_asi && x.id_compra == id_comp
@@ -93,7 +93,7 @@ namespace Datos_Org.Servicios
         public List<AsientoVendido> getAsientoVendido(int id_funcion)
         {
             List<AsientoVendido> asi = new List<AsientoVendido>();
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 asi = (from x in db.Detalle_compra where x.Id_funcion == id_funcion
                        select new AsientoVendido

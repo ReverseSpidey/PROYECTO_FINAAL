@@ -59,7 +59,7 @@ namespace AppDesktop.GUI
         private void dgvPeliculas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             vPelicula obj_pel = new vPelicula();
-            if (e.ColumnIndex == 9)
+            if (e.ColumnIndex == 8)
             {
                 obj_pel.nombre_pelicula = dgvPeliculas.Rows[e.RowIndex].Cells[0].Value.ToString();
                 obj_pel.Duracion = dgvPeliculas.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -69,7 +69,6 @@ namespace AppDesktop.GUI
                 obj_pel.Sinopsis = dgvPeliculas.Rows[e.RowIndex].Cells[5].Value.ToString();
                 obj_pel.Imagen_pelicula = (byte[])dgvPeliculas.Rows[e.RowIndex].Cells[6].Value;
                 obj_pel.Id_pelicula = (Int32)dgvPeliculas.Rows[e.RowIndex].Cells[7].Value;
-                obj_pel.RutaFoto = dgvPeliculas.Rows[e.RowIndex].Cells[8].Value.ToString();
                 Peliculas peli = new Peliculas(obj_pel, this);
                 peli.ShowDialog();
             }

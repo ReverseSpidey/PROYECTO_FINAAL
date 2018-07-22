@@ -10,7 +10,7 @@
             <div class="col-md-3">
             <div class="card-deck">
                   <div class="card">
-                             <img class="card-img-top" src="data:image/jpg;base64,<%# Convert.ToBase64String((byte[])DataBinder.Eval(Container.DataItem,"imagen_pelicula"))%>" alt="Card image cap">
+                             <img class="card-img-top" width="50" src="data:image/jpg;base64,<%# Convert.ToBase64String((byte[])DataBinder.Eval(Container.DataItem,"imagen_pelicula"))%>" alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title"><asp:Label ControlID="lblPelicula" runat="server" Text='<%# Eval("nombre_pelicula") %>'></asp:Label></h5>
                       <p class="card-text"><small class="text-muted">

@@ -17,7 +17,7 @@ namespace Datos_Org.Servicios
         public List<vFuncion> Horario(int id)
         {
             List<vFuncion> obj = new List<vFuncion>();
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 obj = (from x in db.Funcion
                        select new vFuncion
@@ -41,7 +41,7 @@ namespace Datos_Org.Servicios
         public List<vFuncion> ObtenFuncion()
         {
             List<vFuncion> obj = new List<vFuncion>();
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 obj = (from x in db.Funcion
                        select new vFuncion
@@ -64,7 +64,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new CinemaEntidades())
                 {
                     db.Funcion.Add(item);
                     db.SaveChanges();
@@ -81,7 +81,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new CinemaEntidades())
                 {
                     Funcion obj = db.Funcion.Where(x => x.ID_funcion == item.ID_funcion).FirstOrDefault();
                     if (obj != null)
@@ -105,7 +105,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new CinemaEntidades())
                 {
                     Funcion obj = db.Funcion.Where(x => x.ID_funcion == item.ID_funcion).FirstOrDefault();
                     if (obj != null)

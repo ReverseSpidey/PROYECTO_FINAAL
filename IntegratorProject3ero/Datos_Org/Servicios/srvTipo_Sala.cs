@@ -12,7 +12,7 @@ namespace Datos_Org.Servicios
         public List<Tipo_sala> GetPrecios()
         {
             List<Tipo_sala> tipe = new List<Tipo_sala>();
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 tipe = (from x in db.Tipo_sala
                         select x).ToList();

@@ -13,7 +13,7 @@ namespace Datos_Org.Servicios
         public List<Tipo_boleto> ObtenerPrecio()
         {
             List<Tipo_boleto> obj = new List<Tipo_boleto>();
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 obj = (from x in db.Tipo_boleto
                       select x).ToList();

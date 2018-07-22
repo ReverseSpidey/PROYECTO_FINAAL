@@ -17,7 +17,7 @@ namespace Datos_Org.Entidades
         public List<vPelicula> ObtenrDatePeli()
         {
             List<vPelicula> vsal = new List<vPelicula>();
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 vsal = (from x in db.Pelicula
                         select new vPelicula
@@ -30,7 +30,6 @@ namespace Datos_Org.Entidades
                             nom_idioma = x.Idioma.Nombre_idioma,
                             Sinopsis = x.Sinopsis,
                             Imagen_pelicula = x.Imagen_pelicula,
-                            RutaFoto = x.RutaFoto,
                             
                             
                             
@@ -41,7 +40,7 @@ namespace Datos_Org.Entidades
 
         public List<Pelicula> GetPeliculas()
         {
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 return db.Pelicula.ToList();
             }
@@ -51,7 +50,7 @@ namespace Datos_Org.Entidades
         public List<vPelicula> ObtenerImagen(int id)
         {
             List<vPelicula> peli = new List<vPelicula>();
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 peli = (from x in db.Pelicula
                         where x.Id_pelicula == id
@@ -65,7 +64,7 @@ namespace Datos_Org.Entidades
 
         public List<Clasificacion> GetClasificacions()
         {
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 return db.Clasificacion.ToList();
             }
@@ -74,7 +73,7 @@ namespace Datos_Org.Entidades
 
         public List<Genero> GetGeneros()
         {
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 return db.Genero.ToList();
             }
@@ -82,7 +81,7 @@ namespace Datos_Org.Entidades
 
         public List<Idioma> GetIdiomas()
         {
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 return db.Idioma.ToList();
             }
@@ -92,7 +91,7 @@ namespace Datos_Org.Entidades
         public int TotalPelis()
         {
             List<Pelicula> list = new List<Pelicula>();
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 return db.Pelicula.Count();
             }
@@ -104,7 +103,7 @@ namespace Datos_Org.Entidades
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new CinemaEntidades())
                 {
                     db.Pelicula.Add(item);
                     db.SaveChanges();
@@ -122,7 +121,7 @@ namespace Datos_Org.Entidades
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new CinemaEntidades())
                 {
                     Pelicula obj = db.Pelicula.Where(x => x.nombre_pelicula == item.nombre_pelicula).FirstOrDefault();
                     if (obj != null)
@@ -134,7 +133,6 @@ namespace Datos_Org.Entidades
                         obj.Cod_idioma = item.Cod_idioma;
                         obj.id_clasif = item.id_clasif;
                         obj.Imagen_pelicula = item.Imagen_pelicula;
-                        obj.RutaFoto = item.RutaFoto;
 
                         db.SaveChanges();
                         MessageBox.Show("Si se actualizó paps");
@@ -153,7 +151,7 @@ namespace Datos_Org.Entidades
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new CinemaEntidades())
                 {
                     Pelicula obj = db.Pelicula.Where(x => x.Id_pelicula == item.Id_pelicula).FirstOrDefault();
                     if (obj != null)
@@ -175,7 +173,7 @@ namespace Datos_Org.Entidades
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new CinemaEntidades())
                 {
                     string query = @"SELECT VALUE Pelicula FROM EntidadesCinema.Pelicula As Pelicula ";
                     StringBuilder whereis = new StringBuilder();

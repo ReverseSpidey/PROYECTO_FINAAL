@@ -16,7 +16,7 @@ namespace Datos_Org.Servicios
     {
         public List<Sala> getListSALAS()
         {
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 return db.Sala.ToList();
             }
@@ -24,7 +24,7 @@ namespace Datos_Org.Servicios
 
         public List<Tipo_sala> getlistTipo_Sala()
         {
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 return db.Tipo_sala.ToList();
             }
@@ -37,7 +37,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new CinemaEntidades())
                 {
                     db.Sala.Add(item);
                     db.SaveChanges();
@@ -54,7 +54,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new CinemaEntidades())
                 {
                     Sala obj = db.Sala.Where(x => x.Cod_sala == item.Cod_sala).FirstOrDefault();
                     if (obj != null)
@@ -77,7 +77,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new CinemaEntidades())
                 {
                     Sala obj = db.Sala.Where(x => x.Num_sala == item.Num_sala).FirstOrDefault();
                     if (obj != null)
@@ -99,7 +99,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new CinemaEntidades())
                 {
                     string query = @"SELECT VALUE SALA FROM Cinema_Model.Sala As Sala";
                     StringBuilder wheereis = new StringBuilder();
@@ -138,7 +138,7 @@ namespace Datos_Org.Servicios
         public List<vSala> Sala_c_tipo()
         {
             List<vSala> obj = new List<vSala>();
-            using (var db = new EntidadesCinema())
+            using (var db = new CinemaEntidades())
             {
                 obj = (from x in db.Sala
                        select new vSala

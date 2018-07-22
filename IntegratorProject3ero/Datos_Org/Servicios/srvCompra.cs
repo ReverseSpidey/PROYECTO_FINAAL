@@ -15,7 +15,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new CinemaEntidades())
                 {
                     db.Compra.Add(item);
                     db.SaveChanges();

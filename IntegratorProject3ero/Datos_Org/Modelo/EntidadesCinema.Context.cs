@@ -13,10 +13,10 @@ namespace Datos_Org.Modelo
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EntidadesCinema : DbContext
+    public partial class CinemaEntidades : DbContext
     {
-        public EntidadesCinema()
-            : base("name=EntidadesCinema")
+        public CinemaEntidades()
+            : base("name=CinemaEntidades")
         {
         }
     
