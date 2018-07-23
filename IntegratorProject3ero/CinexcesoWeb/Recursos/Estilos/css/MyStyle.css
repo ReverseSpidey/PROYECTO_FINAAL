@@ -14,7 +14,97 @@
     left:40%;
 }
 
-.card-img-top img {
-    width: 50px;
-    height: 50px;
+
+
+div.contenedor {
+    margin: 15px;
+    width: 200px;
+    height: 350px;
+    background-color: red;
+    overflow: hidden;
+}
+
+div.imagen {
+    width: 200px;
+    height: 400px;
+    background-color: gray;
+    overflow: hidden;
+    -webkit-transition: height .4s;
+}
+
+
+div.info {
+    width: 200px;
+    height: 0px;
+    background-color: #233c80;
+    overflow: hidden;
+    -webkit-transition: height .4s;
+}
+
+img.imagen {
+    display: block;
+    margin: 10px auto;
+    width: 185px;
+    height: 250px;
+    -webkit-transition: margin-top .4s;
+}
+
+/*p.titulo {
+    margin: 15px;
+    font-size: 1.1em;
+    color: forestgreen;
+}
+
+p.adicional {
+    color: white;
+    margin: 15px;
+}*/
+
+a.link {
+    float: right;
+    margin-top: 10px!important;
+    margin-right: 45px;
+    padding: 5px 15px;
+    /*background-color: #d53a61;*/
+    font-size: 16px;
+    color: white;
+    text-decoration: none!important;
+    text-align:center;
+}
+a.Sinopsis {
+    float: right;
+    margin-top: 0px !important;
+    margin-right: 49px;
+    padding: 5px 15px;
+    /*background-color: forestgreen;*/
+    font-size: 16px;
+    color: white;
+    text-decoration: none !important;
+    text-align: center;
+
+}
+a:hover{
+    color: #66d9ff!important;
+}
+
+h3.nomPeli {
+    text-align: center;
+    font-weight: bold;
+}
+
+div.contenedor:hover div.imagen {
+    height: 260px; aqui /*perro pon el width de div info div image y contenedor +10*/
+}
+
+div.contenedor:hover div.info {
+    height: 90px;
+}
+
+
+div.contenedor:hover img.imagen {
+    margin-top: 5px;
+}
+
+.btn btn-info{
+    font-size:20px;
 }

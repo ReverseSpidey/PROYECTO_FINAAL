@@ -76,6 +76,7 @@
   <ItemGroup>
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="GUI\wfrmFuncionPelicula.aspx" />
     <Content Include="GUI\wfrmPrueba.aspx" />
     <Content Include="Recursos\assets\slider_documentation\documentation\assets\css\bootstrap-responsive.css" />
     <Content Include="Recursos\assets\slider_documentation\documentation\assets\css\bootstrap.css" />
@@ -368,6 +369,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\wfrmFuncionPelicula.aspx.cs">
+      <DependentUpon>wfrmFuncionPelicula.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\wfrmFuncionPelicula.aspx.designer.cs">
+      <DependentUpon>wfrmFuncionPelicula.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\wfrmPrueba.aspx.cs">
       <DependentUpon>wfrmPrueba.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

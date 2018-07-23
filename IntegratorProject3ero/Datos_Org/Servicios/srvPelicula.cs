@@ -29,11 +29,28 @@ namespace Datos_Org.Entidades
                             nom_genero = x.Genero.nombre_gen,
                             nom_idioma = x.Idioma.Nombre_idioma,
                             Sinopsis = x.Sinopsis,
-                            Imagen_pelicula = x.Imagen_pelicula,
-                            
-                            
-                            
+                            Imagen_pelicula = x.Imagen_pelicula,                                                                                   
                         }).ToList();
+                return vsal;
+            }
+        }
+        public List<vPelicula> ObtenrDatePeli(int id_peli)
+        {
+            List<vPelicula> vsal = new List<vPelicula>();
+            using (var db = new CinemaEntidades())
+            {
+                vsal = (from x in db.Pelicula
+                        select new vPelicula
+                        {
+                            Id_pelicula = x.Id_pelicula,
+                            nombre_pelicula = x.nombre_pelicula,
+                            Duracion = x.Duracion,
+                            nom_clasif = x.Clasificacion.nombre_clasif,
+                            nom_genero = x.Genero.nombre_gen,
+                            nom_idioma = x.Idioma.Nombre_idioma,
+                            Sinopsis = x.Sinopsis,
+                            Imagen_pelicula = x.Imagen_pelicula,
+                        }).Where(x => x.Id_pelicula == id_peli).ToList();
                 return vsal;
             }
         }

@@ -17,15 +17,18 @@ namespace CinexcesoWeb.GUI
         {
             RptPeliculas.DataSource = peli.GetPeliculas();
             RptPeliculas.DataBind();
+
+            RptPeliculas.ItemCommand += new RepeaterCommandEventHandler(RptPeliculas_ItemCommand);
+            
         }
-        private void ConsultarImagen()
+
+        private void RptPeliculas_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
-
-        }
-
-        protected void RptPeliculas_ItemCommand(object source, RepeaterCommandEventArgs e)
-        {
-
+            if(e.CommandName =="verFuncion")
+            {
+                string id_peli = ((LinkButton)e.CommandSource).CommandArgument;
+                Response.Redirect("wfrmFuncionPelicula.aspx?ID=" + id_peli);
+            }
         }
     }
 }
