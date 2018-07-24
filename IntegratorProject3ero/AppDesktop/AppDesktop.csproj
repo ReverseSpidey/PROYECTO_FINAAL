@@ -298,8 +298,6 @@
     <Content Include="bin\Debug\Microsoft.VisualBasic.PowerPacks.Design.dll" />
     <Content Include="bin\Debug\Microsoft.VisualBasic.PowerPacks.dll" />
     <Content Include="bin\Debug\MySql.Data.dll" />
-    <Content Include="bin\EntityFramework.dll" />
-    <Content Include="bin\EntityFramework.SqlServer.dll" />
     <None Include="Resources\movie-symbol-of-video-camera1.png" />
     <None Include="Resources\booking.png" />
     <None Include="Resources\tickets.png" />

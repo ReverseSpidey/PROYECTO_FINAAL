@@ -136,7 +136,6 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Gray;
-            this.button4.Enabled = false;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button4.Location = new System.Drawing.Point(954, 355);
@@ -144,6 +143,7 @@
             this.button4.Size = new System.Drawing.Size(53, 45);
             this.button4.TabIndex = 46;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 

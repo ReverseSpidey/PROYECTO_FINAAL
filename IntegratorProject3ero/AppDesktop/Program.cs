@@ -17,7 +17,7 @@ namespace AppDesktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LOGIN());
+            Application.Run(new MenuAdministrador());
             
         }
     }

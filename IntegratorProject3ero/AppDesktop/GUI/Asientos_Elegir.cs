@@ -176,6 +176,14 @@ using System.Windows.Forms;
             
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            foreach (var x in id_boleto)
+            {
+                MessageBox.Show("el id es: " + x);
+            }
+        }
+
         private void Recorrer()
         {
             foreach (Control x in Cuerpo.Controls)
@@ -226,7 +234,7 @@ using System.Windows.Forms;
             {
                 ID = x.id_siento;
             }
-
+            MessageBox.Show("el di es " + ID);
             if (butt.BackColor == Color.Red)
             {
                 butt.BackColor = Color.Green;

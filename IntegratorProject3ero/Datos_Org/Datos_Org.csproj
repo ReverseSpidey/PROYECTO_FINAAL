@@ -50,88 +50,89 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\ArregloImagen.cs" />
     <Compile Include="Entidades\AsientoVendido.cs" />
     <Compile Include="Entidades\vDetallecompra.cs" />
     <Compile Include="Entidades\vPelicula.cs" />
     <Compile Include="Entidades\vTipo_Boleto.cs" />
     <Compile Include="Entidades\vTipo_Sala.cs" />
     <Compile Include="Modelo\Asiento.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Ciudad.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Clasificacion.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Compra.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Cuenta.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Detalle_compra.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\EntidadesCinema.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntidadesCinema.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\EntidadesCinema.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\EntidadesCinema.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntidadesCinema.edmx</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Estado.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Funcion.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Genero.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Idioma.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloCinema.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloCinema.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloCinema.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloCinema.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloCinema.edmx</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Pelicula.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Perfil.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Persona.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Sala.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Sucursal.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\sysdiagrams.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Tarjeta_credito.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Tipo_boleto.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Tipo_pago.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Tipo_sala.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Usuario.cs">
-      <DependentUpon>EntidadesCinema.tt</DependentUpon>
+      <DependentUpon>ModeloCinema.tt</DependentUpon>
     </Compile>
     <Compile Include="Servicios\srvCompra.cs" />
     <Compile Include="Servicios\srvDetalle_Compra.cs" />
@@ -150,28 +151,29 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="Modelo\EntidadesCinema.edmx">
+    <EntityDeploy Include="Modelo\ModeloCinema.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EntidadesCinema.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModeloCinema.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Modelo\EntidadesCinema.edmx.diagram">
-      <DependentUpon>EntidadesCinema.edmx</DependentUpon>
+    <None Include="Modelo\ModeloCinema.edmx.diagram">
+      <DependentUpon>ModeloCinema.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Content Include="Modelo\EntidadesCinema.Context.tt">
+    <Content Include="Modelo\ModeloCinema.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntidadesCinema.edmx</DependentUpon>
-      <LastGenOutput>EntidadesCinema.Context.cs</LastGenOutput>
+      <DependentUpon>ModeloCinema.edmx</DependentUpon>
+      <LastGenOutput>ModeloCinema.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Modelo\EntidadesCinema.tt">
+    <Content Include="Modelo\ModeloCinema.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntidadesCinema.edmx</DependentUpon>
-      <LastGenOutput>EntidadesCinema.cs</LastGenOutput>
+      <DependentUpon>ModeloCinema.edmx</DependentUpon>
+      <LastGenOutput>ModeloCinema.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

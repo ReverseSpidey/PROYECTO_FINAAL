@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="CINEMA_PROJECTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="CinemaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Asiento">
           <Key>
             <PropertyRef Name="id_siento" />
@@ -102,7 +102,6 @@
           <Property Name="Cod_idioma" Type="int" Nullable="false" />
           <Property Name="id_clasif" Type="int" />
           <Property Name="Imagen_pelicula" Type="image" />
-          <Property Name="RutaFoto" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Perfil">
           <Key>
@@ -448,7 +447,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="CINEMA_PROJECTModelStoreContainer">
+        <EntityContainer Name="CinemaModelStoreContainer">
           <EntitySet Name="Asiento" EntityType="Self.Asiento" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ciudad" EntityType="Self.Ciudad" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Clasificacion" EntityType="Self.Clasificacion" Schema="dbo" store:Type="Tables" />
@@ -555,10 +554,11 @@
             <End Role="Cuenta" EntitySet="Cuenta" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="CINEMA_PROJECTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="CinemaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Asiento">
           <Key>
             <PropertyRef Name="id_siento" />
@@ -642,10 +642,10 @@
           <Property Name="Id_pelicula" Type="Int32" Nullable="false" />
           <Property Name="Hora_ini" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="ID_funcion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FechaFun" Type="DateTime" Precision="0" />
           <NavigationProperty Name="Detalle_compra" Relationship="Self.FK__Detalle_c__Id_fu__0697FACD" FromRole="Funcion" ToRole="Detalle_compra" />
           <NavigationProperty Name="Sala" Relationship="Self.FK__Funcion__Cod_sal__4E53A1AA" FromRole="Funcion" ToRole="Sala" />
           <NavigationProperty Name="Pelicula" Relationship="Self.RefPelicula13" FromRole="Funcion" ToRole="Pelicula" />
-          <Property Name="FechaFun" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Genero">
           <Key>
@@ -680,7 +680,6 @@
           <NavigationProperty Name="Funcion" Relationship="Self.RefPelicula13" FromRole="Pelicula" ToRole="Funcion" />
           <NavigationProperty Name="Genero" Relationship="Self.RefGenero14" FromRole="Pelicula" ToRole="Genero" />
           <NavigationProperty Name="Idioma" Relationship="Self.RefIdioma18" FromRole="Pelicula" ToRole="Idioma" />
-          <Property Name="RutaFoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Perfil">
           <Key>
@@ -1044,7 +1043,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="EntidadesCinema" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EntidadesCinemaF" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Asiento" EntityType="Self.Asiento" />
           <EntitySet Name="Ciudad" EntityType="Self.Ciudad" />
           <EntitySet Name="Clasificacion" EntityType="Self.Clasificacion" />
@@ -1156,9 +1155,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="CINEMA_PROJECTModelStoreContainer" CdmEntityContainer="EntidadesCinema">
+        <EntityContainerMapping StorageEntityContainer="CinemaModelStoreContainer" CdmEntityContainer="EntidadesCinemaF">
           <EntitySetMapping Name="Asiento">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Asiento">
+            <EntityTypeMapping TypeName="CinemaModel.Asiento">
               <MappingFragment StoreEntitySet="Asiento">
                 <ScalarProperty Name="id_siento" ColumnName="id_siento" />
                 <ScalarProperty Name="fila" ColumnName="fila" />
@@ -1168,7 +1167,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Ciudad">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Ciudad">
+            <EntityTypeMapping TypeName="CinemaModel.Ciudad">
               <MappingFragment StoreEntitySet="Ciudad">
                 <ScalarProperty Name="Cod_ciudad" ColumnName="Cod_ciudad" />
                 <ScalarProperty Name="Nombre_ciudad" ColumnName="Nombre_ciudad" />
@@ -1177,7 +1176,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Clasificacion">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Clasificacion">
+            <EntityTypeMapping TypeName="CinemaModel.Clasificacion">
               <MappingFragment StoreEntitySet="Clasificacion">
                 <ScalarProperty Name="id_clasif" ColumnName="id_clasif" />
                 <ScalarProperty Name="nombre_clasif" ColumnName="nombre_clasif" />
@@ -1185,7 +1184,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Compra">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Compra">
+            <EntityTypeMapping TypeName="CinemaModel.Compra">
               <MappingFragment StoreEntitySet="Compra">
                 <ScalarProperty Name="id_compra" ColumnName="id_compra" />
                 <ScalarProperty Name="fecha_exp" ColumnName="fecha_exp" />
@@ -1196,7 +1195,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Cuenta">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Cuenta">
+            <EntityTypeMapping TypeName="CinemaModel.Cuenta">
               <MappingFragment StoreEntitySet="Cuenta">
                 <ScalarProperty Name="id_cuenta" ColumnName="id_cuenta" />
                 <ScalarProperty Name="correo" ColumnName="correo" />
@@ -1206,7 +1205,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Detalle_compra">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Detalle_compra">
+            <EntityTypeMapping TypeName="CinemaModel.Detalle_compra">
               <MappingFragment StoreEntitySet="Detalle_compra">
                 <ScalarProperty Name="id_detalle" ColumnName="id_detalle" />
                 <ScalarProperty Name="id_asiento" ColumnName="id_asiento" />
@@ -1217,7 +1216,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Estado">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Estado">
+            <EntityTypeMapping TypeName="CinemaModel.Estado">
               <MappingFragment StoreEntitySet="Estado">
                 <ScalarProperty Name="Cod_estado" ColumnName="Cod_estado" />
                 <ScalarProperty Name="Nombre_estado" ColumnName="Nombre_estado" />
@@ -1225,18 +1224,18 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Funcion">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Funcion">
+            <EntityTypeMapping TypeName="CinemaModel.Funcion">
               <MappingFragment StoreEntitySet="Funcion">
-                <ScalarProperty Name="FechaFun" ColumnName="FechaFun" />
                 <ScalarProperty Name="Cod_sala" ColumnName="Cod_sala" />
                 <ScalarProperty Name="Id_pelicula" ColumnName="Id_pelicula" />
                 <ScalarProperty Name="Hora_ini" ColumnName="Hora_ini" />
                 <ScalarProperty Name="ID_funcion" ColumnName="ID_funcion" />
+                <ScalarProperty Name="FechaFun" ColumnName="FechaFun" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Genero">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Genero">
+            <EntityTypeMapping TypeName="CinemaModel.Genero">
               <MappingFragment StoreEntitySet="Genero">
                 <ScalarProperty Name="ID_genero" ColumnName="ID_genero" />
                 <ScalarProperty Name="nombre_gen" ColumnName="nombre_gen" />
@@ -1244,7 +1243,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Idioma">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Idioma">
+            <EntityTypeMapping TypeName="CinemaModel.Idioma">
               <MappingFragment StoreEntitySet="Idioma">
                 <ScalarProperty Name="Cod_idioma" ColumnName="Cod_idioma" />
                 <ScalarProperty Name="Sibtitulos_idiom" ColumnName="Sibtitulos_idiom" />
@@ -1253,9 +1252,8 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Pelicula">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Pelicula">
+            <EntityTypeMapping TypeName="CinemaModel.Pelicula">
               <MappingFragment StoreEntitySet="Pelicula">
-                <ScalarProperty Name="RutaFoto" ColumnName="RutaFoto" />
                 <ScalarProperty Name="Id_pelicula" ColumnName="Id_pelicula" />
                 <ScalarProperty Name="nombre_pelicula" ColumnName="nombre_pelicula" />
                 <ScalarProperty Name="Duracion" ColumnName="Duracion" />
@@ -1268,7 +1266,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Perfil">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Perfil">
+            <EntityTypeMapping TypeName="CinemaModel.Perfil">
               <MappingFragment StoreEntitySet="Perfil">
                 <ScalarProperty Name="id_perfil" ColumnName="id_perfil" />
                 <ScalarProperty Name="nombre_perfil" ColumnName="nombre_perfil" />
@@ -1276,7 +1274,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Persona">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Persona">
+            <EntityTypeMapping TypeName="CinemaModel.Persona">
               <MappingFragment StoreEntitySet="Persona">
                 <ScalarProperty Name="id_persona" ColumnName="id_persona" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
@@ -1287,7 +1285,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Sala">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Sala">
+            <EntityTypeMapping TypeName="CinemaModel.Sala">
               <MappingFragment StoreEntitySet="Sala">
                 <ScalarProperty Name="Cod_sala" ColumnName="Cod_sala" />
                 <ScalarProperty Name="Num_sala" ColumnName="Num_sala" />
@@ -1298,7 +1296,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Sucursal">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Sucursal">
+            <EntityTypeMapping TypeName="CinemaModel.Sucursal">
               <MappingFragment StoreEntitySet="Sucursal">
                 <ScalarProperty Name="id_sucursal" ColumnName="id_sucursal" />
                 <ScalarProperty Name="nombre_sucursal" ColumnName="nombre_sucursal" />
@@ -1308,7 +1306,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.sysdiagrams">
+            <EntityTypeMapping TypeName="CinemaModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -1319,7 +1317,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Tarjeta_credito">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Tarjeta_credito">
+            <EntityTypeMapping TypeName="CinemaModel.Tarjeta_credito">
               <MappingFragment StoreEntitySet="Tarjeta_credito">
                 <ScalarProperty Name="id_tarjeta" ColumnName="id_tarjeta" />
                 <ScalarProperty Name="numero" ColumnName="numero" />
@@ -1331,7 +1329,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Tipo_boleto">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Tipo_boleto">
+            <EntityTypeMapping TypeName="CinemaModel.Tipo_boleto">
               <MappingFragment StoreEntitySet="Tipo_boleto">
                 <ScalarProperty Name="id_tipoBoleto" ColumnName="id_tipoBoleto" />
                 <ScalarProperty Name="nombre_tipo" ColumnName="nombre_tipo" />
@@ -1340,7 +1338,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Tipo_pago">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Tipo_pago">
+            <EntityTypeMapping TypeName="CinemaModel.Tipo_pago">
               <MappingFragment StoreEntitySet="Tipo_pago">
                 <ScalarProperty Name="id_pago" ColumnName="id_pago" />
                 <ScalarProperty Name="Tipo" ColumnName="Tipo" />
@@ -1350,7 +1348,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Tipo_sala">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Tipo_sala">
+            <EntityTypeMapping TypeName="CinemaModel.Tipo_sala">
               <MappingFragment StoreEntitySet="Tipo_sala">
                 <ScalarProperty Name="Cod_sala" ColumnName="Cod_sala" />
                 <ScalarProperty Name="Nombre_sala" ColumnName="Nombre_sala" />
@@ -1359,7 +1357,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuario">
-            <EntityTypeMapping TypeName="CINEMA_PROJECTModel.Usuario">
+            <EntityTypeMapping TypeName="CinemaModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
                 <ScalarProperty Name="id_user" ColumnName="id_user" />
                 <ScalarProperty Name="correo" ColumnName="correo" />

@@ -18,7 +18,7 @@ namespace Datos_Org.Servicios
         {
             DateTime fecha_fun = Convert.ToDateTime(fecha.ToShortDateString());
             List<vFuncion> obj = new List<vFuncion>();
-            using (var db = new EntidadesCinema())
+            using (var db = new EntidadesCinemaF())
             {
                 obj = (from x in db.Funcion
                        select new vFuncion
@@ -40,7 +40,7 @@ namespace Datos_Org.Servicios
         public List<vFuncion> Horario(int id)
         {
             List<vFuncion> obj = new List<vFuncion>();
-            using (var db = new EntidadesCinema())
+            using (var db = new EntidadesCinemaF())
             {
                 obj = (from x in db.Funcion
                        select new vFuncion
@@ -64,7 +64,7 @@ namespace Datos_Org.Servicios
         public List<vFuncion> ObtenFuncion()
         {
             List<vFuncion> obj = new List<vFuncion>();
-            using (var db = new EntidadesCinema())
+            using (var db = new EntidadesCinemaF())
             {
                 obj = (from x in db.Funcion
                        select new vFuncion
@@ -87,7 +87,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new EntidadesCinemaF())
                 {
                     db.Funcion.Add(item);
                     db.SaveChanges();
@@ -104,7 +104,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new EntidadesCinemaF())
                 {
                     Funcion obj = db.Funcion.Where(x => x.ID_funcion == item.ID_funcion).FirstOrDefault();
                     if (obj != null)
@@ -128,7 +128,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new EntidadesCinemaF())
                 {
                     Funcion obj = db.Funcion.Where(x => x.ID_funcion == item.ID_funcion).FirstOrDefault();
                     if (obj != null)

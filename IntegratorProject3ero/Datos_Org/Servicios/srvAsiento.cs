@@ -16,7 +16,7 @@ namespace Datos_Org.Servicios
         public List<vAsiento> GetAsiento(string nombre, string valor, int sala)//método para obtener todos los datos del asiento
         {
             List<vAsiento> liss = new List<vAsiento>();
-            using (var db = new EntidadesCinema())
+            using (var db = new EntidadesCinemaF())
             {
                 liss = (from x in db.Asiento
                         where x.fila == nombre && x.columna == valor && x.Cod_sala == sala
@@ -33,7 +33,7 @@ namespace Datos_Org.Servicios
         /*Método para obtener los id de sala*/
         public List<Sala> getSala()//método para obtener todos los datos del asiento
         {
-            using (var db = new EntidadesCinema())
+            using (var db = new EntidadesCinemaF())
             {
                 return db.Sala.ToList();
             }
@@ -43,7 +43,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new EntidadesCinemaF())
                 {
                     db.Asiento.Add(item);
                     db.SaveChanges();
@@ -60,7 +60,7 @@ namespace Datos_Org.Servicios
         {
             try
             {
-                using (var db = new EntidadesCinema())
+                using (var db = new EntidadesCinemaF())
                 {
                     Asiento obj = db.Asiento.Where(x => x.id_siento == item.id_siento).FirstOrDefault();
                     if(obj != null)
@@ -81,7 +81,7 @@ namespace Datos_Org.Servicios
         public List<vAsiento> AsientoComplete()
         {
             List<vAsiento> obj = new List<vAsiento>();
-            using (var db = new EntidadesCinema())
+            using (var db = new EntidadesCinemaF())
             {
                 obj = (from x in db.Asiento
                        select new vAsiento
@@ -100,7 +100,7 @@ namespace Datos_Org.Servicios
         public List<vAsiento> CantAsientos(int num_sala)
         {
             List<vAsiento> obj = new List<vAsiento>();
-            using (var db = new EntidadesCinema())
+            using (var db = new EntidadesCinemaF())
             {
               obj= (from x in db.Asiento
                  where
