@@ -11,7 +11,7 @@
                 <div class="col-md-4">
                         <div class="contenedor">
                             <div class="imagen">
-                                <img class="imagen" src="data:image/jpg;base64,<%# Convert.ToBase64String((byte[])DataBinder.Eval(Container.DataItem,"imagen_pelicula"))%>"">
+                                <img class="imagen" src="data:image/jpg;base64,<%# Convert.ToBase64String((byte[])DataBinder.Eval(Container.DataItem,"imagen_pelicula"))%>" />
                              <h3 class="nomPeli"><asp:Label ID="lblNombre_peli" runat="server" Text=<%# Eval("nombre_pelicula") %>></asp:Label></span></h3>
                             </div>
 
