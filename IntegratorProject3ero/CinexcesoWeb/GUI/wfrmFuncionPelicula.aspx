@@ -11,7 +11,7 @@
                         <div class="col-sm-6 col-md-4 movie-mobile">
                             <div class="movie__images">
                                 <span class="movie__rating">5.0</span>
-                                <img src="#" /><
+                                <img ID="imagen" runat="server">
                             </div>
                             <div class="movie__rate">Your vote: <div id='score' class="score"></div></div>
                         </div>

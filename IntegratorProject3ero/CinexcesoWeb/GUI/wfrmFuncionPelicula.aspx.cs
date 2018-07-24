@@ -26,21 +26,28 @@ namespace CinexcesoWeb.GUI
             vPel = new vPelicula();
             foreach(vPelicula obj in svPeli.ObtenrDatePeli(peli))
             {
-                //vPel.Id_pelicula = obj.Id_pelicula;
-                //vPel.nombre_pelicula = obj.nombre_pelicula;
-                //vPel.Duracion = obj.Duracion;
-                //vPel.nom_clasif = obj.nom_clasif;
-                //vPel.nom_genero = obj.nom_genero;
-                //vPel.nom_idioma = obj.nom_idioma;
-                //vPel.Imagen_pelicula = obj.Imagen_pelicula;
-                //vPel.Sinopsis = obj.Sinopsis;
-
+                vPel.Id_pelicula = obj.Id_pelicula;
+                vPel.nombre_pelicula = obj.nombre_pelicula;
+                vPel.Duracion = obj.Duracion;
+                vPel.nom_clasif = obj.nom_clasif;
+                vPel.nom_genero = obj.nom_genero;
+                vPel.nom_idioma = obj.nom_idioma;
+                vPel.Imagen_pelicula = obj.Imagen_pelicula;
+                vPel.Sinopsis = obj.Sinopsis;
+                ConvertirImagen(vPel.Imagen_pelicula);
 
             }
 
         }
 
-        private void FormatearImagen()
-        { }
+        public void ConvertirImagen(byte[] ImagenPeliEdit)
+        {
+
+            string imreBase64Data = Convert.ToBase64String(ImagenPeliEdit);
+            string imgDataURL = string.Format("data:image/png;base64,{0}", imreBase64Data);
+
+
+            imagen.Src = imgDataURL;
+        }
     }
 }
