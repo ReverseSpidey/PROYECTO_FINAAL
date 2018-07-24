@@ -73,11 +73,23 @@
     <Compile Include="GUI\Asiento_Columna.Designer.cs">
       <DependentUpon>Asiento_Columna.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\CatFunciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CatFunciones.Designer.cs">
+      <DependentUpon>CatFunciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmAsiento.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmAsiento.Designer.cs">
       <DependentUpon>frmAsiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Funciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Funciones.Designer.cs">
+      <DependentUpon>Funciones.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\MenuEmpleado.cs">
       <SubType>Form</SubType>
@@ -166,8 +178,14 @@
     <EmbeddedResource Include="GUI\Asiento_Columna.resx">
       <DependentUpon>Asiento_Columna.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CatFunciones.resx">
+      <DependentUpon>CatFunciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmAsiento.resx">
       <DependentUpon>frmAsiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Funciones.resx">
+      <DependentUpon>Funciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MenuEmpleado.resx">
       <DependentUpon>MenuEmpleado.cs</DependentUpon>
@@ -280,8 +298,6 @@
     <Content Include="bin\Debug\Microsoft.VisualBasic.PowerPacks.Design.dll" />
     <Content Include="bin\Debug\Microsoft.VisualBasic.PowerPacks.dll" />
     <Content Include="bin\Debug\MySql.Data.dll" />
-    <Content Include="bin\EntityFramework.dll" />
-    <Content Include="bin\EntityFramework.SqlServer.dll" />
     <None Include="Resources\movie-symbol-of-video-camera1.png" />
     <None Include="Resources\booking.png" />
     <None Include="Resources\tickets.png" />

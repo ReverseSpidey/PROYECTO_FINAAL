@@ -43,12 +43,13 @@ namespace AppDesktop.GUI
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             id = Convert.ToInt32(cboPeliculas.SelectedValue);
-            LlenarData();
+            DateTime fechaSel = dtpFechaFun.Value;
+            LlenarData(fechaSel);
         }
-        private void LlenarData()
+        private void LlenarData(DateTime fechasel)
         {
             dgvHorarios.AutoGenerateColumns = false;
-            dgvHorarios.DataSource = fun.Horario(id);
+            dgvHorarios.DataSource = fun.Horario(id, fechasel);
             dgvHorarios.Columns[0].Visible = false;
         }
 

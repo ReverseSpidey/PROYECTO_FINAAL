@@ -141,7 +141,7 @@ namespace AppDesktop.GUI
 
                     //Resumen de la venta. Sólo son ejemplos
                     ticket.AgregarTotales("         SUBTOTAL......$", precio_bol);
-                    //ticket.AgregarTotales("         IVA...........$", 10.04M);//La M indica que es un decimal en C#
+                    ticket.AgregarTotales("         TOTAL NETO....$", TOT);//La M indica que es un decimal en C#
                     ticket.TextoIzquierda("");
                     ticket.AgregarTotales("         EFECTIVO......$", pago_cli);
                     ticket.AgregarTotales("         CAMBIO........$", CAMBIO);

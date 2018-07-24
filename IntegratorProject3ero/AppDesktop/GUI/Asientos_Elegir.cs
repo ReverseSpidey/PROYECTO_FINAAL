@@ -2,6 +2,8 @@
 using Datos_Org.Modelo;
 using Datos_Org.Servicios;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -38,7 +40,7 @@ using System.Windows.Forms;
             id_fun = obj.ID_funcion;
             vista = obj;
             RecupFilaColumn();
-            total_asiento = num; 
+            total_asiento = num;
             tipos[0] = abuelo;
             tipos[1] = adul;
             tipos[2] = ninio;
@@ -174,11 +176,19 @@ using System.Windows.Forms;
             
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            foreach (var x in id_boleto)
+            {
+                MessageBox.Show("el id es: " + x);
+            }
+        }
+
         private void Recorrer()
         {
             foreach (Control x in Cuerpo.Controls)
             {
-                if (x is Button)//asientos recomendados
+                if (x is Button)
                 {
                     if (cont <= total_asiento - 1 && x.Enabled == true)
                     {
@@ -204,6 +214,7 @@ using System.Windows.Forms;
                         else
                         {
                             x.BackColor = Color.Green;
+
                         }
 
                     }
@@ -223,7 +234,7 @@ using System.Windows.Forms;
             {
                 ID = x.id_siento;
             }
-
+            MessageBox.Show("el di es " + ID);
             if (butt.BackColor == Color.Red)
             {
                 butt.BackColor = Color.Green;

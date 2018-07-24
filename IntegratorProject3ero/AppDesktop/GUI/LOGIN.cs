@@ -100,10 +100,21 @@ namespace AppDesktop.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            this.Hide();
-            MenuEmpleado obj = new MenuEmpleado();
-            obj.Show();
+            string correo = txtUsuario.Text;
+            switch(correo)
+            {
+                case "pumasbarca.ajct@gmail.com":
+                    this.Hide();
+                    MenuEmpleado obj = new MenuEmpleado();
+                    obj.Show();
+                    break;
+                case "leonsio_xool@hotmail.com":
+                    this.Hide();
+                    MenuAdministrador objM = new MenuAdministrador();
+                    objM.Show();
+                    break;
+            }
+            
         }
 
         private void label3_Click(object sender, EventArgs e)
